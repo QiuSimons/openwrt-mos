@@ -21,7 +21,7 @@ define Package/luci-app-mosdns
 	PKG_MAINTAINER:=<https://github.com/dogbutcat/luci-app-mosdns>
 	PKGARCH:=all
 	DEPENDS:= \
-		+MosDNS \
+		+mosdns \
 		+!wget&&!curl:wget
 endef
 
