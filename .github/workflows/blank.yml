@@ -1,0 +1,56 @@
+name: Generate-Chnroute-CI
+
+on:
+  schedule:
+    - cron: 0 16 * * *
+  watch:
+    types: [started]
+  #push:
+  #  branches: 
+  #    - master
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-18.04
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+    - uses: actions/checkout@master
+    
+    - name: Init build dependencies
+      env:
+        DEBIAN_FRONTEND: noninteractive
+      run: |
+        sudo -E apt-get update -y
+        sudo -E apt-get install -y aggregate
+        
+    - name: Run generate script
+      run: | 
+        chmod +x ./chnroute.sh
+        ./chnroute.sh
+        rm -f ./update.txt
+        chmod +x ./mapcidr
+        ./mapcidr -l ./dist/chnroute/chnroute.txt -o ./dist/chnroute/TMP4.txt -sbh 65530
+        cat ./dist/chnroute/TMP4.txt > ./dist/chnroute/chnroute.txt
+        rm -f ./dist/chnroute/TMP4.txt
+        echo `date +%Y/%m/%d\ %H:%M:%S\ %Z` >> ./update.txt
+      
+    - name: Commit file
+      run: |
+        git config --global user.email simonsqiu@foxmail.com
+        git config --global user.name SimonsQiu
+        git add .
+        git commit -m "Update `date +%Y/%m/%d\ %H:%M:%S\ %Z`" -a
+        
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{secrets.GITHUB_TOKEN}}
+        
+    - name: Cleanup Workflow Logs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        token: ${{ github.token }}
+        repository: ${{ github.repository }}
+        retain_days: 1
