@@ -1,0 +1,1 @@
+https://github.com/IrineSistiana/mosdns/releases/download/${latest_ver}/mosdns-linux-${Arch}.zip

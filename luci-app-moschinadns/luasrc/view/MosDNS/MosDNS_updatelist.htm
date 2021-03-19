@@ -1,0 +1,52 @@
+<%+cbi/valueheader%>
+<%local fs=require"nixio.fs"%>
+<input type="button" class="cbi-button cbi-button-apply" id="apply_update_list_button" value="<%:Update list%>" onclick=" return apply_list_update() "/>
+</div>
+<script type="text/javascript">//<![CDATA[
+var inited=false;
+var updatelistbtn = document.getElementById('apply_update_list_button');
+function apply_list_update(){
+	XHR.get('<%=url([[admin]], [[services]], [[MosDNS]], [[doupdatelist]])%>',null,function(x, data){});
+	updatelistbtn.disabled = true;
+	updatelistbtn.value    = '<%:Check...%>';
+	poll_list_check();
+	return
+}
+function poll_list_check(){
+XHR.poll(3, '<%=url([[admin]], [[services]], [[MosDNS]], [[checkupdatelist]])%>', null,
+	function(x, data) {
+		if (x.responseText) {
+			if (x.responseText=="\u0000"){
+				for(j = 0,len=this.XHR._q.length; j < len; j++) {
+					if (this.XHR._q[j].url == '<%=url([[admin]], [[services]], [[MosDNS]], [[checkupdatelist]])%>'){
+						this.XHR._q.splice(j,1);
+						updatelistbtn.disabled = false;
+						updatelistbtn.value    = '<%:Updated%>';
+						break;
+					}
+				}
+				return	
+			}else if(x.responseText=="2" || x.responseText=="3" || x.responseText=="1"){
+				updatelistbtn.disabled = false;
+				updatelistbtn.value = "Error "+x.responseText
+			}
+		}
+	}
+);}
+
+<% if fs.access("/var/run/update_list") then %>
+if(!inited){
+	updatelistbtn.disabled = true;
+	updatelistbtn.value    = '<%:Check...%>';
+	poll_list_check();
+	inited=true;
+}
+<%elseif fs.access("/var/run/update_list_error") then %>
+if(!inited){
+	poll_list_check();
+	inited=true;
+}
+<%end%>
+//]]>
+</script>
+<%+cbi/valuefooter%>
