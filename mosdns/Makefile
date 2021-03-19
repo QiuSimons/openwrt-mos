@@ -7,8 +7,22 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mosdns
-PKG_VERSION:=1.6.5
+PKG_VERSION:=v1.6.5
 PKG_RELEASE:=1
+
+include $(INCLUDE_DIR)/package.mk
+
+define Package/$(PKG_NAME)
+	SECTION:=net
+	CATEGORY:=Network
+	TITLE:=mosdns is a programmable DNS forwarder
+	DEPENDS:=
+	URL:=https://github.com/IrineSistiana/mosdns/releases
+endef
+
+define Package/$(PKG_NAME)/description
+mosdns is a "programmable" DNS forwarder.
+endef
 
 ifeq ($(ARCH),mipsel)
 	MOSDNS_ARCH:=mipsle-softfloat
@@ -26,34 +40,15 @@ ifeq ($(ARCH),aarch64)
 	MOSDNS_ARCH:=arm64
 endif
 
-PKG_LICENSE:=Apache-2.0
-PKG_BUILD_DIR:=$(BUILD_DIR)/mosdns-$(PKG_VERSION)
-PKG_URL:=https://github.com/IrineSistiana/mosdns/releases/download/v$(PKG_VERSION)/mosdns-linux-$(MOSDNS_ARCH).zip
-PKG_FILE:=mosdns-linux-$(MOSDNS_ARCH)-$(PKG_VERSION).zip
-
-include $(INCLUDE_DIR)/package.mk
-
-define Package/$(PKG_NAME)
-	SECTION:=net
-	CATEGORY:=Network
-	TITLE:=mosdns is a programmable DNS forwarder
-	DEPENDS:=
-	URL:=https://github.com/IrineSistiana/mosdns/releases
-endef
-
-define Package/$(PKG_NAME)/description
-mosdns is a "programmable" DNS forwarder.
-endef
-
-define Build/Download
-	if [ ! -f $(DL_DIR)/$(PKG_FILE) ] ; then \
-		wget -c -t 5 -O $(DL_DIR)/$(PKG_FILE) $(PKG_URL); \
-	fi
-endef
+PKG_SOURCE:=mosdns-linux-$(MOSDNS_ARCH).zip
+PKG_SOURCE_URL:=https://github.com/IrineSistiana/mosdns/releases/download/$(PKG_VERSION)/
+UNZIP_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/$(PKG_NAME)-unzip
+PKG_HASH:=skip
 
 define Build/Prepare
-	$(Build/Download)
-	unzip $(DL_DIR)/$(PKG_FILE) -d $(PKG_BUILD_DIR)
+	mkdir -vp $(UNZIP_DIR)
+	unzip -od $(UNZIP_DIR) $(DL_DIR)/$(PKG_SOURCE)
+	chmod 755 $(UNZIP_DIR)/mosdns
 endef
 
 define Build/Configure
@@ -62,11 +57,17 @@ endef
 define Build/Compile
 endef
 
+define Package/$(PKG_NAME)/extra_provides
+    echo 'libc.so.6'; \
+    echo 'libpthread.so.0';
+endef
+
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	mkdir $(1)/usr/bin/MosDNS
-	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mosdns $(1)/usr/bin/MosDNS/MosDNS
-	$(INSTALL_DATA) ./files/mosdns/* $(1)/usr/bin/MosDNS/
+	$(INSTALL_BIN) $(UNZIP_DIR)/mosdns $(1)/usr/bin/MosDNS/MosDNS
+	$(INSTALL_BIN) ./files/mosdns/geoip.dat $(1)/usr/bin/MosDNS/geoip.dat
+	$(INSTALL_BIN) ./files/mosdns/geosite.dat $(1)/usr/bin/MosDNS/geosite.dat
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))
