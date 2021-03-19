@@ -1,0 +1,12 @@
+#!/bin/sh
+
+uci -q batch <<-EOF >/dev/null 2>&1
+	delete ucitrack.@MosDNS[-1]
+	add ucitrack MosDNS
+	set ucitrack.@MosDNS[-1].init=MosDNS
+	commit ucitrack
+	delete MosDNS.MosDNS.ucitracktest
+EOF
+
+rm -f /tmp/luci-indexcache
+exit 0
