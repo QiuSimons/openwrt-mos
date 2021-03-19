@@ -7,7 +7,7 @@ local uci=require"luci.model.uci".cursor()
 local configpath=uci:get("MosDNS","MosDNS","configpath") or "/etc/config/MosDNS.yaml"
 local binpath=uci:get("MosDNS","MosDNS","binpath") or "/usr/bin/MosDNS/MosDNS"
 httpport=uci:get("MosDNS","MosDNS","httpport") or "3000"
-m = Map("MosDNS", "Mos ChinaDNS")
+m = Map("MosDNS", "Mos DNS")
 m.description = translate("Free and open source, powerful network-wide ads & trackers blocking DNS server.")
 m:section(SimpleSection).template  = "MosDNS/MosDNS_status"
 

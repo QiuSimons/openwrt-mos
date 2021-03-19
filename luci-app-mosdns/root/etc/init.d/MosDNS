@@ -447,11 +447,11 @@ start_service() {
 	# hack to save config file when upgrade system
 	config_get upprotect $CONFIGURATION upprotect ""
 	eval upprotect=${upprotect// /\\\\n}
-	echo -e "$upprotect">/lib/upgrade/keep.d/luci-app-MosDNS
+	echo -e "$upprotect">/lib/upgrade/keep.d/luci-app-mosdns
 
 	if [ ! -f "$binpath" ]; then
 		_do_redirect 0
-		/usr/share/MosDNS/update_MosDNS_core.sh 2>&1 >/tmp/MosDNS_update.log &
+		/usr/share/MosDNS/update_mosdns_core.sh 2>&1 >/tmp/MosDNS_update.log &
 		exit 0
 	fi
 
@@ -548,8 +548,8 @@ do_crontab(){
 	local findstr default cronenable replace commit
 	local cronreload=0
 	local commit=0
-	findstr="/usr/share/MosDNS/update_MosDNS_core.sh"
-	default="30 3 * * * /usr/share/MosDNS/update_MosDNS_core.sh 2>&1"
+	findstr="/usr/share/MosDNS/update_mosdns_core.sh"
+	default="30 3 * * * /usr/share/MosDNS/update_mosdns_core.sh 2>&1"
 	[ "$enabled" == "0" ] || [ "${crontab//autoupdate/}" == "$crontab" ] && cronenable=0 || cronenable=1
 	crontab_editor
 	

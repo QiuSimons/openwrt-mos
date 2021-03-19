@@ -65,12 +65,12 @@ XHR.poll(3, '<%=url([[admin]], [[services]], [[MosDNS]], [[check]])%>', null,
 		}
 	}
 );}
-<% if fs.access("/var/run/update_MosDNS_core") then %>
+<% if fs.access("/var/run/update_mosdns_core") then %>
 	updatebtn.disabled = true;
 	updatebtn.value    = '<%:Check...%>';
 	forceupdatebtn.style.display="inline"
 	poll_check();
-<%elseif fs.access("/var/run/update_MosDNS_core_error") then %>
+<%elseif fs.access("/var/run/update_mosdns_core_error") then %>
 	poll_check();
 <%end%>
 //]]>

@@ -17,16 +17,16 @@ define Package/luci-app-mosdns
 	SECTION:=luci
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
-	TITLE:=LuCI app for MosDNS
+	TITLE:=LuCI app for mosdns
 	PKG_MAINTAINER:=<https://github.com/dogbutcat/luci-app-mosdns>
 	PKGARCH:=all
 	DEPENDS:= \
-		+mosdns \
+		+MosDNS \
 		+!wget&&!curl:wget
 endef
 
 define Package/luci-app-mosdns/description
-	LuCI support for MosDNS
+	LuCI support for mosdns
 endef
 
 define Build/Prepare

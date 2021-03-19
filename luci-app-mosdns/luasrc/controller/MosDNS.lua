@@ -3,7 +3,7 @@ local fs=require"nixio.fs"
 local http=require"luci.http"
 local uci=require"luci.model.uci".cursor()
 function index()
-entry({"admin", "services", "MosDNS"},alias("admin", "services", "MosDNS", "base"),_("Mos ChinaDNS"), 10).dependent = true
+entry({"admin", "services", "MosDNS"},alias("admin", "services", "MosDNS", "base"),_("Mos DNS"), 10).dependent = true
 entry({"admin","services","MosDNS","base"},cbi("MosDNS/base"),_("Base Setting"),1).leaf = true
 entry({"admin","services","MosDNS","log"},form("MosDNS/log"),_("Log"),2).leaf = true
 entry({"admin","services","MosDNS","manual"},cbi("MosDNS/manual"),_("Manual Config"),3).leaf = true
@@ -67,12 +67,12 @@ function do_update()
 	else
 		arg=""
 	end
-	if fs.access("/var/run/update_MosDNS_core") then
+	if fs.access("/var/run/update_mosdns_core") then
 		if arg=="force" then
-			luci.sys.exec("kill $(pgrep /usr/share/MosDNS/update_MosDNS_core.sh) ; sh /usr/share/MosDNS/update_MosDNS_core.sh "..arg.." >/tmp/MosDNS_update.log 2>&1 &")
+			luci.sys.exec("kill $(pgrep /usr/share/MosDNS/update_mosdns_core.sh) ; sh /usr/share/MosDNS/update_mosdns_core.sh "..arg.." >/tmp/MosDNS_update.log 2>&1 &")
 		end
 	else
-		luci.sys.exec("sh /usr/share/MosDNS/update_MosDNS_core.sh "..arg.." >/tmp/MosDNS_update.log 2>&1 &")
+		luci.sys.exec("sh /usr/share/MosDNS/update_mosdns_core.sh "..arg.." >/tmp/MosDNS_update.log 2>&1 &")
 	end
 end
 function get_log()
@@ -121,7 +121,7 @@ function check_update()
 	fdp=f:seek()
 	fs.writefile("/var/run/lucilogpos",tostring(fdp))
 	f:close()
-if fs.access("/var/run/update_MosDNS_core") then
+if fs.access("/var/run/update_mosdns_core") then
 	http.write(a)
 else
 	http.write(a.."\0")
