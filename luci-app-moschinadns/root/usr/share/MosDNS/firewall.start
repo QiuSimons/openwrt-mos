@@ -1,8 +1,0 @@
-#!/bin/sh
-
-MosDNS_enable=$(uci get MosDNS.MosDNS.enabled)
-redirect=$(uci get MosDNS.MosDNS.redirect)
-
-if [ $MosDNS_enable -eq 1 -a "$redirect" == "redirect" ]; then
-	/etc/init.d/MosDNS do_redirect 1
-fi
