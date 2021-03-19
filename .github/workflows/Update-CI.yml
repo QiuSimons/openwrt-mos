@@ -1,4 +1,4 @@
-name: Generate-Chnroute-CI
+name: Update-CI
 
 on:
   schedule:
@@ -18,24 +18,10 @@ jobs:
     steps:
     - uses: actions/checkout@master
     
-    - name: Init build dependencies
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        sudo -E apt-get update -y
-        sudo -E apt-get install -y aggregate
-        
     - name: Run generate script
       run: | 
-        chmod +x ./chnroute.sh
-        ./chnroute.sh
-        rm -f ./update.txt
-        chmod +x ./mapcidr
-        ./mapcidr -l ./dist/chnroute/chnroute.txt -o ./dist/chnroute/TMP4.txt -sbh 65530
-        cat ./dist/chnroute/TMP4.txt > ./dist/chnroute/chnroute.txt
-        rm -f ./dist/chnroute/TMP4.txt
-        echo `date +%Y/%m/%d\ %H:%M:%S\ %Z` >> ./update.txt
-      
+      wget -P ./mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+      wget -P ./mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat      
     - name: Commit file
       run: |
         git config --global user.email simonsqiu@foxmail.com
