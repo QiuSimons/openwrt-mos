@@ -66,8 +66,6 @@ define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	mkdir $(1)/usr/bin/mosdns
 	$(INSTALL_BIN) $(UNZIP_DIR)/mosdns $(1)/usr/bin/mosdns/mosdns
-	$(INSTALL_DIR) $(1)/etc/init.d
-	$(INSTALL_BIN) ./files/mosdns-init $(1)/etc/init.d/mosdns-init
 	mkdir $(1)/etc/mosdns
 	$(INSTALL_DIR) $(1)/etc/mosdns
 	$(INSTALL_DATA) ./files/mosdns/* $(1)/etc/mosdns/
