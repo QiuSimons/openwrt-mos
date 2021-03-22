@@ -21,4 +21,6 @@ local apply = luci.http.formvalue("cbi.apply")
      io.popen("/etc/init.d/MosDNS reload")
 end
 
+io.popen("/etc/init.d/MosDNS reload")
+
 return mp
