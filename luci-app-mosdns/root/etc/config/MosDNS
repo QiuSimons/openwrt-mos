@@ -1,0 +1,3 @@
+
+config MosDNS 'MosDNS'
+	option enabled '1'
