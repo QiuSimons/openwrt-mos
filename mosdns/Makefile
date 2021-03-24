@@ -7,7 +7,7 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mosdns
-PKG_VERSION:=v1.6.5
+PKG_VERSION:=1.7.0
 PKG_RELEASE:=1
 
 include $(INCLUDE_DIR)/package.mk
@@ -41,7 +41,7 @@ ifeq ($(ARCH),aarch64)
 endif
 
 PKG_SOURCE:=mosdns-linux-$(MOSDNS_ARCH).zip
-PKG_SOURCE_URL:=https://github.com/IrineSistiana/mosdns/releases/download/$(PKG_VERSION)/
+PKG_SOURCE_URL:=https://github.com/IrineSistiana/mosdns/releases/download/v$(PKG_VERSION)/
 UNZIP_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/mosdns-unzip
 PKG_HASH:=skip
 
