@@ -29,12 +29,6 @@ plugin:
     args:
       exec:
         - if:
-            - query_is_ad_domain    # 已知的广告域名
-          exec:
-            - _block_with_nxdomain  # 屏蔽
-            - _end
-
-        - if:
             - query_is_local_domain   # 已知的本地域名
             - '!_query_is_common'     # 和不常见的请求类型
           exec:
