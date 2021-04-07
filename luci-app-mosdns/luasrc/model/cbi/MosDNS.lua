@@ -21,7 +21,7 @@ enabled.rmempty = false
 
 -- manual-config
 addr = s:option(Value, "manual-config", translate("手动配置"),
-translate("------------------------------------------------------------------------------------------------------"))
+translate("------------------------------------------------------------------------------------------------------------"))
 
 addr.template = "cbi/tvalue"
 addr.rows = 25
