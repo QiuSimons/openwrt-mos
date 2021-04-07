@@ -20,10 +20,11 @@ enabled.default = 0
 enabled.rmempty = false
 
 -- manual-config
-addr = s:option(Value, "manual-config", translate("手动配置"))
+addr = s:option(Value, "manual-config", translate("手动配置"),
+translate("------------------------------------------------------------------------------------------------------"))
 
 addr.template = "cbi/tvalue"
-addr.rows = 20
+addr.rows = 25
 
 function addr.cfgvalue(self, section)
 	return nixio.fs.readfile("/etc/mosdns/config.yaml")
