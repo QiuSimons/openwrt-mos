@@ -8,19 +8,19 @@ local port=require"luci.model.uci".cursor()
 local port=port:get("MosDNS","MosDNS","port")
 
 mp = Map("MosDNS", translate("MosDNS"))
-mp.description = translate("一个插件化的 DNS 转发/分流器，默认监听6052端口（配置文件: /etc/mosdns/config.yaml）")
+mp.description = translate("MosDNS is a 'programmable' DNS forwarder.")
 mp:section(SimpleSection).template  = "MosDNS/MosDNS_status"
 
 s = mp:section(TypedSection, "MosDNS")
 s.anonymous=true
 s.addremove=false
 
-enabled = s:option(Flag, "enabled", translate("启用MosDNS"))
+enabled = s:option(Flag, "enabled", translate("Enable"))
 enabled.default = 0
 enabled.rmempty = false
 
 -- manual-config
-addr = s:option(Value, "manual-config", translate("手动配置"),
+addr = s:option(Value, "manual-config", translate("Manual Configuration"),
 translate("------------------------------------------------------------------------------------------------------------"))
 
 addr.template = "cbi/tvalue"

@@ -17,7 +17,7 @@ define Package/luci-app-mosdns
 	SECTION:=luci
 	CATEGORY:=LuCI
 	SUBMENU:=3. Applications
-	TITLE:=LuCI Support for mosdns on or off
+	TITLE:=LuCI Support for mosdns
 	DEPENDS:=+mosdns
 endef
 
@@ -38,6 +38,8 @@ define Package/luci-app-mosdns/install
 	$(INSTALL_BIN) ./root/etc/init.d/MosDNS $(1)/etc/init.d/
 	$(INSTALL_DIR) $(1)/etc/config
 	cp -pR ./root/etc/config/* $(1)/etc/config/
+	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
+	po2lmo ./po/zh-cn/mosdns.po $(1)/usr/lib/lua/luci/i18n/mosdns.zh-cn.lmo
 endef
 
 define Package/luci-app-mosdns/postinst

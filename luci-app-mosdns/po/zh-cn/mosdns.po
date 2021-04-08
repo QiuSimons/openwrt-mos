@@ -1,0 +1,18 @@
+#/cgi-bin/luci/admin/services/MosDNS
+msgid "Manual Configuration"
+msgstr "手动配置"
+
+msgid "MosDNS is a 'programmable' DNS forwarder."
+msgstr "MosDNS 是一个一个插件化的 DNS 转发/分流器。"
+
+msgid "RUNNING"
+msgstr "运行中"
+
+msgid "NOT RUNNING"
+msgstr "未运行"
+
+msgid "Collecting data..."
+msgstr "获取数据中..."
+
+msgid "Enable"
+msgstr "启用"
