@@ -3,7 +3,7 @@ msgid "Manual Configuration"
 msgstr "手动配置"
 
 msgid "MosDNS is a 'programmable' DNS forwarder."
-msgstr "MosDNS 是一个一个插件化的 DNS 转发/分流器。"
+msgstr "MosDNS 是一个插件化的 DNS 转发/分流器。"
 
 msgid "RUNNING"
 msgstr "运行中"
