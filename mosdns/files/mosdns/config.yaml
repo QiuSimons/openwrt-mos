@@ -10,7 +10,7 @@ plugin:
     type: server
     args:
       entry:
-        - _default_cache  # 缓存
+        - super_cache   # 缓存
         - main_sequence
       server:
         - protocol: udp
@@ -62,6 +62,12 @@ plugin:
     args:
       upstream:
         - addr: 127.0.0.1:6051
+
+  - tag: super_cache               # 超级缓存
+    type: cache
+    args:
+      size: 4194304
+      cleaner_interval: 3600
 
   ################ 匹配器插件 #################
 
