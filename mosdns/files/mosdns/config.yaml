@@ -12,6 +12,7 @@ plugin:
       entry:
         - super_cache   # 缓存
         - main_sequence
+        - ttl_set
       server:
         - protocol: udp
           addr: 127.0.0.1:6052
@@ -68,6 +69,12 @@ plugin:
     args:
       size: 102400
       cleaner_interval: 3600
+      
+  - tag: ttl_set
+    type: ttl
+    args:
+      minimal_ttl: 3600  # 最小TTL。如果非零，小于这个数的应答的TTL会被修改成这个值。
+      maximum_ttl: 7200 # 最大TTL。如果非零，大于这个数的应答的TTL会被修改成这个值。
 
   ################ 匹配器插件 #################
 
