@@ -40,9 +40,9 @@ plugin:
           exec:
             - forward_remote             # 用远程服务器
         - if:
-            - match_aaaa
+            - _qtype_AAAA
           exec:
-            - _drop_response
+            - _block_with_nxdomain
             - _end
         - forward_local               # 先请求转发至本地服务器
         - if:
@@ -103,8 +103,3 @@ plugin:
     args:
       ip:
         - 'ext:./geoip.dat:cn'
-        
-  - tag: match_aaaa
-    type: query_matcher
-    args:
-      qtype: [28]
