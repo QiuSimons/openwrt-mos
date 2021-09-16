@@ -42,7 +42,7 @@ plugin:
         - if:
             - _qtype_AAAA
           exec:
-            - _block_with_nxdomain
+            - _block_with_empty_response
             - _end
         - forward_local               # 先请求转发至本地服务器
         - if:
