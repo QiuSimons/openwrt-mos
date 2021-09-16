@@ -20,8 +20,8 @@ jobs:
     
     - name: Run generate script
       run: | 
-        wget -P ./mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
-        wget -P ./mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
+        wget -P ./luci-app-mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+        wget -P ./luci-app-mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
         chmod -R 755 ./
     - name: Commit file
       run: |

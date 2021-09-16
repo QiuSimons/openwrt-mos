@@ -35,6 +35,8 @@ define Package/luci-app-mosdns/install
 	cp -pR ./root/etc/config/* $(1)/etc/config/
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/i18n
 	po2lmo ./po/zh-cn/mosdns.po $(1)/usr/lib/lua/luci/i18n/mosdns.zh-cn.lmo
+	$(INSTALL_DIR) $(1)/etc/mosdns
+	$(INSTALL_DATA) ./files/mosdns/* $(1)/etc/mosdns/
 endef
 
 define Package/luci-app-mosdns/postinst
