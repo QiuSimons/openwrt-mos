@@ -50,10 +50,6 @@ plugin:
           exec:
             - _end                    # 就直接采用结果
         - forward_remote              # 否则去请求远程服务器的结果
-        - if:
-            - match_aaaa
-          exec:
-            - _drop_response
 
   - tag: forward_local                # 转发至本地服务器的插件
     type: forward
