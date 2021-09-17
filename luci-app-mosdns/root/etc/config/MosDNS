@@ -1,3 +1,4 @@
 
 config MosDNS 'MosDNS'
 	option enabled '0'
+	option not_first_start '0'
