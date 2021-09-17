@@ -43,6 +43,7 @@ define Build/Prepare
 	mkdir -vp $(UNZIP_DIR)
 	unzip -od $(UNZIP_DIR) $(DL_DIR)/$(PKG_SOURCE)
 	chmod 755 $(UNZIP_DIR)/mosdns
+	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(UNZIP_DIR)/mosdns
 endef
 
 define Build/Configure
@@ -58,8 +59,7 @@ endef
 
 define Package/$(PKG_NAME)/install
 	$(INSTALL_DIR) $(1)/usr/bin
-	mkdir $(1)/usr/bin/mosdns
-	$(INSTALL_BIN) $(UNZIP_DIR)/mosdns $(1)/usr/bin/mosdns/mosdns
+	$(INSTALL_BIN) $(UNZIP_DIR)/mosdns $(1)/usr/bin/mosdns
 endef
 
 $(eval $(call BuildPackage,$(PKG_NAME)))

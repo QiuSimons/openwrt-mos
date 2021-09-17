@@ -5,7 +5,7 @@ START=90
 USE_PROCD=1
 
 #####  ONLY CHANGE THIS BLOCK  ######
-PROG=/usr/bin/mosdns/mosdns # where is mosdns
+PROG=/usr/bin/mosdns # where is mosdns
 RES_DIR=/etc/mosdns/ # resource dir / working dir / the dir where you store ip/domain lists
 CONF=./config.yaml   # where is the config file, it can be a relative path to $RES_DIR
 CONFIGURATION=MosDNS
