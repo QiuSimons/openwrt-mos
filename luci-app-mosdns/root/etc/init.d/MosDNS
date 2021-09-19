@@ -53,7 +53,7 @@ prepare_setting()
 	uci commit network
 }
 
-update()
+update_service()
 {
     	set -o pipefail
     	rm -rf  /tmp/mosdns
