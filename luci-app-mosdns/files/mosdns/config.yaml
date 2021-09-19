@@ -30,6 +30,11 @@ plugin:
     args:
       exec:
         - if:
+            - query_is_ad_domain    # 已知的广告域名
+          exec:
+            - _block_with_nxdomain  # 用 NXDOMAIN 屏蔽
+            - _end
+        - if:
             - query_is_local_domain   # 已知的本地域名
             - '!_query_is_common'     # 和不常见的请求类型
           exec:
@@ -93,6 +98,12 @@ plugin:
     args:
       domain:
         - 'ext:./geosite.dat:geolocation-!cn'
+
+  - tag: query_is_ad_domain    # 匹配广告域名的插件
+    type: query_matcher
+    args:
+      domain:
+        - 'ext:./geosite.dat:category-ads-all'
 
   - tag: response_has_local_ip        # 匹配本地 IP的插件
     type: response_matcher
