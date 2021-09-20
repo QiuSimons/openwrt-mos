@@ -73,6 +73,7 @@ reload_service()
 
 setcron()
 {
+chmod 755 /etc/mosdns/mosupdater.sh
 echo "15 4 * * 1 /etc/mosdns/mosupdater.sh" >> /etc/crontabs/root && cat /etc/crontabs/root | sort | uniq > /tmp/tmp_cron_root && cat /tmp/tmp_cron_root > /etc/crontabs/root
 }
 
