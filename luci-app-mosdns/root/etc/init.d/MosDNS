@@ -71,15 +71,16 @@ reload_service()
     	start
 }
 
-setcron
+setcron()
 {
 echo "15 4 * * 1 /etc/mosdns/mosupdater.sh" >> /etc/crontabs/root && cat /etc/crontabs/root | sort | uniq > /tmp/tmp_cron_root && cat /tmp/tmp_cron_root > /etc/crontabs/root
 }
 
-delcron
+delcron()
 {
 sed -i '/mosdns/d' /etc/crontabs/root
 }
+
 start_service() {
 	
 	# Reading config
