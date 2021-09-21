@@ -1,62 +1,54 @@
 log:
   level: error
   file: ''
-
 plugin:
-
-  ################# 服务插件 ################
-
-  - tag: main_server      # 启动服务器
+  - tag: main_server
     type: server
     args:
       entry:
-        - super_cache   # 缓存
+        - _default_cache
         - main_sequence
         - ttl_set
       server:
         - protocol: udp
-          addr: 127.0.0.1:5335
+          addr: '127.0.0.1:5335'
         - protocol: tcp
-          addr: 127.0.0.1:5335
+          addr: '127.0.0.1:5335'
         - protocol: udp
           addr: '[::1]:5335'
         - protocol: tcp
           addr: '[::1]:5335'
-
-  ################# 可执行插件 ################
-
   - tag: main_sequence
     type: sequence
     args:
       exec:
         - if:
-            - query_is_ad_domain    # 已知的广告域名
+            - query_is_ad_domain
           exec:
-            - _block_with_nxdomain  # 用 NXDOMAIN 屏蔽
+            - _block_with_nxdomain
             - _end
         - if:
-            - query_is_local_domain   # 已知的本地域名
-            - '!_query_is_common'     # 和不常见的请求类型
+            - query_is_local_domain
+            - '!_query_is_common'
           exec:
-            - forward_local           # 用本地服务器
+            - forward_local
             - _end
         - if:
-            - query_is_non_local_domain  # 已知的非本地域名
+            - query_is_non_local_domain
           exec:
-            - forward_remote             # 用远程服务器
+            - forward_remote
         - if:
             - _qtype_AAAA
           exec:
             - _block_with_empty_response
             - _end
-        - forward_local               # 先请求转发至本地服务器
+        - forward_local
         - if:
-            - response_has_local_ip   # 如果(本地)应答包含本地 IP
+            - response_has_local_ip
           exec:
-            - _end                    # 就直接采用结果
-        - forward_remote              # 否则去请求远程服务器的结果
-
-  - tag: forward_local                # 转发至本地服务器的插件
+            - _end
+        - forward_remote
+  - tag: forward_local
     type: forward
     args:
       upstream:
@@ -64,48 +56,34 @@ plugin:
         - addr: 223.5.5.5
         - addr: 180.76.76.76
       fastest_ip: true
-
-  - tag: forward_remote               # 转发至远程服务器的插件
+  - tag: forward_remote
     type: forward
     args:
       upstream:
-        - addr: tls://8.8.4.4
-        - addr: tls://1.1.1.1
+        - addr: 'tls://8.8.4.4'
+        - addr: 'tls://1.1.1.1'
       fastest_ip: true
-
-  - tag: super_cache               # 超级缓存
-    type: cache
-    args:
-      size: 102400
-      cleaner_interval: 3600
-      
   - tag: ttl_set
     type: ttl
     args:
-      minimal_ttl: 3600  # 最小TTL。如果非零，小于这个数的应答的TTL会被修改成这个值。
-      maximum_ttl: 7200 # 最大TTL。如果非零，大于这个数的应答的TTL会被修改成这个值。
-
-  ################ 匹配器插件 #################
-
-  - tag: query_is_local_domain         # 匹配本地域名的插件
+      minimal_ttl: 3600
+      maximum_ttl: 7200
+  - tag: query_is_local_domain
     type: query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:cn'
-
-  - tag: query_is_non_local_domain    # 匹配非本地域名的插件
+  - tag: query_is_non_local_domain
     type: query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:geolocation-!cn'
-
-  - tag: query_is_ad_domain    # 匹配广告域名的插件
+  - tag: query_is_ad_domain
     type: query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:category-ads-all'
-
-  - tag: response_has_local_ip        # 匹配本地 IP的插件
+  - tag: response_has_local_ip
     type: response_matcher
     args:
       ip:
