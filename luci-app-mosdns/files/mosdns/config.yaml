@@ -55,6 +55,7 @@ plugin:
         - addr: 119.29.29.29
         - addr: 223.5.5.5
         - addr: 180.76.76.76
+      deduplicate: true
       fastest_ip: true
   - tag: forward_remote
     type: forward
@@ -62,6 +63,7 @@ plugin:
       upstream:
         - addr: 'tls://8.8.4.4'
         - addr: 'tls://1.0.0.1'
+      deduplicate: true
       fastest_ip: true
   - tag: ttl_set
     type: ttl
