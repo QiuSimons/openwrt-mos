@@ -61,7 +61,7 @@ plugin:
     args:
       upstream:
         - addr: 'tls://8.8.4.4'
-        - addr: 'tls://1.1.1.1'
+        - addr: 'tls://1.0.0.1'
       fastest_ip: true
   - tag: ttl_set
     type: ttl
