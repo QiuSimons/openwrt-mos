@@ -6,6 +6,7 @@ plugin:
     type: server
     args:
       entry:
+        - _no_ecs
         - _default_cache
         - main_sequence
         - ttl_set
@@ -54,7 +55,6 @@ plugin:
       upstream:
         - addr: 119.29.29.29
         - addr: 223.5.5.5
-        - addr: 180.76.76.76
       deduplicate: true
   - tag: forward_remote
     type: fast_forward
