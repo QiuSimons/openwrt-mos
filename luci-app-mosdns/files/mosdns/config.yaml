@@ -15,10 +15,6 @@ plugin:
           addr: '127.0.0.1:5335'
         - protocol: tcp
           addr: '127.0.0.1:5335'
-        - protocol: udp
-          addr: '[::1]:5335'
-        - protocol: tcp
-          addr: '[::1]:5335'
   - tag: main_sequence
     type: sequence
     args:
@@ -43,12 +39,21 @@ plugin:
           exec:
             - _block_with_empty_response
             - _end
-        - forward_local
-        - if:
-            - response_has_local_ip
-          exec:
-            - _end
-        - forward_remote
+        - primary:
+            - forward_local
+            - if:
+                - '!response_has_local_ip'
+              exec:
+                - _drop_response
+          secondary:
+            - forward_remote
+            - if:
+                - _qtype_AAAA
+              exec:
+                - _block_with_empty_response
+                - _end
+          fast_fallback: 200
+          always_standby: true
   - tag: forward_local
     type: fast_forward
     args:
