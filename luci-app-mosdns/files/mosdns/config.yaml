@@ -7,7 +7,7 @@ plugin:
     args:
       entry:
         - _no_ecs
-        - _default_cache
+        - lazy_cache
         - main_sequence
         - ttl_set
       server:
@@ -75,6 +75,11 @@ plugin:
     args:
       minimal_ttl: 3600
       maximum_ttl: 7200
+  - tag: lazy_cache
+    type: cache
+    args:
+      size: 512000
+      lazy_cache_ttl: 31536000
   - tag: query_is_local_domain
     type: query_matcher
     args:
