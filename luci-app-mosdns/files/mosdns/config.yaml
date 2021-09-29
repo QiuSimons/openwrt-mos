@@ -6,10 +6,10 @@ plugin:
     type: server
     args:
       entry:
+        - _single_flight
         - _no_ecs
         - lazy_cache
         - main_sequence
-        #- ttl_set
       server:
         - protocol: udp
           addr: '127.0.0.1:5335'
@@ -70,11 +70,6 @@ plugin:
         - addr: 'tls://1.0.0.1'
           idle_timeout: 60
       deduplicate: true
-  - tag: ttl_set
-    type: ttl
-    args:
-      minimal_ttl: 3600
-      maximum_ttl: 7200
   - tag: lazy_cache
     type: cache
     args:
