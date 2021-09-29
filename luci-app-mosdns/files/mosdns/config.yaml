@@ -9,7 +9,7 @@ plugin:
         - _no_ecs
         - lazy_cache
         - main_sequence
-        - ttl_set
+        #- ttl_set
       server:
         - protocol: udp
           addr: '127.0.0.1:5335'
