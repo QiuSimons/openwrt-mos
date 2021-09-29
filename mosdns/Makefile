@@ -1,65 +1,80 @@
+# SPDX-License-Identifier: GPL-3.0-only
+#
+# Copyright (C) 2021 ImmortalWrt.org
+
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mosdns
-PKG_VERSION:=2.0.0-alpha2
-PKG_RELEASE:=1
+PKG_VERSION:=d91fa92
+PKG_RELEASE:=$(AUTORELEASE)
 
-include $(INCLUDE_DIR)/package.mk
-
-define Package/$(PKG_NAME)
-	SECTION:=net
-	CATEGORY:=Network
-	TITLE:=mosdns is a programmable DNS forwarder
-	DEPENDS:=
-	URL:=https://github.com/IrineSistiana/mosdns/releases
-endef
-
-define Package/$(PKG_NAME)/description
-mosdns is a "programmable" DNS forwarder.
-endef
-
-ifeq ($(ARCH),mipsel)
-	MOSDNS_ARCH:=mipsle-softfloat
-endif
-ifeq ($(ARCH),mips)
-	MOSDNS_ARCH:=mips64-hardfloat
-endif
-ifeq ($(ARCH),x86_64)
-	MOSDNS_ARCH:=amd64
-endif
-ifeq ($(ARCH),arm)
-	MOSDNS_ARCH:=arm-7
-endif
-ifeq ($(ARCH),aarch64)
-	MOSDNS_ARCH:=arm64
-endif
-
-PKG_SOURCE:=mosdns-linux-$(MOSDNS_ARCH).zip
-PKG_SOURCE_URL:=https://github.com/IrineSistiana/mosdns/releases/download/v$(PKG_VERSION)/
-UNZIP_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)/mosdns-unzip
+PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
+PKG_SOURCE_URL:=https://codeload.github.com/IrineSistiana/mosdns/tar.gz/v$(PKG_VERSION)?
 PKG_HASH:=skip
 
-define Build/Prepare
-	mkdir -vp $(UNZIP_DIR)
-	unzip -od $(UNZIP_DIR) $(DL_DIR)/$(PKG_SOURCE)
-	chmod 755 $(UNZIP_DIR)/mosdns
-	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(UNZIP_DIR)/mosdns
+PKG_LICENSE:=GPL-3.0
+PKG_LICENSE_FILE:=LICENSE
+PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
+
+PKG_CONFIG_DEPENDS:= \
+	CONFIG_MOSDNS_COMPRESS_GOPROXY \
+	CONFIG_MOSDNS_COMPRESS_UPX
+
+PKG_BUILD_DEPENDS:=golang/host
+PKG_BUILD_PARALLEL:=1
+PKG_USE_MIPS16:=0
+
+GO_PKG:=github.com/IrineSistiana/mosdns
+GO_PKG_LDFLAGS:=-s -w
+GO_PKG_LDFLAGS_X:=main.version=v$(PKG_VERSION)
+
+include $(INCLUDE_DIR)/package.mk
+include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
+
+define Package/mosdns/Default
+  SECTION:=net
+  CATEGORY:=Network
+  SUBMENU:=IP Addresses and Names
+  TITLE:=A plug-in DNS forwarder/splitter
+  URL:=https://github.com/IrineSistiana/mosdns
 endef
 
-define Build/Configure
+define Package/mosdns
+  $(call Package/mosdns/Default)
+  DEPENDS:=$(GO_ARCH_DEPENDS)
 endef
+
+define Package/mosdns/config
+config MOSDNS_COMPRESS_GOPROXY
+	bool "Compiling with GOPROXY proxy"
+	default n
+
+config MOSDNS_COMPRESS_UPX
+	bool "Compress executable files with UPX"
+	default y
+endef
+
+ifeq ($(CONFIG_MOSDNS_COMPRESS_GOPROXY),y)
+	export GO111MODULE=on
+	export GOPROXY=https://goproxy.baidu.com
+endif
+
+define Build/Prepare
+	$(call Build/Prepare/Default)
+endef
+
+GO_PKG_TARGET_VARS:=$(filter-out CGO_ENABLED=%,$(GO_PKG_TARGET_VARS)) CGO_ENABLED=0
 
 define Build/Compile
+	$(call GoPackage/Build/Compile)
+ifneq ($(CONFIG_MOSDNS_COMPRESS_UPX),)
+	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/mosdns
+endif
 endef
 
-define Package/$(PKG_NAME)/extra_provides
-    echo 'libc.so.6'; \
-    echo 'libpthread.so.0';
+define Package/mosdns/install
+	$(call GoPackage/Package/Install/Bin,$(1))
 endef
 
-define Package/$(PKG_NAME)/install
-	$(INSTALL_DIR) $(1)/usr/bin
-	$(INSTALL_BIN) $(UNZIP_DIR)/mosdns $(1)/usr/bin/mosdns
-endef
-
-$(eval $(call BuildPackage,$(PKG_NAME)))
+$(eval $(call GoBinPackage,mosdns))
+$(eval $(call BuildPackage,mosdns))
