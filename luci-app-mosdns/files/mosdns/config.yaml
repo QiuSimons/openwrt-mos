@@ -60,7 +60,6 @@ plugin:
       upstream:
         - addr: 119.29.29.29
         - addr: 223.5.5.5
-      deduplicate: true
   - tag: forward_remote
     type: fast_forward
     args:
@@ -69,7 +68,6 @@ plugin:
           idle_timeout: 60
         - addr: 'tls://1.0.0.1'
           idle_timeout: 60
-      deduplicate: true
   - tag: lazy_cache
     type: cache
     args:
