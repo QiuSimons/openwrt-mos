@@ -24,6 +24,7 @@ restore_setting()
 {
 	sed -i "/list server/d" /etc/config/dhcp
 	sed -i "/dhcp_option/d" /etc/config/dhcp
+	uci set dhcp.@dnsmasq[0].noresolv="0"
 	uci commit dhcp
 	uci set shadowsocksr.@global[0].pdnsd_enable='1'
 	uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
@@ -42,6 +43,7 @@ prepare_setting()
 	lanip="$(uci get network.lan.ipaddr)"
 	sed -i "/dhcp_option/d" /etc/config/dhcp
 	sed -i "/dhcpv6/a\\\tlist dhcp_option '6,$lanip'" /etc/config/dhcp
+	uci set dhcp.@dnsmasq[0].noresolv="1"
 	uci commit dhcp
 	uci set shadowsocksr.@global[0].pdnsd_enable='0'
 	uci del shadowsocksr.@global[0].tunnel_forward
