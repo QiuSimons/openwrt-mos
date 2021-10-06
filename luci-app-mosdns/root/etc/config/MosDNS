@@ -2,3 +2,6 @@
 config MosDNS 'MosDNS'
 	option enabled '0'
 	option not_first_start '0'
+	option geo_auto_update '1'
+	option geo_update_week_time '*'
+	option geo_update_day_time '0'
