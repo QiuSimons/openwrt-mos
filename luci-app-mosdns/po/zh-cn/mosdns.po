@@ -1,4 +1,8 @@
 #/cgi-bin/luci/admin/services/MosDNS
+
+msgid "Basic Setting"
+msgstr "基础设置"
+
 msgid "Manual Configuration"
 msgstr "手动配置"
 
