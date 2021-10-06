@@ -8,6 +8,7 @@ USE_PROCD=1
 PROG=/usr/bin/mosdns # where is mosdns
 RES_DIR=/etc/mosdns/ # resource dir / working dir / the dir where you store ip/domain lists
 CONF=./config.yaml   # where is the config file, it can be a relative path to $RES_DIR
+CRON_FILE=/etc/crontabs/root
 #####  ONLY CHANGE THIS BLOCK  ######
 
 inital_conf()
@@ -76,12 +77,17 @@ reload_service()
 setcron()
 {
 chmod 755 /etc/mosdns/mosupdater.sh
-echo "15 4 * * 1 /etc/mosdns/mosupdater.sh" >> /etc/crontabs/root && cat /etc/crontabs/root | sort | uniq > /tmp/tmp_cron_root && cat /tmp/tmp_cron_root > /etc/crontabs/root
+   [ "$(tail -n1 /etc/crontabs/root | wc -l)" -eq 0 ] && [ -n "$(cat /etc/crontabs/root 2>/dev/null)" ] && echo >> /etc/crontabs/root
+   [ -z "$(grep "mosupdater.sh" "$CRON_FILE" 2>/dev/null)" ] && {
+      [ "$(uci -q get MosDNS.config.geo_auto_update)" -eq 1 ] && echo "0 $(uci -q get MosDNS.config.geo_update_day_time) * * $(uci -q get MosDNS.config.geo_update_week_time) /etc/mosdns/mosupdater.sh" >> $CRON_FILE
+   }
+   crontab $CRON_FILE
 }
 
 delcron()
 {
-sed -i '/mosdns/d' /etc/crontabs/root
+   sed -i '/mosupdater.sh/d' $CRON_FILE 2>/dev/null
+   /etc/init.d/cron restart
 }
 
 start_service() {
