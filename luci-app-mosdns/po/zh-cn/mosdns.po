@@ -23,3 +23,9 @@ msgstr "启用"
 
 msgid "This file is /etc/mosdns/config.yaml."
 msgstr "配置文件位置 /etc/mosdns/config.yaml。"
+
+msgid "GEODATA Update"
+msgstr "数据库更新"
+
+msgid "Enable GEODATA Update"
+msgstr "启用数据库自动更新"
