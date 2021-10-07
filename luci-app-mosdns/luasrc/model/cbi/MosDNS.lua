@@ -11,6 +11,8 @@ s:tab("basic", translate("Basic Setting"))
 enable = s:taboption("basic",Flag, "enabled", translate("Enable"))
 enable.rmempty = false
 
+s:tab("geo_update", translate("GEODATA Update"))
+enable = s:taboption("geo_update",Flag, "geo_auto_update", translate("Enable GEODATA Update"))
 o = s:taboption("geo_update", ListValue, "geo_update_week_time", translate("Update Time (Every Week)"))
 o:value("*", translate("Every Day"))
 o:value("1", translate("Every Monday"))
@@ -28,8 +30,8 @@ o:value(t, t..":00")
 end
 o.default=0
 
-o = s:taboption("geo_update", Button, translate("GEOIP Update")) 
-o.title = translate("Update GEOIP Database")
+o = s:taboption("geo_update", Button, translate("GEODATA Update")) 
+o.title = translate("GEODATA Update")
 o.inputtitle = translate("Check And Update")
 o.inputstyle = "reload"
 o.write = function()
