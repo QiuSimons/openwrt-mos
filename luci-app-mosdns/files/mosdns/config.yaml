@@ -52,7 +52,7 @@ plugin:
               exec:
                 - _block_with_empty_response
                 - _end
-          fast_fallback: 300
+          fast_fallback: 400
           always_standby: true
   - tag: forward_local
     type: fast_forward
