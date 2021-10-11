@@ -47,12 +47,7 @@ plugin:
                 - _drop_response
           secondary:
             - forward_remote
-            - if:
-                - _qtype_AAAA
-              exec:
-                - _block_with_empty_response
-                - _end
-          fast_fallback: 400
+          fast_fallback: 300
           always_standby: true
   - tag: forward_local
     type: fast_forward
@@ -65,9 +60,9 @@ plugin:
     args:
       upstream:
         - addr: 'tls://8.8.4.4'
-          idle_timeout: 60
+          idle_timeout: 90
         - addr: 'tls://1.0.0.1'
-          idle_timeout: 60
+          idle_timeout: 90
   - tag: lazy_cache
     type: cache
     args:
