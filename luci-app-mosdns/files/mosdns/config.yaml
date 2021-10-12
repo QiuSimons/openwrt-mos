@@ -1,9 +1,9 @@
 log:
-  level: error
-  file: ''
+  level:                   error
+  file:                    ''
 plugin:
-  - tag: main_server
-    type: server
+  - tag:                   main_server
+    type:                  server
     args:
       entry:
         - _single_flight
@@ -11,12 +11,12 @@ plugin:
         - lazy_cache
         - main_sequence
       server:
-        - protocol: udp
-          addr: '127.0.0.1:5335'
-        - protocol: tcp
-          addr: '127.0.0.1:5335'
-  - tag: main_sequence
-    type: sequence
+        - protocol:        udp
+          addr:            '127.0.0.1:5335'
+        - protocol:        tcp
+          addr:            '127.0.0.1:5335'
+  - tag:                   main_sequence
+    type:                  sequence
     args:
       exec:
         - if:
@@ -47,44 +47,44 @@ plugin:
                 - _drop_response
           secondary:
             - forward_remote
-          fast_fallback: 300
-          always_standby: true
-  - tag: forward_local
-    type: fast_forward
+          fast_fallback:   300
+          always_standby:  true
+  - tag:                   forward_local
+    type:                  fast_forward
     args:
       upstream:
-        - addr: 119.29.29.29
-        - addr: 223.5.5.5
-  - tag: forward_remote
-    type: fast_forward
+        - addr:            119.29.29.29
+        - addr:            223.5.5.5
+  - tag:                   forward_remote
+    type:                  fast_forward
     args:
       upstream:
-        - addr: 'tls://8.8.4.4'
-          idle_timeout: 90
-        - addr: 'tls://1.0.0.1'
-          idle_timeout: 90
-  - tag: lazy_cache
-    type: cache
+        - addr:            'tls://8.8.4.4'
+          idle_timeout:    90
+        - addr:            'tls://1.0.0.1'
+          idle_timeout:    90
+  - tag:                   lazy_cache
+    type:                  cache
     args:
-      size: 512000
-      lazy_cache_ttl: 31536000
-  - tag: query_is_local_domain
-    type: query_matcher
+      size:                512000
+      lazy_cache_ttl:      31536000
+  - tag:                   query_is_local_domain
+    type:                  query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:cn'
-  - tag: query_is_non_local_domain
-    type: query_matcher
+  - tag:                   query_is_non_local_domain
+    type:                  query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:geolocation-!cn'
-  - tag: query_is_ad_domain
-    type: query_matcher
+  - tag:                   query_is_ad_domain
+    type:                  query_matcher
     args:
       domain:
         - 'ext:./geosite.dat:category-ads-all'
-  - tag: response_has_local_ip
-    type: response_matcher
+  - tag:                   response_has_local_ip
+    type:                  response_matcher
     args:
       ip:
         - 'ext:./geoip.dat:cn'

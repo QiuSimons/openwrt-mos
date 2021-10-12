@@ -21,6 +21,9 @@ msgstr "获取数据中..."
 msgid "Enable"
 msgstr "启用"
 
+msgid "Enable Redirect"
+msgstr "启用 DNS 重定向"
+
 msgid "This file is /etc/mosdns/config.yaml."
 msgstr "配置文件位置 /etc/mosdns/config.yaml。"
 
