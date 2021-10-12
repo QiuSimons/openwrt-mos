@@ -43,6 +43,10 @@ endef
 
 define Package/luci-app-mosdns/postinst
 #!/bin/sh
+if [ -z "$${IPKG_INSTROOT}" ]; then
+	( . /etc/uci-defaults/55_luci-MosDNS ) && rm -f /etc/uci-defaults/55_luci-MosDNS
+fi
+
 	/etc/init.d/MosDNS enable >/dev/null 2>&1
 exit 0
 endef
