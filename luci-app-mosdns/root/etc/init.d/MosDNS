@@ -29,6 +29,10 @@ restore_setting() {
   uci set shadowsocksr.@global[0].pdnsd_enable='1'
   uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
   uci commit shadowsocksr
+  uci set passwall.@global[0].dns_mode='pdnsd'
+  uci set passwall.@global[0].dns_forward='8.8.8.8'
+  uci set passwall.@global[0].dns_cache='1'
+  uci commit passwall
 }
 
 prepare_setting() {
@@ -45,15 +49,26 @@ prepare_setting() {
   uci set shadowsocksr.@global[0].pdnsd_enable='0'
   uci del shadowsocksr.@global[0].tunnel_forward
   uci commit shadowsocksr
+  uci set passwall.@global[0].dns_mode='nonuse'
+  uci del passwall.@global[0].dns_forward
+  uci del passwall.@global[0].dns_cache
+  uci commit passwall
 }
 
 restart_others() {
   /etc/init.d/network reload
   /etc/init.d/dnsmasq reload
+
   ps | grep ssrplus | grep -v grep
   if [ $? -eq 0 ]; then
     /etc/init.d/shadowsocksr restart
   fi
+
+  ps | grep passwall | grep -v grep
+  if [ $? -eq 0 ]; then
+    /etc/init.d/passwall restart
+  fi
+
 }
 
 reload_service() {
