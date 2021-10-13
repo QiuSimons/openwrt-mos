@@ -20,9 +20,8 @@ jobs:
     
     - name: Run generate script
       run: | 
-        wget -P ./luci-app-mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
-        wget -P ./luci-app-mosdns/files/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
-        chmod -R 755 ./
+        wget -P ./luci-app-mosdns/root/etc/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geoip.dat
+        wget -P ./luci-app-mosdns/root/etc/mosdns -N https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat
     - name: Commit file
       run: |
         git config --global user.email simonsqiu@foxmail.com
