@@ -29,10 +29,6 @@ restore_setting() {
   uci set shadowsocksr.@global[0].pdnsd_enable='1'
   uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
   uci commit shadowsocksr
-  uci del network.lan.dns
-  uci del network.wan.peerdns
-  uci del network.wan.dns
-  uci commit network
 }
 
 prepare_setting() {
@@ -49,11 +45,6 @@ prepare_setting() {
   uci set shadowsocksr.@global[0].pdnsd_enable='0'
   uci del shadowsocksr.@global[0].tunnel_forward
   uci commit shadowsocksr
-  sed -i "/list dns/d" /etc/config/network
-  uci set network.wan.peerdns='0'
-  uci add_list network.wan.dns='127.0.0.1'
-  uci add_list network.lan.dns='127.0.0.1'
-  uci commit network
 }
 
 restart_others() {
