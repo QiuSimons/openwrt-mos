@@ -41,7 +41,7 @@ o.write = function()
 end
 
 s:tab("manual-config", translate("Manual Configuration"))
-config = s:taboption("manual-config", Value, "manual-config", translate("Manual Configuration"), translate("This file is /etc/mosdns/config.yaml."), "")
+config = s:taboption("manual-config", Value, "manual-config", translate("Manual Configuration"), translate("View the YAML Configuration file used by this MosDNS. You can edit it as you own need, Beware the listening port 5335 was hardcoded into the init script, do not change that."), "")
 config.template = "cbi/tvalue"
 config.rows = 25
 
