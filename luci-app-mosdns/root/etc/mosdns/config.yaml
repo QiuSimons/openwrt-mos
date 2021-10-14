@@ -34,11 +34,6 @@ plugin:
             - query_is_non_local_domain
           exec:
             - forward_remote
-        - if:
-            - _qtype_AAAA
-          exec:
-            - _block_with_empty_response
-            - _end
         - primary:
             - forward_local
             - if:
