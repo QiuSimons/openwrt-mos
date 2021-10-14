@@ -24,7 +24,7 @@ restore_setting() {
   sed -i "/dhcp_option/d" /etc/config/dhcp
   uci set dhcp.@dnsmasq[0].noresolv='0'
   uci del dhcp.@dnsmasq[0].cachesize
-  uci set dhcp.@dnsmasq[0].filter_aaaa='1'
+  uci set dhcp.@dnsmasq[0].filter_aaaa='0'
   uci commit dhcp
   uci set shadowsocksr.@global[0].pdnsd_enable='1'
   uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
