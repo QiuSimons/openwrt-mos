@@ -35,11 +35,12 @@ plugin:
         - if:
             - query_is_non_local_domain
           exec:
+            - if:
+                - _qtype_AAAA
+              exec:
+                - _block_with_empty_response
+                - _end
             - forward_remote
-        - if:
-            - _qtype_AAAA
-          exec:
-            - _block_with_empty_response
             - _end
         
         - forward_local

@@ -33,6 +33,8 @@ restore_setting() {
   uci set passwall.@global[0].dns_forward='8.8.8.8'
   uci set passwall.@global[0].dns_cache='1'
   uci commit passwall
+  uci set vssr.@global[0].pdnsd_enable='1'
+  uci commit vssr
 }
 
 prepare_setting() {
@@ -53,6 +55,8 @@ prepare_setting() {
   uci del passwall.@global[0].dns_forward
   uci del passwall.@global[0].dns_cache
   uci commit passwall
+  uci set vssr.@global[0].pdnsd_enable='0'
+  uci commit vssr
 }
 
 restart_others() {
@@ -67,6 +71,11 @@ restart_others() {
   ps | grep passwall | grep -v grep
   if [ $? -eq 0 ]; then
     /etc/init.d/passwall restart
+  fi
+
+  ps | grep vssr | grep -v grep
+  if [ $? -eq 0 ]; then
+    /etc/init.d/vssr restart
   fi
 
 }
