@@ -33,11 +33,12 @@ plugin:
         - if:
             - query_is_non_local_domain
           exec:
+            - if:
+                - _qtype_AAAA
+              exec:
+                - _block_with_empty_response
+                - _end
             - forward_remote
-        - if:
-            - _qtype_AAAA
-          exec:
-            - _block_with_empty_response
             - _end
         - primary:
             - forward_local
@@ -47,7 +48,7 @@ plugin:
                 - _drop_response
           secondary:
             - forward_remote
-          fast_fallback:   300
+          fast_fallback:   150
           always_standby:  true
   - tag:                   forward_local
     type:                  fast_forward
