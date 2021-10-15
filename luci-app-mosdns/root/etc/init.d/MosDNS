@@ -73,7 +73,7 @@ restart_others() {
     /etc/init.d/passwall restart
   fi
 
-  ps | grep vssr | grep -v grep
+  ps | grep vssr | grep -v "grep\|ssr-server"
   if [ $? -eq 0 ]; then
     /etc/init.d/vssr restart
   fi
