@@ -63,18 +63,18 @@ restart_others() {
   /etc/init.d/network reload
   /etc/init.d/dnsmasq reload
 
-  ps | grep ssrplus | grep -v "grep\|ssr-server"
-  if [ $? -eq 0 ]; then
+  ssrp="$(uci get shadowsocksr.@global[0].global_server)"
+  if [ $ssrp != "nil" ]; then
     /etc/init.d/shadowsocksr restart
   fi
 
-  ps | grep passwall | grep -v "grep\|haproxy\|_server"
-  if [ $? -eq 0 ]; then
+  pw="$(uci get passwall.@global[0].enabled)"
+  if [ $pw -eq 1 ]; then
     /etc/init.d/passwall restart
   fi
 
-  ps | grep vssr | grep -v "grep\|ssr-server"
-  if [ $? -eq 0 ]; then
+  vssr="$(uci get vssr.@global[0].global_server)"
+  if [ $vssr != "nil" ]; then
     /etc/init.d/vssr restart
   fi
 
