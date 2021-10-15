@@ -24,12 +24,14 @@ plugin:
           exec:
             - _block_with_nxdomain
             - _end
+        
         - if:
             - query_is_local_domain
             - '!_query_is_common'
           exec:
             - forward_local
             - _end
+        
         - if:
             - query_is_non_local_domain
           exec:
@@ -39,16 +41,18 @@ plugin:
           exec:
             - _block_with_empty_response
             - _end
-        - primary:
-            - forward_local
-            - if:
-                - '!response_has_local_ip'
-              exec:
-                - _drop_response
-          secondary:
-            - forward_remote
-          fast_fallback:   300
-          always_standby:  true
+        
+        - forward_local
+        - if:
+          - response_has_local_ip
+          exec:
+            - _end
+        - forward_remote
+        - if:
+            - _qtype_AAAA
+          exec:
+            - _block_with_empty_response
+
   - tag:                   forward_local
     type:                  fast_forward
     args:
