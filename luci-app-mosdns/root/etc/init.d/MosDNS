@@ -140,13 +140,10 @@ stop_service() {
   echo "enabled="$enabled""
 
   config_load "MosDNS"
-  local enabled
-  config_get_bool enabled MosDNS enabled 0
-  if [ "$enabled" -eq 0 ]; then
-    redirect=$(uci -q get MosDNS.MosDNS.redirect)
-    [ "${redirect}" = "1" ] && restore_setting
+    enabled=$(uci -q get MosDNS.MosDNS.enabled)
+    #redirect=$(uci -q get MosDNS.MosDNS.redirect)
+    [ "${enabled}" = "0" ] && restore_setting
     restart_others
     delcron
-  fi
 
 }
