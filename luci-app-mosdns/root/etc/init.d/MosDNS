@@ -144,9 +144,10 @@ stop_service() {
   config_get_bool enabled MosDNS enabled 0
   if [ "$enabled" -eq 0 ]; then
     redirect=$(uci -q get MosDNS.MosDNS.redirect)
-    [ "${redirect}" = "1" ] && restore_setting
+    if [ "${redirect}" = "1" ]; then
+    restore_setting
+    fi
     restart_others
     delcron
   fi
-
 }
