@@ -57,6 +57,8 @@ prepare_setting() {
   uci commit passwall
   uci set vssr.@global[0].pdnsd_enable='0'
   uci commit vssr
+  ipset -! add blacklist 8.8.4.4
+  ipset -! add blacklist 1.0.0.1
 }
 
 restart_others() {
