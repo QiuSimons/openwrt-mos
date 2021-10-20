@@ -20,43 +20,55 @@ service_triggers() {
 }
 
 restore_setting() {
-  sed -i "/list server/d" /etc/config/dhcp
-  sed -i "/dhcp_option/d" /etc/config/dhcp
-  uci set dhcp.@dnsmasq[0].noresolv='0'
-  uci del dhcp.@dnsmasq[0].cachesize
-  uci set dhcp.@dnsmasq[0].filter_aaaa='1'
-  uci commit dhcp
-  uci set shadowsocksr.@global[0].pdnsd_enable='1'
-  uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
-  uci commit shadowsocksr
-  uci set passwall.@global[0].dns_mode='pdnsd'
-  uci set passwall.@global[0].dns_forward='8.8.8.8'
-  uci set passwall.@global[0].dns_cache='1'
-  uci commit passwall
-  uci set vssr.@global[0].pdnsd_enable='1'
-  uci commit vssr
+  redirect=$(uci -q get MosDNS.MosDNS.redirect)
+  if [ $redirect -eq 1 ]; then
+    sed -i "/list server/d" /etc/config/dhcp
+    sed -i "/dhcp_option/d" /etc/config/dhcp
+    uci set dhcp.@dnsmasq[0].noresolv='0'
+    uci del dhcp.@dnsmasq[0].cachesize
+    uci set dhcp.@dnsmasq[0].filter_aaaa='1'
+    uci commit dhcp
+  fi
+  autoconf="$(uci -q get MosDNS.MosDNS.autoconf)"
+  if [ $autoconf -eq 1 ]; then
+    uci set shadowsocksr.@global[0].pdnsd_enable='1'
+    uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
+    uci commit shadowsocksr
+    uci set passwall.@global[0].dns_mode='pdnsd'
+    uci set passwall.@global[0].dns_forward='8.8.8.8'
+    uci set passwall.@global[0].dns_cache='1'
+    uci commit passwall
+    uci set vssr.@global[0].pdnsd_enable='1'
+    uci commit vssr
+  fi
 }
 
 prepare_setting() {
-  sed -i "/list server/d" /etc/config/dhcp
-  uci add_list dhcp.@dnsmasq[0].server='127.0.0.1#5335'
-  uci set dhcp.@dnsmasq[0].rebind_protection='0'
-  lanip="$(uci get network.lan.ipaddr)"
-  sed -i "/dhcp_option/d" /etc/config/dhcp
-  sed -i "/dhcpv6/a\\\tlist dhcp_option '6,$lanip'" /etc/config/dhcp
-  uci set dhcp.@dnsmasq[0].noresolv="1"
-  uci set dhcp.@dnsmasq[0].cachesize='0'
-  uci set dhcp.@dnsmasq[0].filter_aaaa='0'
-  uci commit dhcp
-  uci set shadowsocksr.@global[0].pdnsd_enable='0'
-  uci del shadowsocksr.@global[0].tunnel_forward
-  uci commit shadowsocksr
-  uci set passwall.@global[0].dns_mode='nonuse'
-  uci del passwall.@global[0].dns_forward
-  uci del passwall.@global[0].dns_cache
-  uci commit passwall
-  uci set vssr.@global[0].pdnsd_enable='0'
-  uci commit vssr
+  redirect=$(uci -q get MosDNS.MosDNS.redirect)
+  if [ $redirect -eq 1 ]; then
+    sed -i "/list server/d" /etc/config/dhcp
+    uci add_list dhcp.@dnsmasq[0].server='127.0.0.1#5335'
+    uci set dhcp.@dnsmasq[0].rebind_protection='0'
+    lanip="$(uci get network.lan.ipaddr)"
+    sed -i "/dhcp_option/d" /etc/config/dhcp
+    sed -i "/dhcpv6/a\\\tlist dhcp_option '6,$lanip'" /etc/config/dhcp
+    uci set dhcp.@dnsmasq[0].noresolv="1"
+    uci set dhcp.@dnsmasq[0].cachesize='0'
+    uci set dhcp.@dnsmasq[0].filter_aaaa='0'
+    uci commit dhcp
+  fi
+  autoconf="$(uci -q get MosDNS.MosDNS.autoconf)"
+  if [ $autoconf -eq 1 ]; then
+    uci set shadowsocksr.@global[0].pdnsd_enable='0'
+    uci del shadowsocksr.@global[0].tunnel_forward
+    uci commit shadowsocksr
+    uci set passwall.@global[0].dns_mode='nonuse'
+    uci del passwall.@global[0].dns_forward
+    uci del passwall.@global[0].dns_cache
+    uci commit passwall
+    uci set vssr.@global[0].pdnsd_enable='0'
+    uci commit vssr
+  fi
 }
 
 restart_others() {
@@ -127,8 +139,7 @@ start_service() {
   procd_set_param respawn "${respawn_threshold:-3600}" "${respawn_timeout:-5}" "${respawn_retry:-5}"
   procd_close_instance MOSDNS
 
-  redirect=$(uci -q get MosDNS.MosDNS.redirect)
-  [ "${redirect}" = "1" ] && prepare_setting
+  prepare_setting
   restart_others
 
   echo "MosDNS turn on"
@@ -143,10 +154,9 @@ stop_service() {
   echo "enabled="$enabled""
 
   config_load "MosDNS"
-    enabled=$(uci -q get MosDNS.MosDNS.enabled)
-    #redirect=$(uci -q get MosDNS.MosDNS.redirect)
-    [ "${enabled}" = "0" ] && restore_setting
-    restart_others
-    delcron
+  enabled=$(uci -q get MosDNS.MosDNS.enabled)
+  [ "${enabled}" = "0" ] && restore_setting
+  restart_others
+  delcron
 
 }

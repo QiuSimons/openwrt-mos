@@ -10,8 +10,11 @@ s.anonymous = true
 s:tab("basic", translate("Basic Setting"))
 enable = s:taboption("basic", Flag, "enabled", translate("Enable"))
 enable.rmempty = false
-enable = s:taboption("basic", Flag, "redirect", translate("Enable Redirect"))
-enable.rmempty = false
+redirect = s:taboption("basic", Flag, "redirect", translate("Enable Redirect"))
+redirect.rmempty = false
+autoconf = s:taboption("basic", Flag, "autoconf", translate("Enable AutoConfiguration"))
+autoconf.description = translate("Turning it on will make the necessary adjustments to other plug-in settings.")
+autoconf.rmempty = false
 
 s:tab("geo_update", translate("GEODATA Update"))
 enable = s:taboption("geo_update", Flag, "geo_auto_update", translate("Enable GEODATA Update"))
