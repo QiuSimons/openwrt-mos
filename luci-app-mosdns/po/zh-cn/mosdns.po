@@ -25,7 +25,7 @@ msgid "Enable DNS Redirect"
 msgstr "启用 DNS 重定向"
 
 msgid "View the YAML Configuration file used by this MosDNS. You can edit it as you own need; Beware the listening port 5335 was hardcoded into the init script, do not change that."
-msgstr "查看MosDNS所使用的YAML配置文件。你可以根据自己的需要进行编辑；但请注意，监听端口5335是硬编码在启动脚本中的，不要更改！"
+msgstr "查看 MosDNS 所使用的 YAML 配置文件。你可以根据自己的需要进行编辑；但请注意，监听端口5335是硬编码在启动脚本中的，不要更改！"
 
 msgid "Geodata Update"
 msgstr "数据库更新"
@@ -33,8 +33,8 @@ msgstr "数据库更新"
 msgid "Update Time (Every Day)"
 msgstr "更新时间（每天）"
 
-msgid "Update Time (Every Week)"
-msgstr "更新时间（每周）"
+msgid "Update Cycle"
+msgstr "更新周期"
 
 msgid "Every Day"
 msgstr "每天"
@@ -63,8 +63,8 @@ msgstr "每周日"
 msgid "Database Update"
 msgstr "数据库更新"
 
-msgid "Check Update"
-msgstr "检查更新"
+msgid "Check And Update"
+msgstr "检查并更新"
 
 msgid "Enable Auto Database Update"
 msgstr "启用数据库自动更新"
