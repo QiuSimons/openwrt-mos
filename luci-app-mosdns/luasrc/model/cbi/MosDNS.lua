@@ -1,4 +1,4 @@
-mp = Map("MosDNS", translate("MosDNS"))
+mp = Map("MosDNS")
 mp.title = translate("MosDNS")
 mp.description = translate("MosDNS is a 'programmable' DNS forwarder.")
 mp:section(SimpleSection).template = "MosDNS/MosDNS_status"
@@ -10,14 +10,18 @@ s.anonymous = true
 s:tab("basic", translate("Basic Setting"))
 enable = s:taboption("basic", Flag, "enabled", translate("Enable"))
 enable.rmempty = false
-redirect = s:taboption("basic", Flag, "redirect", translate("Enable Redirect"))
+
+redirect = s:taboption("basic", Flag, "redirect", translate("Enable DNS Redirect"))
 redirect.rmempty = false
+
 autoconf = s:taboption("basic", Flag, "autoconf", translate("Enable AutoConfiguration"))
 autoconf.description = translate("Turning it on will make the necessary adjustments to other plug-in settings.")
 autoconf.rmempty = false
 
-s:tab("geo_update", translate("GEODATA Update"))
-enable = s:taboption("geo_update", Flag, "geo_auto_update", translate("Enable GEODATA Update"))
+s:tab("geo_update", translate("Geodata Update"))
+enable = s:taboption("geo_update", Flag, "geo_auto_update", translate("Enable Auto Database Update"))
+enable.rmempty = false
+
 o = s:taboption("geo_update", ListValue, "geo_update_week_time", translate("Update Time (Every Week)"))
 o:value("*", translate("Every Day"))
 o:value("1", translate("Every Monday"))
@@ -29,22 +33,22 @@ o:value("6", translate("Every Saturday"))
 o:value("0", translate("Every Sunday"))
 o.default = 1
 
-o = s:taboption("geo_update", ListValue, "geo_update_day_time", translate("Update time (every day)"))
+update_time = s:taboption("geo_update", ListValue, "geo_update_day_time", translate("Update Time (Every Day)"))
 for t = 0, 23 do
-  o:value(t, t..":00")
+  update_time:value(t, t..":00")
 end
-o.default = 0
+update_time.default = 0
 
-o = s:taboption("geo_update", Button, translate("GEODATA Update"))
-o.title = translate("GEODATA Update")
-o.inputtitle = translate("Check And Update")
-o.inputstyle = "reload"
-o.write = function()
+data_update = s:taboption("geo_update", Button, "geo_update_database", translate("Database Update"))
+data_update.inputtitle = translate("Check Update")
+data_update.inputstyle = "reload"
+data_update.write = function()
   luci.sys.exec("/etc/mosdns/mosupdater.sh >/dev/null 2>&1 &")
 end
 
 s:tab("manual-config", translate("Manual Configuration"))
-config = s:taboption("manual-config", Value, "manual-config", translate("Manual Configuration"), translate("View the YAML Configuration file used by this MosDNS. You can edit it as you own need; Beware the listening port 5335 was hardcoded into the init script, do not change that."), "")
+config = s:taboption("manual-config", Value, "manual-config", translate("Manual Configuration"))
+config.description = translate("View the YAML Configuration file used by this MosDNS. You can edit it as you own need; Beware the listening port 5335 was hardcoded into the init script, do not change that.")
 config.template = "cbi/tvalue"
 config.rows = 25
 
