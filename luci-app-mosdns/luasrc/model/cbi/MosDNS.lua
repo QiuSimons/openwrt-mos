@@ -22,7 +22,7 @@ s:tab("geo_update", translate("Geodata Update"))
 enable = s:taboption("geo_update", Flag, "geo_auto_update", translate("Enable Auto Database Update"))
 enable.rmempty = false
 
-o = s:taboption("geo_update", ListValue, "geo_update_week_time", translate("Update Time (Every Week)"))
+o = s:taboption("geo_update", ListValue, "geo_update_week_time", translate("Update Cycle"))
 o:value("*", translate("Every Day"))
 o:value("1", translate("Every Monday"))
 o:value("2", translate("Every Tuesday"))
@@ -40,7 +40,7 @@ end
 update_time.default = 0
 
 data_update = s:taboption("geo_update", Button, "geo_update_database", translate("Database Update"))
-data_update.inputtitle = translate("Check Update")
+data_update.inputtitle = translate("Check And Update")
 data_update.inputstyle = "reload"
 data_update.write = function()
   luci.sys.exec("/etc/mosdns/mosupdater.sh >/dev/null 2>&1 &")
