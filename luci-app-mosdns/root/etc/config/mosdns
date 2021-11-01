@@ -1,5 +1,5 @@
 
-config MosDNS 'MosDNS'
+config mosdns 'mosdns'
 	option not_first_start '0'
 	option enabled '0'
 	option geo_auto_update '0'
