@@ -1,10 +1,10 @@
-m = Map("MosDNS")
+m = Map("mosdns")
 m.title = translate("MosDNS")
 m.description = translate("MosDNS is a 'programmable' DNS forwarder.")
 
-m:section(SimpleSection).template = "MosDNS/MosDNS_status"
+m:section(SimpleSection).template = "mosdns/mosdns_status"
 
-s = m:section(TypedSection, "MosDNS")
+s = m:section(TypedSection, "mosdns")
 s.addremove = false
 s.anonymous = true
 

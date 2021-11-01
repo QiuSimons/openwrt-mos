@@ -1,8 +1,8 @@
 <script type="text/javascript">
 	//<![CDATA[
-	XHR.poll(3, '<%=url([[admin]], [[services]], [[MosDNS]], [[status]])%>', null,
+	XHR.poll(3, '<%=url([[admin]], [[services]], [[mosdns]], [[status]])%>', null,
 		function(x, data) {
-			var tb = document.getElementById('MosDNS_status');
+			var tb = document.getElementById('mosdns_status');
 			if (data && tb) {
 				if (data.running) {
 					var links = '<em><b><font color=green>MosDNS <%:RUNNING%></font></b></em>';
@@ -22,7 +22,7 @@
 	}
 </style>
 <fieldset class="cbi-section">
-	<p id="MosDNS_status">
+	<p id="mosdns_status">
 		<em><%:Collecting data...%></em>
 	</p>
 </fieldset>

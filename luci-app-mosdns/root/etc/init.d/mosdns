@@ -12,15 +12,15 @@ CRON_FILE=/etc/crontabs/root
 #####  ONLY CHANGE THIS BLOCK  ######
 
 inital_conf() {
-  config_load "MosDNS"
-  config_get "enabled" "MosDNS" "enabled" "0"
+  config_load "mosdns"
+  config_get "enabled" "mosdns" "enabled" "0"
 }
 service_triggers() {
-  procd_add_reload_trigger "MosDNS"
+  procd_add_reload_trigger "mosdns"
 }
 
 restore_setting() {
-  redirect=$(uci -q get MosDNS.MosDNS.redirect)
+  redirect=$(uci -q get mosdns.mosdns.redirect)
   if [ $redirect -eq 1 ]; then
     sed -i "/list server/d" /etc/config/dhcp
     sed -i "/dhcp_option/d" /etc/config/dhcp
@@ -29,7 +29,7 @@ restore_setting() {
     uci set dhcp.@dnsmasq[0].filter_aaaa='1'
     uci commit dhcp
   fi
-  autoconf="$(uci -q get MosDNS.MosDNS.autoconf)"
+  autoconf="$(uci -q get mosdns.mosdns.autoconf)"
   if [ $autoconf -eq 1 ]; then
     uci set shadowsocksr.@global[0].pdnsd_enable='1'
     uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
@@ -44,7 +44,7 @@ restore_setting() {
 }
 
 prepare_setting() {
-  redirect=$(uci -q get MosDNS.MosDNS.redirect)
+  redirect=$(uci -q get mosdns.mosdns.redirect)
   if [ $redirect -eq 1 ]; then
     sed -i "/list server/d" /etc/config/dhcp
     uci add_list dhcp.@dnsmasq[0].server='127.0.0.1#5335'
@@ -57,7 +57,7 @@ prepare_setting() {
     uci set dhcp.@dnsmasq[0].filter_aaaa='0'
     uci commit dhcp
   fi
-  autoconf="$(uci -q get MosDNS.MosDNS.autoconf)"
+  autoconf="$(uci -q get mosdns.mosdns.autoconf)"
   if [ $autoconf -eq 1 ]; then
     uci set shadowsocksr.@global[0].pdnsd_enable='0'
     uci del shadowsocksr.@global[0].tunnel_forward
@@ -106,7 +106,7 @@ setcron() {
   chmod 755 /etc/mosdns/mosupdater.sh
   [ "$(tail -n1 /etc/crontabs/root | wc -l)" -eq 0 ] && [ -n "$(cat /etc/crontabs/root 2>/dev/null)" ] && echo >>/etc/crontabs/root
   [ -z "$(grep "mosupdater.sh" "$CRON_FILE" 2>/dev/null)" ] && {
-    [ "$(uci -q get MosDNS.MosDNS.geo_auto_update)" -eq 1 ] && echo "0 $(uci -q get MosDNS.MosDNS.geo_update_day_time) * * $(uci -q get MosDNS.MosDNS.geo_update_week_time) /etc/mosdns/mosupdater.sh" >>$CRON_FILE
+    [ "$(uci -q get mosdns.mosdns.geo_auto_update)" -eq 1 ] && echo "0 $(uci -q get mosdns.mosdns.geo_update_day_time) * * $(uci -q get mosdns.mosdns.geo_update_week_time) /etc/mosdns/mosupdater.sh" >>$CRON_FILE
   }
   crontab $CRON_FILE
 }
@@ -121,23 +121,23 @@ start_service() {
   # Reading config
   inital_conf
   if [ "$enabled" -eq 0 ]; then
-    firstblood=$(uci -q get MosDNS.MosDNS.not_first_start)
+    firstblood=$(uci -q get mosdns.mosdns.not_first_start)
     [ "${firstblood}" = "0" ] && restore_setting
     [ "${firstblood}" = "0" ] && restart_others
-    uci set MosDNS.MosDNS.not_first_start='1'
-    uci commit MosDNS
+    uci set mosdns.mosdns.not_first_start='1'
+    uci commit mosdns
     echo "MosDNS has turned off"
     return 1
   fi
   delcron
   setcron
-  procd_open_instance MOSDNS
+  procd_open_instance mosdns
   procd_set_param command $PROG -dir $RES_DIR -c $CONF
   procd_set_param user root
   procd_set_param stdout 1
   procd_set_param stderr 1
   procd_set_param respawn "${respawn_threshold:-3600}" "${respawn_timeout:-5}" "${respawn_retry:-5}"
-  procd_close_instance MOSDNS
+  procd_close_instance mosdns
 
   prepare_setting
   restart_others
@@ -153,8 +153,8 @@ stop_service() {
   echo "MosDNS turn off"
   echo "enabled="$enabled""
 
-  config_load "MosDNS"
-  enabled=$(uci -q get MosDNS.MosDNS.enabled)
+  config_load "mosdns"
+  enabled=$(uci -q get mosdns.mosdns.enabled)
   [ "${enabled}" = "0" ] && restore_setting
   restart_others
   delcron

@@ -1,6 +1,6 @@
-m = Map("MosDNS")
+m = Map("mosdns")
 
-s = m:section(TypedSection, "MosDNS")
+s = m:section(TypedSection, "mosdns")
 s.addremove = false
 s.anonymous = true
 
