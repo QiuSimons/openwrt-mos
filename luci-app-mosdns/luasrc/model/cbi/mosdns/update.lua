@@ -11,6 +11,9 @@ s.anonymous = true
 enable = s:option(Flag, "geo_auto_update", translate("Enable Auto Database Update"))
 enable.rmempty = false
 
+enable = s:option(Flag, "syncconfig", translate("Enable Config Update"))
+enable.rmempty = false
+
 o = s:option(ListValue, "geo_update_week_time", translate("Update Cycle"))
 o:value("all", translate("Every Day"))
 o:value("1", translate("Every Monday"))
