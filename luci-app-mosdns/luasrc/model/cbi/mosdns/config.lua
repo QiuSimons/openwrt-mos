@@ -4,7 +4,7 @@ s = m:section(TypedSection, "mosdns")
 s.addremove = false
 s.anonymous = true
 
-config = s:option(Value, "manual-config", translate("Manual Configuration"))
+config = s:option(TextValue, "manual-config")
 config.description = translate("View the YAML Configuration file used by this MosDNS. You can edit it as you own need; Beware the listening port 5335 was hardcoded into the init script, do not change that.")
 config.template = "cbi/tvalue"
 config.rows = 25
