@@ -21,7 +21,7 @@ jobs:
     - name: Run generate script
       run: | 
         wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geoip.dat
-        wget https://github.com/Loyalsoldier/v2ray-rules-dat/raw/release/geosite.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geosite.dat
+        wget https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geosite.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geosite.dat
     - name: Commit file
       run: |
         git config --global user.email simonsqiu@foxmail.com
