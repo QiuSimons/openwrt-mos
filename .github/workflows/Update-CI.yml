@@ -25,6 +25,7 @@ jobs:
         wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext' -nv -O ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         wget -qO - 'https://github.com/VeleSila/yhosts/raw/master/hosts' |  grep 0.0.0.0 > ./luci-app-mosdns/root/etc/mosdns/chn.txt
         sed -i 's,0.0.0.0 ,,g' ./luci-app-mosdns/root/etc/mosdns/chn.txt
+        sed -i '/#/d' ./luci-app-mosdns/root/etc/mosdns/chn.txt
         cat ./luci-app-mosdns/root/etc/mosdns/chn.txt ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/chn.txt
