@@ -22,7 +22,12 @@ jobs:
       run: | 
         wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geoip.dat
         wget https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geosite.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geosite.dat
-        wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext' -nv -O ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
+        wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext' -nv -O ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
+        wget -qO - 'https://cdn.jsdelivr.net/gh/neoFelhz/neohosts@gh-pages/basic/hosts' |  grep 0.0.0.0 > ./luci-app-mosdns/root/etc/mosdns/neo.txt
+        sed -i 's,0.0.0.0 ,,g' ./luci-app-mosdns/root/etc/mosdns/neo.txt
+        cat ./luci-app-mosdns/root/etc/mosdns/neo.txt ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
+        rm -f ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
+        rm -f ./luci-app-mosdns/root/etc/mosdns/neo.txt
     - name: Commit file
       run: |
         git config --global user.email simonsqiu@foxmail.com
