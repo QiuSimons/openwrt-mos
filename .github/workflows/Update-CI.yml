@@ -6,9 +6,9 @@ on:
   watch:
     types: [started]
   #push:
-  #  branches: 
+  #  branches:
   #    - master
-      
+
 jobs:
   build:
 
@@ -17,9 +17,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    
+
     - name: Run generate script
-      run: | 
+      run: |
         wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geoip.dat
         wget https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geosite.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geosite.dat
         wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext' -nv -O ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
@@ -29,18 +29,22 @@ jobs:
         cat ./luci-app-mosdns/root/etc/mosdns/chn.txt ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/chn.txt
+        latest_commit="$(curl -s https://github.com/IrineSistiana/mosdns/commits/main | grep -E '"oid"' | cut -b 44-50 | sed -n 1p)"
+        sed -i '/PKG_VERSION:/d' ./mosdns/Makefile
+        sed -i '7 a PKG_VERSION:=$latest_commit' ./mosdns/Makefile
+
     - name: Commit file
       run: |
         git config --global user.email simonsqiu@foxmail.com
         git config --global user.name SimonsQiu
         git add .
         git commit -m "Update `date +%Y/%m/%d\ %H:%M:%S\ %Z`" -a
-        
+
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
-        
+
     - name: Cleanup Workflow Logs
       uses: Mattraks/delete-workflow-runs@main
       with:
