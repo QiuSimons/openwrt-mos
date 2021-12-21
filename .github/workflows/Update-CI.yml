@@ -29,7 +29,7 @@ jobs:
         cat ./luci-app-mosdns/root/etc/mosdns/chn.txt ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         rm -f ./luci-app-mosdns/root/etc/mosdns/chn.txt
-        latest_commit="$(curl -s https://github.com/IrineSistiana/mosdns/commits/main | grep -E '"oid"' | cut -b 44-50 | sed -n 1p)"
+        latest_commit="$(curl -s https://github.com/IrineSistiana/mosdns/commits/main | grep -E '"Copy the full SHA"' | cut -b 28-34 | sed -n 1p)"
         sed -i '/PKG_VERSION:/d' ./mosdns/Makefile
         sed -i "7 a PKG_VERSION:=$latest_commit" ./mosdns/Makefile
 
