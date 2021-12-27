@@ -32,6 +32,7 @@ jobs:
         latest_commit="$(curl -s https://github.com/IrineSistiana/mosdns/commits/main | grep -E '"Copy the full SHA"' | cut -b 28-34 | sed -n 1p)"
         sed -i '/PKG_VERSION:/d' ./mosdns/Makefile
         sed -i "7 a PKG_VERSION:=$latest_commit" ./mosdns/Makefile
+        chmod -R 755 *.sh
 
     - name: Commit file
       run: |
