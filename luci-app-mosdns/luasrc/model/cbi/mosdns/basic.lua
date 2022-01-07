@@ -11,11 +11,31 @@ s.anonymous = true
 enable = s:option(Flag, "enabled", translate("Enable"))
 enable.rmempty = false
 
+configfile = s:option(ListValue, "configfile", translate("MosDNS Config File"))
+configfile:value("./def_config.yaml", translate("Def Config"))
+configfile:value("./cus_config.yaml", translate("Cus Config"))
+configfile.default = "./def_config.yaml"
+
+loglv = s:option(ListValue, "loglv", translate("Log Level"))
+loglv:value("debug")
+loglv:value("info")
+loglv:value("warn")
+loglv:value("error")
+loglv.default = "error"
+loglv:depends( "configfile", "./def_config.yaml")
+
+logfile = s:option(Value, "logfile", translate("MosDNS Log File"))
+logfile.placeholder = "/dev/null"
+logfile.default = "/dev/null"
+logfile:depends( "configfile", "./def_config.yaml")
+
 redirect = s:option(Flag, "redirect", translate("Enable DNS Redirect"))
-redirect.rmempty = false
+redirect:depends( "configfile", "./def_config.yaml")
+redirect.default = true
 
 adblock = s:option(Flag, "adblock", translate("Enable DNS ADblock"))
-adblock.rmempty = false
+adblock:depends( "configfile", "./def_config.yaml")
+adblock.default = true
 
 set_config = s:option(Button, "set_config", translate("DNS Helper"))
 set_config.inputtitle = translate("Apply")
@@ -24,6 +44,7 @@ set_config.description = translate("This will make the necessary adjustments to 
 set_config.write = function()
   luci.sys.exec("/etc/mosdns/set.sh >/dev/null 2>&1 &")
 end
+set_config:depends( "configfile", "./def_config.yaml")
 
 unset_config = s:option(Button, "unset_config", translate("Revert Settings"))
 unset_config.inputtitle = translate("Apply")
