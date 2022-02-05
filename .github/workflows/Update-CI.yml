@@ -34,6 +34,7 @@ jobs:
         curl -s -L https://easylist.to/easylist/easyprivacy.txt https://easylist-downloads.adblockplus.org/easylist_noelemhide.txt https://easylist-downloads.adblockplus.org/easylistchina.txt https://github.com/cjx82630/cjxlist/raw/master/cjx-annoyance.txt > ./luci-app-mosdns/root/etc/mosdns/adblock.host
         sort -u ./luci-app-mosdns/root/etc/mosdns/adblock.host | grep ^\|\|.*\^$ | grep -v \/ > ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp
         sed 's/[\|^]//g' < ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
+        sed -i '/:/d' ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
         rm ./luci-app-mosdns/root/etc/mosdns/adblock.host ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp
         
         latest_commit="$(curl -s https://github.com/IrineSistiana/mosdns/commits/main | grep -E '"Copy the full SHA"' | cut -b 28-34 | sed -n 1p)"
