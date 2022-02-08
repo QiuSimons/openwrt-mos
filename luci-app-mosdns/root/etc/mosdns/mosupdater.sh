@@ -16,6 +16,6 @@ wget https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/r
 find /tmp/mosdns/* -size -2k -exec rm {} \;
 fi
 chmod -R  755  /tmp/mosdns
-cp -rf /tmp/mosdns/* /etc/mosdns
+cp -rf /tmp/mosdns/* /usr/share/v2ray
 rm -rf  /tmp/mosdns
 exit 0
