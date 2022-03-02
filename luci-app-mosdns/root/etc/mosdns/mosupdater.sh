@@ -18,6 +18,6 @@ if [ "$syncconfig" -eq 1 ]; then
 	getdat def_config.yaml
 	find "$TMPDIR"/* -size -2k -exec rm {} \;
 fi
-cp -rf "$TMPDIR"/* /etc/mosdns
+cp -rf "$TMPDIR"/* /usr/share/v2ray
 rm -rf "$TMPDIR"
 exit 0

@@ -13,9 +13,9 @@ exist() {
 
 getdat() {
   if exist curl; then
-    curl -fSLo "$TMPDIR/$1" "https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/luci-app-mosdns/root/etc/mosdns/$1"
+    curl -fSLo "$TMPDIR/$1" "https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat"
   else
-    wget "https://gh.404delivr.workers.dev/https://github.com/QiuSimons/openwrt-mos/raw/master/luci-app-mosdns/root/etc/mosdns/$1" -nv -O "$TMPDIR/$1"
+    wget "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat" -nv -O "$TMPDIR/$1"
   fi
 }
 
