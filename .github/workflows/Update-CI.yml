@@ -20,8 +20,8 @@ jobs:
 
     - name: Run generate script
       run: |
-        wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geoip.dat
-        wget https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geosite.dat -nv -O ./luci-app-mosdns/root/etc/mosdns/geosite.dat
+        wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./dat/geoip.dat
+        wget https://raw.githubusercontent.com/Loyalsoldier/domain-list-custom/release/geosite.dat -nv -O ./dat/geosite.dat
         
         #wget 'https://pgl.yoyo.org/adservers/serverlist.php?hostformat=nohtml&showintro=0&mimetype=plaintext' -nv -O ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         #wget -qO - 'https://github.com/VeleSila/yhosts/raw/master/hosts' |  grep 0.0.0.0 > ./luci-app-mosdns/root/etc/mosdns/chn.txt
@@ -36,6 +36,8 @@ jobs:
         sort -u ./luci-app-mosdns/root/etc/mosdns/adblock.host | grep ^\|\|.*\^$ | grep -v \/ > ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp
         sed 's/[\|^]//g' < ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp > ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp2
         cat ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp2 ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
+        cp -rf ./luci-app-mosdns/root/etc/mosdns/serverlist.txt ./dat/serverlist.txt
+        cp -rf ./luci-app-mosdns/root/etc/mosdns/def_config.yaml ./dat/def_config.yaml
         sed -i '/:/d' ./luci-app-mosdns/root/etc/mosdns/serverlist.txt
         rm ./luci-app-mosdns/root/etc/mosdns/adblock.host ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp ./luci-app-mosdns/root/etc/mosdns/serverlist.tmp2 ./luci-app-mosdns/root/etc/mosdns/yoyo.txt
         
