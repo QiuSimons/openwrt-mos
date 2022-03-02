@@ -52,6 +52,14 @@ getdat() {
 	}
 }
 
+rename_new() {
+	for DAT in 'geoip' 'geosite'; do
+		mv "${TEMPDIR}/$DAT.dat.new" "${WORKDIR}/$DAT.dat"
+		# rm "${TEMPDIR}/$DAT.dat.new"
+		rm "${TEMPDIR}/$DAT.dat.sha256sum.new"
+	done
+}
+
 getdns() {
   if [ "$2" == "inactive" ]; then
     ubus call network.interface.wan status | jsonfilter -e "@['inactive']['dns-server'][$1]"
