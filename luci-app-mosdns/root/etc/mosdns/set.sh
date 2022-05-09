@@ -26,8 +26,9 @@ if L_exist pw; then
 	elif [ "$1" = "" ]; then
 		uci set passwall.@global[0].dns_mode='udp'
 		uci set passwall.@global[0].dns_forward='127.0.0.1:5335'
+		uci set passwall.@global[0].remote_dns='127.0.0.1:5335'
 		uci del passwall.@global[0].dns_cache
-		uci set passwall.@global[0].chinadns_ng='0'
+		uci del passwall.@global[0].chinadns_ng
 	fi
 	uci commit passwall
 	if [ "$(pid passwall)" ]; then
