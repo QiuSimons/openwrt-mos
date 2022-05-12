@@ -72,8 +72,8 @@ plugin:
     type: fast_forward
     args:
       upstream:
-        - addr: "tls://8.8.4.4"
-        - addr: "tls://9.9.9.9"
+        - addr: ${{ uci -q get mosdns.mosdns.remote_dns1 }}
+        - addr: ${{ uci -q get mosdns.mosdns.remote_dns2 }}
 
   - tag: lazy_cache
     type: cache

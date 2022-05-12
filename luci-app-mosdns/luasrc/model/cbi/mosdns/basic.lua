@@ -29,6 +29,31 @@ logfile.placeholder = "/dev/null"
 logfile.default = "/dev/null"
 logfile:depends( "configfile", "./def_config.yaml")
 
+remote_dns = s:option(Value, "remote_dns1", translate("Remote DNS"))
+remote_dns.rmempty = false
+remote_dns.default = "tls://8.8.4.4"
+remote_dns:value("tls://8.8.8.8", "8.8.8.8 (Google DNS)")
+remote_dns:value("tls://8.8.4.4", "8.8.4.4 (Google DNS)")
+remote_dns:value("tls://9.9.9.9", "9.9.9.9 (Quad9 DNS)")
+remote_dns:value("tls://1.1.1.1", "1.1.1.1 (CloudFlare DNS)")
+remote_dns:value("tls://185.222.222.222", "185.222.222.222 (DNS.SB)")
+remote_dns:value("tls://45.11.45.11", "45.11.45.11 (DNS.SB)")
+remote_dns:value("208.67.222.222", "208.67.222.222 (Open DNS)")
+remote_dns:value("208.67.220.220", "208.67.220.220 (Open DNS)")
+remote_dns:depends( "configfile", "./def_config.yaml")
+remote_dns = s:option(Value, "remote_dns2", " ")
+remote_dns.rmempty = false
+remote_dns.default = "tls://9.9.9.9"
+remote_dns:value("tls://8.8.8.8", "8.8.8.8 (Google DNS)")
+remote_dns:value("tls://8.8.4.4", "8.8.4.4 (Google DNS)")
+remote_dns:value("tls://9.9.9.9", "9.9.9.9 (Quad9 DNS)")
+remote_dns:value("tls://1.1.1.1", "1.1.1.1 (CloudFlare DNS)")
+remote_dns:value("tls://185.222.222.222", "185.222.222.222 (DNS.SB)")
+remote_dns:value("tls://45.11.45.11", "45.11.45.11 (DNS.SB)")
+remote_dns:value("208.67.222.222", "208.67.222.222 (Open DNS)")
+remote_dns:value("208.67.220.220", "208.67.220.220 (Open DNS)")
+remote_dns:depends( "configfile", "./def_config.yaml")
+
 redirect = s:option(Flag, "redirect", translate("Enable DNS Redirect"))
 redirect:depends( "configfile", "./def_config.yaml")
 redirect.default = true
