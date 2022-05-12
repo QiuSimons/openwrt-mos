@@ -22,12 +22,15 @@ plugin:
     type: sequence
     args:
       exec:
+        - query_is_hosts_domain
+        - query_is_redirect_domain
         - if:
             - query_is_whitelist_domain
           exec:
             - forward_local
             - _return
         - if:
+            - query_is_blocklist_domain
             - query_is_ad_domain
             - qtype65
           exec:
@@ -67,6 +70,24 @@ plugin:
     args:
       domain:
         - "ext:./whitelist.txt"
+
+  - tag: query_is_blocklist_domain
+    type: query_matcher
+    args:
+      domain:
+        - "ext:/etc/mosdns/rule/blocklist.txt"
+
+  - tag: query_is_hosts_domain
+    type: hosts
+    args:
+      hosts:
+        - "ext:/etc/mosdns/rule/hosts.txt"
+
+  - tag: query_is_redirect_domain
+    type: redirect
+    args:
+      rule:
+        - "ext:/etc/mosdns/rule/redirect.txt"
 
   - tag: forward_remote
     type: fast_forward

@@ -10,7 +10,8 @@ function index()
 	page.acl_depends = { "luci-app-mosdns" }
 	
 	entry({"admin", "services", "mosdns", "basic"}, cbi("mosdns/basic"), _("Basic Setting"), 1).leaf = true
-	entry({"admin", "services", "mosdns", "update"}, cbi("mosdns/update"), _("Geodata Update"), 2).leaf = true
+	entry({"admin", "services", "mosdns", "rule_list"}, cbi("mosdns/rule_list"), _("Rule List"), 2).leaf = true
+	entry({"admin", "services", "mosdns", "update"}, cbi("mosdns/update"), _("Geodata Update"), 3).leaf = true
 	entry({"admin", "services", "mosdns", "status"}, call("act_status")).leaf = true
 end
 
