@@ -16,6 +16,12 @@ configfile:value("./def_config.yaml", translate("Def Config"))
 configfile:value("./cus_config.yaml", translate("Cus Config"))
 configfile.default = "./def_config.yaml"
 
+listenport = s:option(Value, "listen_port", translate("Listen port"))
+listenport.datatype = "and(port,min(1))"
+listenport.default = 5335
+listenport.rmempty = false
+listenport:depends( "configfile", "./def_config.yaml")
+
 loglv = s:option(ListValue, "loglv", translate("Log Level"))
 loglv:value("debug")
 loglv:value("info")
