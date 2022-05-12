@@ -23,16 +23,16 @@ listenport.rmempty = false
 listenport:depends( "configfile", "./def_config.yaml")
 
 loglv = s:option(ListValue, "loglv", translate("Log Level"))
-loglv:value("debug")
-loglv:value("info")
-loglv:value("warn")
-loglv:value("error")
-loglv.default = "error"
+loglv:value("debug", translate("Debug"))
+loglv:value("info", translate("Info"))
+loglv:value("warn", translate("Warning"))
+loglv:value("error", translate("Error"))
+loglv.default = "info"
 loglv:depends( "configfile", "./def_config.yaml")
 
 logfile = s:option(Value, "logfile", translate("MosDNS Log File"))
-logfile.placeholder = "/dev/null"
-logfile.default = "/dev/null"
+logfile.placeholder = "/tmp/mosdns.txt"
+logfile.default = "/tmp/mosdns.txt"
 logfile:depends( "configfile", "./def_config.yaml")
 
 remote_dns = s:option(Value, "remote_dns1", translate("Remote DNS"))
