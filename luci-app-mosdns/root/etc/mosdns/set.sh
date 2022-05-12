@@ -8,9 +8,14 @@ if L_exist ssrp; then
 		uci set shadowsocksr.@global[0].pdnsd_enable='1'
 		uci set shadowsocksr.@global[0].tunnel_forward='8.8.4.4:53'
 	elif [ "$1" = "" ]; then
-		uci set shadowsocksr.@global[0].pdnsd_enable='0'
-		uci del shadowsocksr.@global[0].tunnel_forward
-		uci del shadowsocksr.@global[0].adblock_url
+		if [ "$(uci -q get mosdns.mosdns.listen_port)" = "5335" ]; then
+			uci set shadowsocksr.@global[0].pdnsd_enable='0'
+			uci del shadowsocksr.@global[0].tunnel_forward
+			uci del shadowsocksr.@global[0].adblock_url
+		else
+			uci set shadowsocksr.@global[0].pdnsd_enable='1'
+			uci set shadowsocksr.@global[0].tunnel_forward="127.0.0.1:$(uci -q get mosdns.mosdns.listen_port)"
+		fi
 	fi
 	uci commit shadowsocksr
 	if [ "$(pid ssrplus)" ]; then
