@@ -4,7 +4,7 @@
 
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=mosdns_neo
+PKG_NAME:=mosdns-neo
 PKG_VERSION:=cf9f10f
 PKG_RELEASE:=$(AUTORELEASE)
 
