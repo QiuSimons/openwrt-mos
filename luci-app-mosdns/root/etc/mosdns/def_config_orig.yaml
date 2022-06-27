@@ -32,7 +32,7 @@ data_providers:
   - tag:                   local_ptr
     file:                  "./rule/local-ptr.txt"
     auto_reload:           true
-    
+
   - tag:                   redirect
     file:                  "./rule/redirect.txt"
     auto_reload:           true
@@ -124,7 +124,6 @@ plugins:
     args:
       exec:
         - _misc_optm
-        - _single_flight
         - lazy_cache
         - query_is_hosts_domain
         - query_is_redirect_domain
