@@ -59,8 +59,8 @@ plugin:
     type: fast_forward
     args:
       upstream:
-        - addr: ${{ ./dns.sh 0 }}
-        - addr: ${{ ./dns.sh 1 }}
+        - addr: ${{ ./lib.sh dns 0 }}
+        - addr: ${{ ./lib.sh dns 1 }}
 
   - tag: query_is_whitelist_domain
     type: query_matcher
