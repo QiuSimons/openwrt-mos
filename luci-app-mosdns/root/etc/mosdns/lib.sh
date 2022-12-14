@@ -1,4 +1,5 @@
 #!/bin/bash
+# shellcheck disable=SC2034  # Unused variables left for readability
 LAN_DNS0="119.29.29.29"
 LAN_DNS1="101.226.4.6"
 WAN_DNS0="8.8.4.4"
@@ -13,7 +14,7 @@ logfile_path() (
     uci -q get mosdns.mosdns.logfile
   else
     [ ! -f /etc/mosdns/cus_config.yaml ] && exit 1
-    cat /etc/mosdns/cus_config.yaml | grep -A 4 log | grep file | awk -F ":" '{print $2}' | sed 's/\"//g;s/ //g'
+    grep < /etc/mosdns/cus_config.yaml -A 4 log | grep file | awk -F ":" '{print $2}' | sed 's/\"//g;s/ //g'
   fi
 )
 
@@ -63,11 +64,11 @@ pid() {
 
 if [ "$1" == "logfile" ]; then
   logfile_path
-elif [ "$1" == "dns" ] && [ "$2" -le 1 ]; then
-if [ "$(ifconfig | grep -c wan)" = 0 ]; then
-  bakdns "$2"
-  exit 0
-fi
+elif [[ "$1" == "dns" && "$2" -le 1 ]]; then
+  if [ "$(ifconfig | grep -c wan)" = 0 ]; then
+    bakdns "$2"
+    exit 0
+  fi
   if [[ "$(getdns 0)" =~ ^127\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
     getdns "$2" inactive
   elif [[ "$(getdns "$2")" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
