@@ -1,6 +1,5 @@
 #!/bin/bash -e
-# shellcheck source=/etc/mosdns/lib.sh
-
+# shellcheck source=/dev/null
 set -o pipefail
 source /etc/mosdns/lib.sh
 

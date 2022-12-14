@@ -1,6 +1,5 @@
 #!/bin/bash
-# shellcheck source=/etc/mosdns/lib.sh
-
+# shellcheck source=/dev/null
 source /etc/mosdns/lib.sh
 
 if uci_ext ssrp; then
