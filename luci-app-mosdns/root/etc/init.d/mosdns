@@ -78,14 +78,6 @@ adblock() {
 }
 
 v4config() {
-  #  见https://openwrt.org/docs/guide-developer/packages#file_installation_macros
-  #  这基本上意味着luci包中的文件在释放时都隐式执行了775权限的设置
-  #  且只要在linux的开发者正确设置了文件的权限，那么在win下只要不瞎搞应该都不会有什么问题，再者还有openwrt的打包机制兜底。
-  #  chmod -R 755 /etc/mosdns/*.sh
-  #  win下的琐事应该在开发阶段就处理，而不是在上级跑业务时处理，而且但凡有个靠谱的编辑器都不会把Unix的换行格式改成Win的吧。
-  #  且我已经处理。
-  #  sed -i 's/\r//g' /etc/mosdns/dns.sh /etc/mosdns/lib.sh
-  #  sed -i 's/\r$//' /etc/mosdns/dns.sh /etc/mosdns/lib.sh
   rm -rf /etc/mosdns/def_config.yaml
   cp -rf /etc/mosdns/def_config_orig.yaml /etc/mosdns/def_config.yaml
   sed -i "s,listenport,$(uci -q get mosdns.mosdns.listen_port),g" /etc/mosdns/def_config.yaml
