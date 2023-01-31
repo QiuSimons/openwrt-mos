@@ -18,12 +18,12 @@ rm -rf "$TMPDIR"
 syncconfig=$(uci -q get mosdns.mosdns.syncconfig)
 if [ "$syncconfig" -eq 1 ]; then
   TMPDIR=$(mktemp -d) || exit 2
-  getdat def_config_v4.yaml
+  getdat def_config_v5.yaml
 
-  if [ "$(grep -o plugin "$TMPDIR"/def_config_v4.yaml | wc -l)" -eq 0 ]; then
-    rm -rf "$TMPDIR"/def_config_v4.yaml
+  if [ "$(grep -o plugin "$TMPDIR"/def_config_v5.yaml | wc -l)" -eq 0 ]; then
+    rm -rf "$TMPDIR"/def_config_v5.yaml
   else
-    mv "$TMPDIR"/def_config_v4.yaml "$TMPDIR"/def_config_orig.yaml
+    mv "$TMPDIR"/def_config_v5.yaml "$TMPDIR"/def_config_orig.yaml
   fi
   cp -rf "$TMPDIR"/* /etc/mosdns
   rm -rf "$TMPDIR"

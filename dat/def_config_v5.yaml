@@ -26,7 +26,7 @@ plugins:
     type: domain_set
     args:
       files:                        # 从文本文件载入
-        - "/etc/mosdns/rule/geosite_no_cn.txt"
+        - "/etc/mosdns/rule/geolocation-no-cn.txt"
 
   # 白名单 加入的域名始终允许使用 “本地 DNS” 进行解析
   - tag: whitelist
@@ -67,7 +67,7 @@ plugins:
   - tag: cache
     type: cache
     args:
-      size: 200000
+      size: cache_size
       lazy_cache_ttl: 259200
 
   # 转发至本地服务器
