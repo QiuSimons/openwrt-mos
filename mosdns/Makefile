@@ -5,31 +5,43 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=mosdns
-PKG_VERSION:=2ecf930
-PKG_RELEASE:=$(AUTORELEASE)
-
-PKG_SOURCE:=mosdns-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/IrineSistiana/mosdns/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=skip
+PKG_VERSION:=5.1.3
+PKG_RELEASE:=1
 
 PKG_LICENSE:=GPL-3.0
 PKG_LICENSE_FILE:=LICENSE
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 
-PKG_CONFIG_DEPENDS:= \
-	CONFIG_MOSDNS_COMPRESS_GOPROXY \
-	CONFIG_MOSDNS_COMPRESS_UPX
-
-PKG_BUILD_DEPENDS:=golang/host upx/host
-PKG_BUILD_PARALLEL:=1
-PKG_USE_MIPS16:=0
-
-GO_PKG:=github.com/IrineSistiana/mosdns
-GO_PKG_LDFLAGS:=-s -w
-GO_PKG_LDFLAGS_X:=main.version=$(PKG_VERSION)
+# OpenWrt ARCH: arm, aarch64, i386, x86_64, mips, mipsel
+# Golang ARCH: armv[5-7], armv8, 386, amd64, mips, mipsle
+PKG_ARCH:=$(ARCH)
+ifeq ($(ARCH),mips)
+	PKG_ARCH:=mips-softfloat
+endif
+ifeq ($(ARCH),mipsel)
+	PKG_ARCH:=mipsle-softfloat
+endif
+ifeq ($(ARCH),x86_64)
+	PKG_ARCH:=amd64
+endif
+ifeq ($(ARCH),arm)
+	PKG_ARCH:=arm-6
+	ifneq ($(BOARD),bcm53xx)
+		PKG_ARCH:=arm-7
+	endif
+	ifeq ($(BOARD),kirkwood)
+		PKG_ARCH:=arm-5
+	endif
+endif
+ifeq ($(ARCH),aarch64)
+	PKG_ARCH:=arm64
+endif
+PKG_SOURCE:=mosdns-linux-$(PKG_ARCH).zip
+PKG_SOURCE_URL:=https://github.com/IrineSistiana/mosdns/releases/download/v$(PKG_VERSION)/
+PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
+PKG_HASH:=skip
 
 include $(INCLUDE_DIR)/package.mk
-include $(TOPDIR)/feeds/packages/lang/golang/golang-package.mk
 
 define Package/mosdns/Default
   SECTION:=net
@@ -41,50 +53,33 @@ endef
 
 define Package/mosdns
   $(call Package/mosdns/Default)
-  DEPENDS:=$(GO_ARCH_DEPENDS)
 endef
 
 define Package/mosdns-v5
   $(call Package/mosdns/Default)
-  DEPENDS:=$(GO_ARCH_DEPENDS)
 endef
 
-define Package/mosdns/config
-config MOSDNS_COMPRESS_GOPROXY
-	bool "Compiling with GOPROXY proxy"
-	default n
-
-config MOSDNS_COMPRESS_UPX
-	bool "Compress executable files with UPX"
-	default y
+define Package/mosdns/description
+	A plug-in DNS forwarder/splitter
 endef
-
-ifeq ($(CONFIG_MOSDNS_COMPRESS_GOPROXY),y)
-	export GO111MODULE=on
-	export GOPROXY=https://mirrors.aliyun.com/goproxy/
-endif
 
 define Build/Prepare
-	$(call Build/Prepare/Default)
+	unzip $(DL_DIR)/$(PKG_SOURCE) -d $(DL_DIR)/mosdns
 endef
 
-GO_PKG_TARGET_VARS:=$(filter-out CGO_ENABLED=%,$(GO_PKG_TARGET_VARS)) CGO_ENABLED=0
-
 define Build/Compile
-	$(call GoPackage/Build/Compile)
-ifneq ($(CONFIG_MOSDNS_COMPRESS_UPX),)
-	$(STAGING_DIR_HOST)/bin/upx --lzma --best $(GO_PKG_BUILD_BIN_DIR)/mosdns
-endif
+	echo "$(PKG_NAME) Compile Skiped!"
 endef
 
 define Package/mosdns/install
-	$(call GoPackage/Package/Install/Bin,$(1))
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(DL_DIR)/mosdns/mosdns $(1)/usr/bin
 endef
 
 define Package/mosdns-v5/install
-	$(call GoPackage/Package/Install/Bin,$(1))
+	$(INSTALL_DIR) $(1)/usr/bin
+	$(INSTALL_BIN) $(DL_DIR)/mosdns/mosdns $(1)/usr/bin
 endef
 
-$(eval $(call GoBinPackage,mosdns))
 $(eval $(call BuildPackage,mosdns))
 $(eval $(call BuildPackage,mosdns-v5))
