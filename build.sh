@@ -5,8 +5,7 @@ echo "src-link QiuSimons /home/build/openwrt/QiuSimons" >> ./feeds.conf
 ./scripts/feeds update QiuSimons
 ./scripts/feeds update packages
 make defconfig
-./scripts/feeds install -a -p QiuSimons
-./scripts/feeds install -a -p packages
+./scripts/feeds install -p QiuSimons -f mosdns
 
 make package/mosdns/download V=s
 make package/mosdns/check V=s
