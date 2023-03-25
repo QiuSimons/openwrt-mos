@@ -137,7 +137,6 @@ start_service() {
 
 stop_service() {
 
-  pgrep -f /usr/bin/mosdns | xargs kill -9
   echo "MosDNS turn off"
   echo "enabled=$enabled"
 
