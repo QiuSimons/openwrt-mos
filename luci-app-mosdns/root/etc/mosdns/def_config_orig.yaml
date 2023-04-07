@@ -154,7 +154,6 @@ plugins:
     args:
       - matches: qname $whitelist
         exec: $local_sequence
-      - exec: jump has_resp_sequence
 
   # 拒绝名单
   - tag: query_is_reject_domain
@@ -178,11 +177,15 @@ plugins:
     args:
       - exec: $hosts
       - exec: jump has_resp_sequence
+      - matches:
+        - "!qname $blocklist"
+        - "!qname $adlist"
+        exec: $cache
       - exec: $redirect
       - exec: jump has_resp_sequence
       - exec: $query_is_whitelist_domain
+      - exec: jump has_resp_sequence
       - exec: $query_is_reject_domain
-      - exec: $cache
       - exec: jump has_resp_sequence
       - exec: $query_is_local_domain
       - exec: jump has_resp_sequence
