@@ -42,6 +42,13 @@ plugins:
       files:                        # 从文本文件载入
         - "/etc/mosdns/rule/blocklist.txt"
 
+  # DDNS域名 加入的域名强制 TTL 5 且不进行缓存
+  - tag: ddnslist
+    type: domain_set
+    args:
+      files:                        # 从文本文件载入
+        - "/etc/mosdns/rule/ddnslist.txt"
+
   # 自定义 Hosts 重写
   - tag: hosts
     type: hosts
@@ -102,11 +109,13 @@ plugins:
     args:
       - exec: prefer_ipv4
       - exec: $forward_remote
-  
+
   # 有响应终止返回
   - tag: has_resp_sequence
     type: sequence
     args:
+      - matches: qname $ddnslist
+        exec: ttl 5-5
       - matches: has_resp
         exec: accept
 
@@ -148,6 +157,13 @@ plugins:
       - matches: qname $geosite_no_cn
         exec: $remote_sequence
 
+  # 查询 DDNS 域名
+  - tag: query_is_ddns_domain
+    type: sequence
+    args:
+      - matches: qname $ddnslist
+        exec: $local_sequence
+
   # 查询白名单
   - tag: query_is_whitelist_domain
     type: sequence
@@ -178,10 +194,13 @@ plugins:
       - exec: $hosts
       - exec: jump has_resp_sequence
       - matches:
+        - "!qname $ddnslist"
         - "!qname $blocklist"
         - "!qname $adlist"
         exec: $cache
       - exec: $redirect
+      - exec: jump has_resp_sequence
+      - exec: $query_is_ddns_domain
       - exec: jump has_resp_sequence
       - exec: $query_is_whitelist_domain
       - exec: jump has_resp_sequence
