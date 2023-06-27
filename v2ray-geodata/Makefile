@@ -5,26 +5,24 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=v2ray-geodata
-PKG_RELEASE:=1
+PKG_RELEASE:=$(shell date "+%Y-%m-%d")
 
 PKG_LICENSE_FILES:=LICENSE
 PKG_MAINTAINER:=Tianling Shen <cnsztl@immortalwrt.org>
 
 include $(INCLUDE_DIR)/package.mk
 
-GEOIP_VER:=202212220107
-GEOIP_FILE:=geoip.dat.$(GEOIP_VER)
+GEOIP_FILE:=geoip.dat
 define Download/geoip
-  URL:=https://github.com/Loyalsoldier/geoip/releases/latest/download
-  URL_FILE:=geoip-only-cn-private.dat
+  URL:=https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/
+  URL_FILE:=geoip.dat
   FILE:=$(GEOIP_FILE)
   HASH:=skip
 endef
 
-GEOSITE_VER:=202212242209
-GEOSITE_FILE:=geosite.dat.$(GEOSITE_VER)
+GEOSITE_FILE:=geosite.dat
 define Download/geosite
-  URL:=https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download
+  URL:=https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/
   URL_FILE:=geosite.dat
   FILE:=$(GEOSITE_FILE)
   HASH:=skip
@@ -41,14 +39,14 @@ endef
 define Package/v2ray-geoip
   $(call Package/v2ray-geodata/template)
   TITLE:=GeoIP List for V2Ray
-  VERSION:=$(GEOIP_VER)-$(PKG_RELEASE)
+  VERSION:=$(PKG_RELEASE)
   LICENSE:=CC-BY-SA-4.0
 endef
 
 define Package/v2ray-geosite
   $(call Package/v2ray-geodata/template)
   TITLE:=Geosite List for V2Ray
-  VERSION:=$(GEOSITE_VER)-$(PKG_RELEASE)
+  VERSION:=$(PKG_RELEASE)
   LICENSE:=MIT
 endef
 
