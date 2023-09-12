@@ -1382,6 +1382,7 @@ applw.com
 appmediagroup.com
 approvedusedbmw.com
 apps5.oingo.com
+appsflayer.com
 appshopper.com
 appsocks.net
 appsonebay.net
@@ -2500,6 +2501,7 @@ bitcointalk.org
 bitcoinworld.com
 bitfinex.com
 bitflyer.com
+bitget.com
 bithumb.com
 bitly.com
 bitmex.com
@@ -4130,6 +4132,7 @@ crucial.com
 cruel-furies.com
 crunchyroll.com
 crustwebsites.net
+crypto.com
 cryptocompare.com
 crystalgunnsworld.com
 crystalmiss.com
@@ -9572,6 +9575,7 @@ kidsnikeshoes.com
 kiehls
 kik.com
 kikdirty.com
+killcovid2021.com
 killwall.com
 kilmeadeandfriends.com
 kimogirl.cc
@@ -10554,6 +10558,8 @@ metlife
 metrotoons.com
 meuhentai.com
 mewe.com
+mexc.com
+mexcsensors.com
 meyul.com
 mf
 mfg-inspector.com
@@ -14079,6 +14085,7 @@ sa-brazil-1.myhuaweicloud.com
 sa-saopaulo.myqcloud.com
 sa.hao123.com
 saarland
+saasexch.com
 sabuibo.net
 sacduc.com
 sacks.com
@@ -17264,6 +17271,7 @@ webkitgtk.org
 weblagu.com
 webmoneyinfo.com
 webmproject.org
+webnovel.com
 webobjects.com
 webobjects.net
 webofknowledge.com
