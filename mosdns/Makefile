@@ -41,7 +41,7 @@ endef
 
 define Package/mosdns
   $(call Package/mosdns/Default)
-  DEPENDS:=$(GO_ARCH_DEPENDS)
+  DEPENDS:=$(GO_ARCH_DEPENDS) +mosdns-v5
 endef
 
 define Package/mosdns-v5
@@ -89,7 +89,6 @@ define Package/mosdns/install
 endef
 
 define Package/mosdns-v5/install
-	$(call GoPackage/Package/Install/Bin,$(1))
 endef
 
 $(eval $(call GoBinPackage,mosdns))
