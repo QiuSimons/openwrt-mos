@@ -3905,8 +3905,6 @@ cnabc.com
 cnappinstall.googleadapis.com
 cnbc.com
 cnbcfm.com
-cnbeta.com
-cnbetacdn.com
 cncrivals.com
 cnd.org
 cnet.com
