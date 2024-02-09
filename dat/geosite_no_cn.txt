@@ -808,6 +808,7 @@ akademiye.org
 akadns.com
 akadns.net
 akadns6.net
+akadns88.net
 akaeai.com
 akafms.net
 akagtm.org
@@ -828,7 +829,6 @@ akamai-sucks.net
 akamai-thailand.com
 akamai-thailand.net
 akamai-trials.com
-akamai.com
 akamai.net
 akamaiedge.net
 akamaientrypoint.net
@@ -1692,6 +1692,7 @@ avinin.com
 avizoon.site
 avizoone.com
 avjb.com
+avjiasu.com
 avjoy.me
 avjzy67.xyz
 avlulu.cc
@@ -2509,6 +2510,7 @@ binance.net
 binance.org
 binance.vision
 binanceapi.com
+binancecnt.com
 binancezh.biz
 binancezh.cc
 binancezh.co
@@ -5312,6 +5314,7 @@ edgecastcdn.net
 edgedatg.com
 edgefonts.net
 edgekey.net
+edgekey88.net
 edgemeplease.com
 edgesuite.net
 edicypages.com
@@ -9263,6 +9266,7 @@ javmoo.xyz
 javmost.com
 javmost.xyz
 javmuch.com
+javmulu.net
 javnew.net
 javopen.co
 javout.co
@@ -9831,6 +9835,7 @@ latrobe
 latticedata.com
 launchpad.net
 launchpad.wang
+launchpadcontent.net
 launchpadlibrarian.com
 launchpadlibrarian.net
 launchpadlibrarian.org
@@ -16956,6 +16961,7 @@ virgin
 virginpornlinks.com
 virsto.com
 virsto.net
+virtualbox.org
 virtualearth.net
 virtualpartyworld.com
 virtualporn.com
@@ -18812,6 +18818,7 @@ full:cbsi.live.ott.irdeto.com
 full:cbsplaylistserver.aws.syncbak.com
 full:cbsservice.aws.syncbak.com
 full:cdn-spotify-experiments.conductrics.com
+full:cdn.js7k.com
 full:cdn.jsdelivr.net
 full:cdngarenanow-a.akamaihd.net
 full:chat.openai.com.cdn.cloudflare.net
