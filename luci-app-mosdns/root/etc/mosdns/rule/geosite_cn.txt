@@ -67989,6 +67989,7 @@ full:crashlyticsreports-pa.googleapis.com
 full:crl-lb.apple.com.akadns.net
 full:crl.apple.com
 full:crl.pki.goog
+full:crls.pki.goog
 full:csi.gstatic.com
 full:cstat.apple.com
 full:cstat.cdn-apple.com
