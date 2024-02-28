@@ -63,7 +63,7 @@ define Build/Prepare
 	$(call Build/Prepare/Default)
 endef
 
-GO_PKG_TARGET_VARS:=$(filter-out CGO_ENABLED=%,$(GO_PKG_TARGET_VARS)) CGO_ENABLED=0
+GO_PKG_TARGET_VARS:=$(filter-out CGO_ENABLED=%,$(GO_PKG_TARGET_VARS)) CGO_ENABLED=1
 
 define Build/UpdateDependencies
 	cd $(PKG_BUILD_DIR) && \
