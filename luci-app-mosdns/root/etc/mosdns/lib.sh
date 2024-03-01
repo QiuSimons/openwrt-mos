@@ -1,14 +1,21 @@
 #!/bin/bash
-# shellcheck disable=SC2034  # Unused variables left for readability
+
 LAN_DNS0="119.29.29.29"
 LAN_DNS1="101.226.4.6"
 WAN_DNS0="8.8.4.4"
 WAN_DNS1="8.8.8.8"
 REPO_URL="https://github.com/QiuSimons/openwrt-mos/raw/master/dat"
-CDN_URL="https://gh.404delivr.workers.dev"
-DAT_PREFIX="$CDN_URL/$REPO_URL"
 
-logfile_path() (
+proxy_url=$(uci -q get mosdns.mosdns.proxy_url)
+if [ -z "$proxy_url" ]; then
+  PROXY_URL="https://gh.404delivr.workers.dev"
+else
+  PROXY_URL="$proxy_url"
+fi
+
+DAT_PREFIX="$PROXY_URL/$REPO_URL"
+
+logfile_path() {
   configfile=$(uci -q get mosdns.mosdns.configfile)
   if [ "$configfile" = "./def_config.yaml" ]; then
     uci -q get mosdns.mosdns.logfile
@@ -16,30 +23,26 @@ logfile_path() (
     [ ! -f /etc/mosdns/cus_config.yaml ] && exit 1
     awk '/^log:/{f=1;next}f==1{if($0~/file:/){print;exit}if($0~/^[^ ]/)exit}' /etc/mosdns/cus_config.yaml | grep -Eo "/[^'\"]+"
   fi
-)
+}
 
 ext() {
   command -v "$1" > /dev/null 2>&1
 }
 
 uci_ext() {
-  if [ "$1" == "ssrp" ]; then
-    uci get shadowsocksr.@global[0].global_server &> /dev/null
-  elif [ "$1" == "pw" ]; then
-    uci get passwall.@global[0].enabled &> /dev/null
-  elif [ "$1" == "pw2" ]; then
-    uci get passwall2.@global[0].enabled &> /dev/null
-  elif [ "$1" == "vssr" ]; then
-    uci get vssr.@global[0].global_server &> /dev/null
-  fi
+  case "$1" in
+    ssrp) uci get shadowsocksr.@global[0].global_server &> /dev/null ;;
+    pw) uci get passwall.@global[0].enabled &> /dev/null ;;
+    pw2) uci get passwall2.@global[0].enabled &> /dev/null ;;
+    vssr) uci get vssr.@global[0].global_server &> /dev/null ;;
+  esac
 }
 
 bakdns() {
-  if [ "$1" -eq 0 ]; then
-    echo "$LAN_DNS0"
-  elif [ "$1" -eq 1 ]; then
-    echo "$LAN_DNS1"
-  fi
+  case "$1" in
+    0) echo "$LAN_DNS0" ;;
+    1) echo "$LAN_DNS1" ;;
+  esac
 }
 
 getdat() {

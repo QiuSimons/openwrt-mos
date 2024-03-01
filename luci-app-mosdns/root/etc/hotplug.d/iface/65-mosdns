@@ -1,2 +1,5 @@
 #!/bin/sh
-[ "$ACTION" = ifup ] && /etc/init.d/mosdns restart
+
+if [ "$ACTION" = "ifup" ]; then
+    /etc/init.d/mosdns restart
+fi

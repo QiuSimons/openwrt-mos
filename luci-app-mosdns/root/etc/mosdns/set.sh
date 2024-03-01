@@ -1,5 +1,4 @@
 #!/bin/bash
-# shellcheck source=/dev/null
 source /etc/mosdns/lib.sh
 
 if uci_ext ssrp; then
@@ -17,10 +16,9 @@ if uci_ext ssrp; then
     fi
   fi
   uci commit shadowsocksr
-  if [ "$(pid ssrplus)" ]; then
-    /etc/init.d/shadowsocksr restart
-  fi
+  [ "$(pid ssrplus)" ] && /etc/init.d/shadowsocksr restart
 fi
+
 if uci_ext pw; then
   if [ "$1" = "unset" ]; then
     uci set passwall.@global[0].dns_mode='dns2tcp'
@@ -36,9 +34,7 @@ if uci_ext pw; then
     uci del passwall.@global[0].chinadns_ng
   fi
   uci commit passwall
-  if [ "$(pid passwall)" ]; then
-    /etc/init.d/passwall restart
-  fi
+  [ "$(pid passwall)" ] && /etc/init.d/passwall restart
 fi
 
 if uci_ext pw2; then
@@ -55,9 +51,7 @@ if uci_ext pw2; then
     uci set passwall2.@global[0].dns_query_strategy='UseIP'
   fi
   uci commit passwall2
-  if [ "$(pid passwall2)" ]; then
-    /etc/init.d/passwall2 restart
-  fi
+  [ "$(pid passwall2)" ] && /etc/init.d/passwall2 restart
 fi
 
 if uci_ext vssr; then
@@ -67,9 +61,7 @@ if uci_ext vssr; then
     uci set vssr.@global[0].pdnsd_enable='0'
   fi
   uci commit vssr
-  if [ "$(pid vssr)" ]; then
-    /etc/init.d/vssr restart
-  fi
+  [ "$(pid vssr)" ] && /etc/init.d/vssr restart
 fi
 
 exit 0

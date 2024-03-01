@@ -61,6 +61,9 @@ msgstr "每周六"
 msgid "Every Sunday"
 msgstr "每周日"
 
+msgid "Proxy URL"
+msgstr "代理地址"
+
 msgid "Database Update"
 msgstr "数据库更新"
 
