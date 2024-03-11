@@ -2469,6 +2469,7 @@ bbc-reporting-api.app
 bbc.co.uk
 bbc.com
 bbc.in
+bbc.mp-pxcdn.com
 bbc.net.uk
 bbcchinese.com
 bbchat.tv
@@ -4580,6 +4581,7 @@ cf-ipfs.com
 cfake.com
 cfblob.com
 cfhks.org.hk
+cfl.re
 cfna.com
 cfos.de
 cfr.org
@@ -13929,6 +13931,7 @@ modeloswebcambogota.com
 modelsfreecams.com
 modeltv.com
 modernchinastudies.org
+modperl.pl
 modrinth.com
 modular.im
 moeero-library.com
@@ -15436,6 +15439,9 @@ okazudouga.tokyo
 okex.com
 okk.tw
 okkisokuho.com
+okx-dns.com
+okx-dns1.com
+okx-dns2.com
 okx.com
 old-cat.net
 old.honeynet.org
@@ -17446,6 +17452,7 @@ redbubble.com
 redchinacn.net
 redchinacn.org
 redd.it
+reddit.app.link
 reddit.com
 redditlist.com
 redditmail.com
@@ -19422,6 +19429,8 @@ tahr.org.tw
 taiav.com
 tail-f.com
 tailf.com
+tailscale.com
+tailscale.io
 tailwindtraders.com
 taiolongdh.sbs
 taipeisociety.org
@@ -20283,6 +20292,7 @@ tryquinn.com
 tryrating.com
 tryst.link
 ts.la
+ts.net
 tsctv.net
 tsdr.uspto.gov
 tsemtulku.com
@@ -24282,6 +24292,7 @@ regexp:.+\.na-ashburn\.tencentcos\.(cn|com(\.cn)?)$
 regexp:.+\.na-siliconvalley\.tencentcos\.(cn|com(\.cn)?)$
 regexp:.+\.na-toronto\.tencentcos\.(cn|com(\.cn)?)$
 regexp:.+\.sa-saopaulo\.tencentcos\.(cn|com(\.cn)?)$
+regexp:chatgpt-async-webps-prod-eastus-\d+\.webpubsub\.azure\.com$
 regexp:github-production-release-asset-[0-9a-zA-Z]{6}\.s3\.amazonaws\.com
 regexp:^((((ut1-wwv)|(ntp\-(b|d|wwv))|(time(\-(([a-e]\-(g|b))|([a-e]\-wwv)))?)).nist.gov)|((ntp-c|ut1-time)|(utcnist(2|3)?)).colorado.edu)$
 regexp:^epicgames-download\d\.akamaized\.net$
