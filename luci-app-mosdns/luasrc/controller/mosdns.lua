@@ -37,12 +37,12 @@ function act_status()
 end
 
 function get_log()
-    local log_file_path = sys.exec("/etc/mosdns/lib.sh logfile")
+    local log_file_path = sys.exec("/usr/share/mosdns/mosdns.sh logfile")
     handle_file_content(log_file_path, true)
 end
 
 function clear_log()
-    local log_file_path = sys.exec("/etc/mosdns/lib.sh logfile")
+    local log_file_path = sys.exec("/usr/share/mosdns/mosdns.sh logfile")
     handle_file_content(log_file_path, false)
 end
 

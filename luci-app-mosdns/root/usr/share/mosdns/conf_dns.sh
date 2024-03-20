@@ -1,7 +1,7 @@
 #!/bin/bash
-source /etc/mosdns/lib.sh
+source /usr/share/mosdns/mosdns.sh
 
-if uci_ext ssrp; then
+if is_uci_config_exists ssrp; then
   if [ "$1" = "unset" ]; then
     uci set shadowsocksr.@global[0].pdnsd_enable='1'
     uci set shadowsocksr.@global[0].tunnel_forward="$WAN_DNS0:53"
@@ -19,7 +19,7 @@ if uci_ext ssrp; then
   [ "$(pid ssrplus)" ] && /etc/init.d/shadowsocksr restart
 fi
 
-if uci_ext pw; then
+if is_uci_config_exists pw; then
   if [ "$1" = "unset" ]; then
     uci set passwall.@global[0].dns_mode='dns2tcp'
     uci set passwall.@global[0].dns_forward="$WAN_DNS1"
@@ -37,7 +37,7 @@ if uci_ext pw; then
   [ "$(pid passwall)" ] && /etc/init.d/passwall restart
 fi
 
-if uci_ext pw2; then
+if is_uci_config_exists pw2; then
   if [ "$1" = "unset" ]; then
     uci set passwall2.@global[0].direct_dns_protocol='auto'
     uci del passwall2.@global[0].direct_dns
@@ -54,7 +54,7 @@ if uci_ext pw2; then
   [ "$(pid passwall2)" ] && /etc/init.d/passwall2 restart
 fi
 
-if uci_ext vssr; then
+if is_uci_config_exists vssr; then
   if [ "$1" = "unset" ]; then
     uci set vssr.@global[0].pdnsd_enable='1'
   elif [ "$1" = "" ]; then

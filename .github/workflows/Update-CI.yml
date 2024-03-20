@@ -21,15 +21,15 @@ jobs:
         run: |
           wget https://raw.githubusercontent.com/Loyalsoldier/geoip/release/geoip-only-cn-private.dat -nv -O ./dat/geoip.dat
           wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -nv -O ./dat/geosite.dat
-          
+
           #geosite_cn
           wget 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/direct-list.txt' -nv -O ./luci-app-mosdns/root/etc/mosdns/rule/geosite_cn.txt
           cp -rf ./luci-app-mosdns/root/etc/mosdns/rule/geosite_cn.txt ./dat/geosite_cn.txt
-          
+
           #geosite_no_cn
           wget 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt' -nv -O ./luci-app-mosdns/root/etc/mosdns/rule/geosite_no_cn.txt
           cp -rf ./luci-app-mosdns/root/etc/mosdns/rule/geosite_no_cn.txt ./dat/geosite_no_cn.txt
-          
+
           #geoip_cn
           wget 'https://raw.githubusercontent.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute.txt' -nv -O ./luci-app-mosdns/root/etc/mosdns/rule/geoip_cn.txt
           wget 'https://raw.githubusercontent.com/QiuSimons/Chnroute/master/dist/chnroute/chnroute-v6.txt' -nv -O ./luci-app-mosdns/root/etc/mosdns/rule/chnroute-v6.txt
@@ -45,13 +45,13 @@ jobs:
           sed -i '/:/d' ./luci-app-mosdns/root/etc/mosdns/rule/serverlist.txt
           sed -i '/cm.bilibili.com/d' ./luci-app-mosdns/root/etc/mosdns/rule/serverlist.txt
           cp -rf ./luci-app-mosdns/root/etc/mosdns/rule/serverlist.txt ./dat/serverlist.txt
-          
-          cp -rf ./luci-app-mosdns/root/etc/mosdns/def_config_orig.yaml ./dat/def_config_v5.yaml
+
+          cp -rf ./luci-app-mosdns/root/usr/share/mosdns/def_config_orig.yaml ./dat/def_config_v5.yaml
 
           latest_commit="$(curl -s https://api.github.com/repos/IrineSistiana/mosdns/commits/main | jq -r '.sha' | cut -b 1-7)"
           sed -i '/PKG_VERSION:/d' ./mosdns/Makefile
           sed -i "7 a PKG_VERSION:=$latest_commit" ./mosdns/Makefile
-          chmod -R 755 ./luci-app-mosdns/root/etc/mosdns/*.sh
+          chmod -R 755 ./luci-app-mosdns/root/usr/share/mosdns/*.sh
 
       - name: Commit file
         run: |
