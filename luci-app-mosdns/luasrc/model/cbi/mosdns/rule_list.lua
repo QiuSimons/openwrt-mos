@@ -32,13 +32,6 @@ local function writeFile(filePath, content)
   file:close()
 end
 
-local function removeFile(filePath)
-  local success, errorMsg = os.remove(filePath)
-  if not success then
-    perror("Failed to remove file: " .. filePath)
-  end
-end
-
 local m = Map("mosdns")
 local s = m:section(TypedSection, "mosdns", translate("Rule Settings"))
 s.anonymous = true
@@ -50,7 +43,7 @@ local function createTextOption(tabName, optionName, filePath, description, cust
   o.wrap = "off"
   o.cfgvalue = function(self, section) return readFile(filePath) end
   o.write = function(self, section, value) writeFile(filePath, value:gsub("\r\n", "\n")) end
-  o.remove = function(self, section, value) removeFile(filePath) end
+  o.remove = function(self, section, value) writeFile(filePath, "") end
   o.validate = function(self, value)
     return value
   end
