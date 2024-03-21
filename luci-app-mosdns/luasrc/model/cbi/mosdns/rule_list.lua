@@ -1,5 +1,5 @@
-local perror = require("luci.util").perror
-local reload_mosdns = require("luci.controller.mosdns").reload_mosdns
+local reload_mosdns, readFile, writeFile = require("luci.controller.mosdns").reload_mosdns,
+    require("luci.controller.mosdns").readFile, require("luci.controller.mosdns").writeFile
 
 local rulePath = {
   whiteList = "/etc/mosdns/rule/whitelist.txt",
@@ -8,29 +8,6 @@ local rulePath = {
   redirectList = "/etc/mosdns/rule/redirect.txt",
   cusConfig = "/etc/mosdns/cus_config.yaml"
 }
-
-local function readFile(filePath)
-  local file = io.open(filePath, "r")
-  if not file then
-    perror("Failed to read file: " .. filePath)
-    return ""
-  end
-
-  local content = file:read("*a")
-  file:close()
-  return content
-end
-
-local function writeFile(filePath, content)
-  local file = io.open(filePath, "w")
-  if not file then
-    perror("Failed to write file: " .. filePath)
-    return
-  end
-
-  file:write(content)
-  file:close()
-end
 
 local m = Map("mosdns")
 local s = m:section(TypedSection, "mosdns", translate("Rule Settings"))

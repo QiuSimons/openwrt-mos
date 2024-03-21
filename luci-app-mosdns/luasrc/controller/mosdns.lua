@@ -21,12 +21,41 @@ local function handle_file_content(file_path, write)
 end
 
 local function check_config_file()
-    return nixio.fs.access("/etc/config/mosdns")
+    local filePath = "/etc/config/mosdns"
+    local exists = readFile(filePath, true)
+    return exists
 end
 
 local function is_mosdns_running()
     local result = sys.exec("pgrep -f mosdns")
     return result ~= ""
+end
+
+function readFile(filePath, checkExistence)
+    local file = io.open(filePath, "r")
+    if not file then
+        util.perror("Failed to read file: " .. filePath)
+        return false
+    else
+        if checkExistence then
+            return true
+        else
+            local content = file:read("*a")
+            file:close()
+            return content
+        end
+    end
+end
+
+function writeFile(filePath, content)
+    local file = io.open(filePath, "w")
+    if not file then
+        util.perror("Failed to write file: " .. filePath)
+        return
+    end
+
+    file:write(content)
+    file:close()
 end
 
 function act_status()
