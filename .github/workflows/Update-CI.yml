@@ -36,7 +36,7 @@ jobs:
           cat ./luci-app-mosdns/root/etc/mosdns/rule/chnroute-v6.txt >> ./luci-app-mosdns/root/etc/mosdns/rule/geoip_cn.txt
           rm ./luci-app-mosdns/root/etc/mosdns/rule/chnroute-v6.txt
           cp -rf ./luci-app-mosdns/root/etc/mosdns/rule/geoip_cn.txt ./dat/geoip_cn.txt
- 
+
           #adlist
           wget 'https://anti-ad.net/domains.txt' -nv -O ./luci-app-mosdns/root/etc/mosdns/antiad.txt
           cat ./luci-app-mosdns/root/etc/mosdns/antiad.txt ./luci-app-mosdns/root/etc/mosdns/yoyo.txt | sort | uniq > ./luci-app-mosdns/root/etc/mosdns/rule/serverlist.txt

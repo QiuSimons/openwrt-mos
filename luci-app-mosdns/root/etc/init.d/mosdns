@@ -60,7 +60,7 @@ setcron() {
   touch "$CRON_FILE"
   sed -i '/mosdns.sh/d' "$CRON_FILE" 2>/dev/null
   if [ "$(uci -q get mosdns.mosdns.geo_auto_update)" = "1" ]; then
-    echo "0 $(uci -q get mosdns.mosdns.geo_update_day_time) * * $(uci -q get mosdns.mosdns.geo_update_week_time) /usr/share/mosdns/mosdns.sh update_mosdns" >> "$CRON_FILE"
+    echo "0 $(uci -q get mosdns.mosdns.geo_update_day_time) * * $(uci -q get mosdns.mosdns.geo_update_week_time) /usr/share/mosdns/mosdns.sh update_mosdns" >>"$CRON_FILE"
   fi
   crontab "$CRON_FILE"
 }
@@ -131,7 +131,7 @@ start_service() {
     restore_setting
     prepare_setting
     if [ "$(uci -q get mosdns.mosdns.redirect)" = "1" ] && [ "$(uci -q get shadowsocksr.@global[0].run_mode)" != gfw ]; then
-      true > /etc/ssrplus/gfw_list.conf
+      true >/etc/ssrplus/gfw_list.conf
       sed -i '/update.lua/d' /usr/share/shadowsocksr/ssrplusupdate.sh
       sed -i '/bin\/sh/a\/usr/bin/lua /usr/share/shadowsocksr/update.lua ad_data' /usr/share/shadowsocksr/ssrplusupdate.sh
       sed -i '/bin\/sh/a\/usr/bin/lua /usr/share/shadowsocksr/update.lua nfip_data' /usr/share/shadowsocksr/ssrplusupdate.sh

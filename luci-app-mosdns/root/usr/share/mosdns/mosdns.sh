@@ -36,17 +36,17 @@ get_logfile_path() {
 
 # 检查命令是否存在
 is_command_exists() {
-  command -v "$1" > /dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
 # 检查UCI配置是否存在
 is_uci_config_exists() {
   local config="$1"
   case "$config" in
-    ssrp) uci get shadowsocksr.@global[0].global_server &> /dev/null ;;
-    pw) uci get passwall.@global[0].enabled &> /dev/null ;;
-    pw2) uci get passwall2.@global[0].enabled &> /dev/null ;;
-    vssr) uci get vssr.@global[0].global_server &> /dev/null ;;
+  ssrp) uci get shadowsocksr.@global[0].global_server &>/dev/null ;;
+  pw) uci get passwall.@global[0].enabled &>/dev/null ;;
+  pw2) uci get passwall2.@global[0].enabled &>/dev/null ;;
+  vssr) uci get vssr.@global[0].global_server &>/dev/null ;;
   esac
 }
 
@@ -54,8 +54,8 @@ is_uci_config_exists() {
 get_backup_dns() {
   local index="$1"
   case "$index" in
-    0) echo "$LAN_DNS0" ;;
-    1) echo "$LAN_DNS1" ;;
+  0) echo "$LAN_DNS0" ;;
+  1) echo "$LAN_DNS1" ;;
   esac
 }
 
@@ -135,27 +135,27 @@ main() {
   local command="$1"
   local arg1="$2"
   case "$command" in
-    logfile)
-      get_logfile_path
-      ;;
-    dns)
-      if ! ifconfig | grep -q wan; then
-        get_backup_dns "$arg1"
-        exit 0
-      fi
-      local dns_server=""
-      if [[ "$(get_dns_server 0)" =~ ^127\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        dns_server=$(get_dns_server "$arg1" "inactive")
-      elif [[ "$(get_dns_server "$arg1")" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-        dns_server=$(get_dns_server "$arg1")
-      else
-        dns_server=$(get_backup_dns "$arg1")
-      fi
-      echo "$dns_server"
-      ;;
-    update_mosdns)
-      update_mosdns
-      ;;
+  logfile)
+    get_logfile_path
+    ;;
+  dns)
+    if ! ifconfig | grep -q wan; then
+      get_backup_dns "$arg1"
+      exit 0
+    fi
+    local dns_server=""
+    if [[ "$(get_dns_server 0)" =~ ^127\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+      dns_server=$(get_dns_server "$arg1" "inactive")
+    elif [[ "$(get_dns_server "$arg1")" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+      dns_server=$(get_dns_server "$arg1")
+    else
+      dns_server=$(get_backup_dns "$arg1")
+    fi
+    echo "$dns_server"
+    ;;
+  update_mosdns)
+    update_mosdns
+    ;;
   esac
 }
 
