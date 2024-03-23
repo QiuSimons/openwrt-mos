@@ -1,6 +1,6 @@
 #!/bin/sh
 cp feeds.conf.default feeds.conf
-echo "src-link QiuSimons /home/build/openwrt/QiuSimons" >> ./feeds.conf
+echo "src-link QiuSimons /home/build/openwrt/QiuSimons" >>./feeds.conf
 
 ./scripts/feeds update QiuSimons
 ./scripts/feeds update packages
