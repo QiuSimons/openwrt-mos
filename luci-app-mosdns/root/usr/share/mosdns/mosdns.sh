@@ -22,9 +22,9 @@ get_proxy_url() {
 get_logfile_path() {
   local config_file
   local log_file=""
-  config_file=$(uci -q get mosdns.mosdns.config_file)
+  config_file=$(uci -q get mosdns.mosdns.configfile)
   if [ "$config_file" = "./def_config.yaml" ]; then
-    log_file=$(uci -q get mosdns.mosdns.log_file)
+    log_file=$(uci -q get mosdns.mosdns.logfile)
   else
     if [ ! -f /etc/mosdns/cus_config.yaml ]; then
       exit 1
