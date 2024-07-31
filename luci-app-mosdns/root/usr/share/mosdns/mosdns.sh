@@ -8,7 +8,7 @@ WAN_DNS0="8.8.4.4"
 WAN_DNS1="8.8.8.8"
 
 # 仓库URL和代理URL
-REPO_URL="https://github.com/QiuSimons/openwrt-mos/raw/master/dat"
+REPO_URL="https://cdn.jsdelivr.net/gh/QiuSimons/openwrt-mos@master/dat"
 PROXY_URL=""
 
 # 获取代理URL
@@ -101,7 +101,7 @@ update_mosdns() {
   local temp_dir
   local sync_config
   local ad_block
-  local data_prefix="${PROXY_URL}/${REPO_URL}"
+  local data_prefix="${REPO_URL}"
   temp_dir=$(mktemp -d) || exit 1
   sync_config=$(uci -q get mosdns.mosdns.sync_config)
   ad_block=$(uci -q get mosdns.mosdns.ad_block)
