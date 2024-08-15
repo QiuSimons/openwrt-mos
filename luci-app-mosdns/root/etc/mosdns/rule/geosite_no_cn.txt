@@ -1464,8 +1464,10 @@ and
 andfaraway.net
 android-x86.org
 android.com
+androidauthority.com
 androidify.com
 androidplus.co
+androidpolice.com
 androidtv.com
 andygod.com
 andysparis.com
@@ -5044,7 +5046,6 @@ chinese-memorial.org
 chinese-porn-videos.com
 chinese-xnxx.com
 chinese.donga.com
-chinese.engadget.com
 chinese.irib.ir
 chinese.soifind.com
 chinesedaily.com
@@ -5839,7 +5840,6 @@ dalailama-archives.org
 dalailama.com
 dalailama.mn
 dalailama.ru
-dalailama.usc.edu
 dalailama80.org
 dalailamacenter.org
 dalailamafellows.org
@@ -6170,6 +6170,7 @@ digitalpack.com
 digitalplayground.com
 digitalplaygroundnetwork.com
 digitalprototyping.com
+digitaltrends.com
 diigo.com
 dilber.se
 dilcdn.com
@@ -7296,6 +7297,7 @@ enfamil.es
 enfamil.pl
 enfamil.pt
 enfasmart.com
+engadget.com
 engagedaily.org
 engineeringvillage.com
 englishforeveryone.org
@@ -20064,6 +20066,7 @@ store-bridgestonesports.com
 storesense.com
 storiesonline.net
 storify.com
+storj.io
 storm.mg
 stormmediagroup.com
 storyful.com
@@ -20479,6 +20482,7 @@ techliquidators.com
 technews.tw
 technics.com
 technologyandsociety.org
+techradar.com
 techspot.com
 techstreet.com
 techtimes.com
@@ -21041,6 +21045,7 @@ tokyotosho.info
 tokyotosho.se
 tomatespodres.com
 tomonews.net
+tomsguide.com
 tonec.com
 tongil.or.kr
 tonicmovies.com
@@ -21732,6 +21737,7 @@ usaco.org
 usaip.eu
 usatoday.com
 usatodaynetworkservice.com
+uscardforum.com
 uscnpm.org
 uselessjunk.com
 useplannr.com
@@ -24522,7 +24528,9 @@ zb.live
 zbporn.com
 zctb.buzz
 zdassets.com
+zdnet.com
 zdnet.com.tw
+zdnet.redvideo.io
 zdusercontent.com
 zee.com
 zee5.com
