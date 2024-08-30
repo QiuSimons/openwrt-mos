@@ -23381,6 +23381,7 @@ x-berry.com
 x-caprice.com
 x-fetish.org
 x-wall.org
+x.ai
 x.co
 x.com
 x.company
@@ -24732,6 +24733,7 @@ full:adobe-dns-3.adobe.com
 full:adobe-dns-4.adobe.com
 full:adobe-dns.adobe.com
 full:adobeereg.com
+full:alkalimakersuite-pa.clients6.google.com
 full:alt1-mtalk.google.com
 full:alt2-mtalk.google.com
 full:alt3-mtalk.google.com
@@ -25013,6 +25015,7 @@ full:scholar.google.sk
 full:scholar.googleusercontent.com
 full:scholar.l.google.com
 full:sentry.ppy.sh
+full:servd-anthropic-website.b-cdn.net
 full:sni1dcb6gl.wpc.edgecastcdn.net
 full:spectator.ppy.sh
 full:spotify.com.edgesuite.net
