@@ -46871,9 +46871,7 @@ ipv4-c024-mia006-ix.1.oca.nflxvideo.net.iberostar.com
 ipv4-cs.intsig.net.iberostar.com
 ipv4.gdt.qq.com
 ipv4.kkmh.com
-ipv4.music.163.com
 ipv6.kg.qq.com
-ipv6.music.163.com
 ipv6monitoring.eu
 ipyjxs.chowsangsang.com
 ipzolkgn.com
@@ -60079,7 +60077,6 @@ mieru-ca.com
 miexgq.forevernew.co.nz
 mifun.mobi
 mig.str.mdt.qq.com
-migc.g.mi.com
 migcreport.g.mi.com
 miggslxuqlowz.com
 mighbest.host
