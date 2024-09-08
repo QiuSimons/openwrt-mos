@@ -3257,6 +3257,8 @@ bild.de
 bili2.cc
 bili888.com
 bili999.com
+bilibili.tv
+biliintl.com
 biliplus.com
 biliworld.com
 bill-safe.com
@@ -6593,6 +6595,7 @@ drdremonsterdre.com
 drdreprobeatssale.com
 dreamamateurs.com
 dreambmw.ca
+dreamcast.hk
 dreamforce.com
 dreammovies.com
 dreamteamfc.com
@@ -10365,6 +10368,7 @@ herokussl.com
 herringnetwork.com
 hetzner.cloud
 hetzner.com
+hetzner.company
 hetzner.de
 heungkongdiscuss.com
 hex.pm
@@ -12086,6 +12090,7 @@ iproperty.com.sg
 iptv.com.tw
 iptvbin.com
 ipvanish.com
+iq.com
 iqiyiavlive.buzz
 iqq2.cc
 iqq3.cc
@@ -25047,6 +25052,7 @@ full:ubisoft-orbit-savegames.s3.amazonaws.com
 full:ubisoft-uplay-savegames.s3.amazonaws.com
 full:ubistatic3-a.akamaihd.net
 full:ulrichsweb.serialssolutions.com
+full:upos-hz-mirrorakam.akamaized.net
 full:ve-dash-uk-live.akamaized.net
 full:ve-uhd-push-uk-live.akamaized.net
 full:venmo.s3.amazonaws.com
