@@ -9387,6 +9387,7 @@ adx-cn.anythinktech.com
 adx-drcn.op.dbankcloud.cn
 adx-exchange.toast.com
 adx-open-service.youku.com
+adx-os.anythinktech.com
 adx-static.ksosoft.com
 adx-tk.rayjump.com
 adx.36kr.com
