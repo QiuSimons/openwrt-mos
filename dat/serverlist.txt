@@ -14771,7 +14771,6 @@ awsmer.com
 awsnjsduyhgpk.com
 awstaticdn.net
 awstats.cloud
-awstrack.me
 awsurveys.com
 awtpguxqtf.com
 awtqbjylk.com
@@ -97017,7 +97016,9 @@ v.topya.com
 v.u22l.cc
 v.xinshide.cn
 v.xiuzhenjewelry.cn
+v1-ad.ixigua.com
 v1-ad.video.yximgs.com
+v1-dc-ad.ixigua.com
 v1-feed.idreamsky.com
 v1-lm.adukwai.com
 v1-play.log.mgtv.com
@@ -97066,6 +97067,7 @@ v2html.atm.youku.com
 v2mi.gdt.qq.com
 v3-ad.ixigua.com
 v3-ad.video.yximgs.com
+v3-dc-ad.ixigua.com
 v3.cnzz.com
 v3.gdt.qq.com
 v3.jiathis.com
@@ -97077,9 +97079,11 @@ v4dwkcv.com
 v5.cnzz.com
 v5.juzi.cn
 v5ad.com
+v6-ad.ixigua.com
 v6-adashx.ut.amap.com
 v6-adashx.ut.ele.me
 v6-adashx.ut.taobao.com
+v6-dc-ad.ixigua.com
 v6.cnzz.com
 v68.ink
 v6ii.gdt.qq.com
@@ -97089,6 +97093,8 @@ v7.kawinhome.com
 v7.shaoyumuye.com
 v8.cnzz.com
 v8tw8x8z1.com
+v9-ad.ixigua.com
+v9-dc-ad.ixigua.com
 v9.cnzz.com
 v96-surf.com
 va-endpoint.com
