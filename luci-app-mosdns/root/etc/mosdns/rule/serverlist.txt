@@ -19140,7 +19140,6 @@ c.okmgy.cn
 c.originz.cn
 c.panqis.cn
 c.panqishu.com
-c.paypal.com
 c.pcswtw.cn
 c.piliangzhuce.cn
 c.ptffw.net
