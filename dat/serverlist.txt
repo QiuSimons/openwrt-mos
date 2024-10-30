@@ -18555,6 +18555,7 @@ cacaca.sp96878.com
 cacafly.com
 cacafly.net
 cache-ssl.celtra.com
+cache-verify.mob.com
 cache.api-zdj.com
 cache.betweendigital.com
 cache.celtra.com
@@ -19155,7 +19156,6 @@ cc.gofile.io
 cc.idasui.cn
 cc.labu24.de
 cc.m.jd.com
-cc.map.qq.com
 cc.moquanad.com
 cc.mpa-web.de
 cc.pennstatehealth.org
@@ -19264,6 +19264,7 @@ cdn-ad.wtzw.com
 cdn-ads.oss-cn-shanghai.aliyuncs.com
 cdn-adtrue.com
 cdn-analytics.pl
+cdn-api-verify.mob.com
 cdn-channels-pixel.ex.co
 cdn-code.host
 cdn-haokanapk.baidu.com
@@ -50200,6 +50201,7 @@ log-report.com
 log-sdk.gifshow.com
 log-stats.weathercn.com
 log-upload-os.hoyoverse.com
+log-verify.mob.com
 log.120ask.com
 log.51network.com
 log.ad.xiaomi.com
@@ -98745,6 +98747,7 @@ ydwlkj.com
 ydwrkwwqytj.xyz
 ydwsjt-2.com
 ydybwjpa.xyz
+ye.dun.163yun.com
 ye.tsdlp.com
 ye185hcamw.com
 yeabble.com
