@@ -30600,6 +30600,8 @@ full:na1r.services.adobe.com
 full:nab.demdex.net
 full:nationalaustraliaban.tt.omtrdc.net
 full:netflix.com.edgesuite.net
+full:notary-submissions-prod.s3-accelerate.amazonaws.com
+full:notary-submissions-prod.s3.us-west-2.amazonaws.com
 full:notify.ppy.sh
 full:nurofensk-prod-env.eu-west-1.elasticbeanstalk.com
 full:nvidia.tt.omtrdc.net
