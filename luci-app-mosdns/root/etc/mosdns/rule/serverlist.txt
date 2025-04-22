@@ -65110,7 +65110,6 @@ r.rover.com
 r.sax.sina.com.cn
 r.skimresources.com
 r.sportsie.com
-r.stripe.com
 r.w.inmobi.com
 r.wz.de
 r.xcycm.com
