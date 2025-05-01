@@ -4992,6 +4992,7 @@ brnc.ac.uk
 brni.com
 broadbandreports.com
 broadbook.com
+broadcom.com
 broadpressinc.com
 broadstairscollege.ac.uk
 brocaproject.com
@@ -17543,6 +17544,7 @@ metabrainz.org
 metacafe.com
 metacloud.com
 metacpan.org
+metacubex.one
 metadac.ac.uk
 metafilter.com
 metalpha.finance
@@ -18506,6 +18508,8 @@ msgamesresearch.com
 msguancha.com
 msha.gov
 mshome.net
+msi.cn
+msi.com
 msidentity.com
 msinnovationchallenge.com
 msk.ilnk.info
@@ -24333,6 +24337,7 @@ sinapse.ac.uk
 sinchew.com.my
 sinchew.my
 sinet.ac.uk
+sing-box.app
 sing4.lat
 sing68.com
 singaporepools.com.sg
@@ -29190,7 +29195,6 @@ wikawika.xyz
 wiki.cnitter.com
 wiki.gamerp.jp
 wiki.keso.cn
-wiki.metacubex.one
 wiki.oauth.net
 wiki.phonegap.com
 wikia.com
