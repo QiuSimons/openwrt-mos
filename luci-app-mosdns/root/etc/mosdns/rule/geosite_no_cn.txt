@@ -177,6 +177,7 @@
 1lib.eu
 1lib.limited
 1lib.pl
+1lib.sk
 1lib.to
 1lib.tw
 1mobile.com
@@ -11650,6 +11651,7 @@ gmnetworks.net
 gmodules.com
 gmoney.org
 gmozomg.izihost.org
+gmp4.com
 gmsa.ac.uk
 gnai-dh.sbs
 gnailapp.sbs
@@ -13706,6 +13708,7 @@ i-lab.ac.uk
 i-o-u.info
 i-part.com.tw
 i-scmp.com
+i.111666.best
 i.lithium.com
 i.org
 i1.hk
@@ -22307,6 +22310,7 @@ puppiesofourtime.ac.uk
 pure18.com
 pureapk.com
 pureconcepts.net
+puredns.org
 pureinsight.org
 purelov5.com
 purelyceleb.com
@@ -22413,6 +22417,7 @@ qmced.ac.uk
 qml.ac.uk
 qmov.com
 qmov.net
+qmp4.com
 qmpgmc.ac.uk
 qmttqg3k.me
 qmu.ac.uk
@@ -30775,9 +30780,14 @@ yyjlymb.xyz
 yysub.net
 yzld188.top
 yzzk.com
+z-lib.fm
+z-lib.fo
+z-lib.gd
+z-lib.gl
 z-lib.io
 z-lib.org
 z-library.se
+z-library.sk
 z00.world
 z18r.co
 z18r.com
