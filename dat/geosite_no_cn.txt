@@ -16087,6 +16087,7 @@ ld.hao123img.com
 ldoc-cdt.ac.uk
 ldplayer.net
 ldplayer.tw
+ldstatic.com
 le-direct.tv
 le-vpn.com
 le.ac.uk
@@ -16392,6 +16393,7 @@ linkuswell.com
 linotype.com
 linseysworld.com
 linst.ac.uk
+linux.do
 linux.org
 linux.org.hk
 linuxfoundation.org
@@ -31089,6 +31091,7 @@ full:avatargarenanow-a.akamaihd.net
 full:az764295.vo.msecnd.net
 full:azure.microsoft.com
 full:azuremarketplace.microsoft.com
+full:bbs.boingboing.net
 full:bcovlive-a.akamaihd.net
 full:bcsecure01-a.akamaihd.net
 full:beatselectronicsllc.tt.omtrdc.net
