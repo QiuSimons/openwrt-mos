@@ -2469,6 +2469,7 @@ asminternational.org
 asmr.gay
 asmrbuluo.com
 asn-online.org
+asobostudio.com
 asp-cc.com
 asp.net
 aspbjournals.org
@@ -10474,6 +10475,7 @@ flickr.net
 flickrhivemind.net
 flickriver.com
 fliggy.hk
+flightsimulator.com
 fling.com
 flipboard.com
 flipfap.com
@@ -10592,6 +10594,7 @@ forum.sina.com.hk
 forum.slime.com.tw
 forum.xinbao.de
 forum4hk.com
+forza.net
 forzamotorsport.net
 forzaracingchampionship.com
 forzarc.com
@@ -31356,6 +31359,7 @@ full:firebaselogging.googleapis.com
 full:firebaseperusertopics-pa.googleapis.com
 full:firebaseremoteconfig.googleapis.com
 full:firstsearch.oclc.org
+full:flightsimulator.azureedge.net
 full:fontshop-prod-responsive-images.s3.amazonaws.com
 full:foxnewsplayer-a.akamaihd.net
 full:gamedownloads-rockstargames-com.akamaized.net
@@ -31458,6 +31462,7 @@ full:practivate.adobe.newoa
 full:practivate.adobe.ntp
 full:prd-priconne-redive.akamaized.net
 full:preprod-publicca.googleapis.com
+full:prodforza.blob.core.windows.net
 full:production-openaicom-storage.azureedge.net
 full:psg-int-centralus.cloudapp.net
 full:psg-int-eastus.cloudapp.net
