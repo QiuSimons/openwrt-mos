@@ -2315,6 +2315,7 @@ a-m-s.poco.cn
 a-mo.net
 a-mx.com
 a-pagerank.net
+a-qmad.qm989.com
 a-reporting.nytimes.com
 a-sta-cn.upltv.com
 a-static.com
@@ -4928,6 +4929,7 @@ a5game.win
 a5jogo.biz
 a5jogo.club
 a5t.icu
+a6-remad.qm989.com
 a6.bjdianyue.com
 a6.codejumps.com
 a6.hn985.com
@@ -79806,6 +79808,7 @@ t-e.flyme.cn
 t-flow.flyme.cn
 t-l.play.aiseet.atianqi.com
 t-pan.triodos.com
+t-remad.qm989.com
 t-s.actemra.com
 t-s.activase.com
 t-s.allergicasthma.com
