@@ -5814,6 +5814,7 @@ cdn-images.mailchimp.com
 cdn-telegram.org
 cdn-terapeak.com
 cdn.ac.uk
+cdn.arstechnica.net
 cdn.assets.lfpcontent.com
 cdn.printfriendly.com
 cdn.seatguru.com
@@ -6287,6 +6288,7 @@ cia.ac.uk
 cias.ac.uk
 ciattackers.com
 cib.ac.uk
+cici.com
 ciciai.com
 cicl.ac.uk
 cied.ac.uk
