@@ -11901,6 +11901,7 @@ anyrelationsandin.com
 anysad.pro
 anysdk.com
 anysize.pro
+anythinktech.com
 anytimebananarecoil.com
 anytimespurt.com
 anytrack.io
@@ -12281,6 +12282,7 @@ apistaging.airpush.com
 apistat.adbana.com
 apistat.gao7.com
 apistat.wasu.cn
+apiv4.anythinktech.com
 apiwmda.58.com.cn
 apiyd.my91app.com
 apjskmyygn.com
