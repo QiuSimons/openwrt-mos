@@ -31156,9 +31156,13 @@ full:d1k2us671qcoau.cloudfront.net
 full:d1m7jfoe9zdc1j.cloudfront.net
 full:d1mhjrowxxagfy.cloudfront.net
 full:d1oca24q5dwo6d.cloudfront.net
+full:d1v5ir2lpwr8os.cloudfront.net
 full:d1w2poirtb3as9.cloudfront.net
 full:d1xhnb4ptk05mw.cloudfront.net
 full:d1ymi26ma8va5x.cloudfront.net
+full:d22qjgkvxw22r6.cloudfront.net
+full:d25xi40x97liuc.cloudfront.net
+full:d27xxe7juh1us6.cloudfront.net
 full:d29vzk4ow07wi7.cloudfront.net
 full:d2aba1wr3818hz.cloudfront.net
 full:d2anahhhmp1ffz.cloudfront.net
@@ -31192,6 +31196,7 @@ full:discord-attachments-uploads-prd.storage.googleapis.com
 full:dl.begellhouse.com
 full:dlgarenanow-a.akamaihd.net
 full:dlmobilegarena-a.akamaihd.net
+full:dmqdd6hw24ucf.cloudfront.net
 full:docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
 full:docker-pinata-support.s3.amazonaws.com
 full:download.visualstudio.microsoft.com
@@ -31262,6 +31267,9 @@ full:hpstore.corpmerchandise.com
 full:hub.slarker.me
 full:hulu.playback.edge.bamgrid.com
 full:i.jeded.com
+full:images-eu.ssl-images-amazon.com
+full:images-fe.ssl-images-amazon.com
+full:images-na.ssl-images-amazon.com
 full:img-prod-cms-rt-microsoft-com.akamaized.net
 full:img-s-msn-com.akamaized.net
 full:impala-media-production.s3.amazonaws.com
@@ -31286,6 +31294,7 @@ full:medone-education.thieme.com
 full:misa-prod.s3.ap-northeast-1.amazonaws.com
 full:mobilelive-hamivideo.cdn.hinet.net
 full:mscrl.microsoft.com
+full:msh.amazon.co.uk
 full:mtalk-dev.google.com
 full:mtalk-staging.google.com
 full:mtalk.google.com
@@ -31455,6 +31464,7 @@ full:spotify.map.fastly.net
 full:spotify.map.fastlylb.net
 full:ssl-lvlt.cdn.ea.com
 full:static-hamivideo.cdn.hinet.net
+full:static.siege-amazon.com
 full:statics-marketingsites-eas-ms-com.akamaized.net
 full:statics-marketingsites-eus-ms-com.akamaized.net
 full:statics-marketingsites-wcus-ms-com.akamaized.net
