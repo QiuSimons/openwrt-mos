@@ -929,6 +929,7 @@ advertfan.com
 advertisercommunity.com
 adx.promo
 ae-ad-1.myhuaweicloud.com
+ae-rus.net
 ae.hao123.com
 ae.org
 aeasyshop.com
@@ -940,6 +941,7 @@ aerogard.com.au
 aerogardcn.com
 aerospace-cadcam.com
 aerospace-design.com
+aestatic.net
 aesworkshops.com
 aex.com
 af-east-201.myhuaweicloud.com
@@ -5634,6 +5636,9 @@ comdotgame.com
 come29.xyz
 comefromchina.com
 cometotheduckside.com
+comfy.org
+comfyci.org
+comfyregistry.org
 comic-mega.me
 comicbox.xyz
 comicscartoonporn.com
@@ -17232,6 +17237,7 @@ oxlife.co
 oyax.com
 oyeloca.com
 oyghan.com
+oystermercury.top
 ozchinese.com
 ozeex.com
 ozodi.org
@@ -18897,12 +18903,15 @@ rbeopp.com
 rbeuroinfo.com
 rbgrads.com
 rbgraduates.com
+rblx.org
 rbmavericks.com
 rbnainternational.com
 rbplc.com
 rbrandlibrary.com
 rbsgr.com
 rbspeakup.com
+rbx.com
+rbxcdn.com
 rcinet.ca
 rcl07.xyz
 rclon.com
@@ -19174,6 +19183,9 @@ rmjdw.com
 ro89.com
 road-crew.com
 roadshow.hk
+roblox-api.arkoselabs.co
+roblox.com
+robloxlabs.com
 robobat.com
 roboforex.com
 roboform.com
@@ -25691,6 +25703,7 @@ full:d1k2us671qcoau.cloudfront.net
 full:d1m7jfoe9zdc1j.cloudfront.net
 full:d1mhjrowxxagfy.cloudfront.net
 full:d1oca24q5dwo6d.cloudfront.net
+full:d1unuk07s6td74.cloudfront.net
 full:d1v5ir2lpwr8os.cloudfront.net
 full:d1w2poirtb3as9.cloudfront.net
 full:d1xhnb4ptk05mw.cloudfront.net
@@ -25895,6 +25908,9 @@ full:push-apple.com.akadns.net
 full:pvr-hamivideo.cdn.hinet.net
 full:qualcomm.sc.omtrdc.net
 full:rink.hockeyapp.net
+full:roblox-load-generator-configuration.s3.us-east-2.amazonaws.com
+full:roblox-poc.global.ssl.fastly.net
+full:robloxcorp.s.llnwi.net
 full:rss.4040940.xyz
 full:rss.datuan.dev
 full:rss.littlebaby.life
