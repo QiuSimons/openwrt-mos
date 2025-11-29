@@ -16884,6 +16884,7 @@ offresspecialesbmw.ca
 offrezdesipods.com
 offworldindustries.com
 offworldindustries.net
+ofiii.com
 ofile.org
 ogakikyoritsu.co.jp
 ogameblog.com
@@ -25857,6 +25858,8 @@ full:notary-submissions-prod.s3-accelerate.amazonaws.com
 full:notary-submissions-prod.s3.us-west-2.amazonaws.com
 full:notify.ppy.sh
 full:np-edge.itunes.apple.com
+full:ntdofifreepc-tgc.cdn.hinet.net
+full:ntdofifreevcpc-tgc.cdn.hinet.net
 full:ntp-b.nist.gov
 full:ntp-c.colorado.edu
 full:ntp-d.nist.gov
