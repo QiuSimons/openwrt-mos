@@ -2624,6 +2624,7 @@ awjq.cc
 aws
 aws-iot-hackathon.com
 aws.com
+aws.dev
 awsapprunner.com
 awsapps.com
 awsautopilot.com
