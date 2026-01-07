@@ -10695,7 +10695,6 @@ ali-pro-pull.kwai.net.iberostar.com
 ali-stats.jpush.cn
 ali8.alinea.fr
 alia-iso.com
-aliapp.org
 alias.cloud-marketing.dimensiondata.com
 aliasanvil.com
 aliasfoot.com
@@ -92632,6 +92631,7 @@ tracker.unbxdapi.com
 tracker.wigzopush.com
 tracker.winload.de
 tracker.wpserveur.net
+tracker.xiaomixiaoai.com
 tracker.yfanads.com
 tracker.yhd.com
 trackerapi.truste.com
@@ -104628,7 +104628,6 @@ yntherplunge.com
 yntvrgqkwlwag.site
 ynud.heizundg.cn
 ynudoo.shoeby.nl
-ynuf.aliapp.org
 ynurfigldblbt.online
 ynvhnmjwszeuf.online
 ynwqls.com
