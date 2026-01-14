@@ -6683,6 +6683,7 @@ digitalprototyping.com
 digitaltrends.com
 diigo.com
 dilcdn.com
+dinopoloclub.com
 dinotube.com
 dipity.com
 dirctv.com
@@ -15530,6 +15531,7 @@ mobilepornmovies.com
 mobileview.page
 mobilevrxxx.com
 mobileways.de
+mobimon.com.tw
 mobmyanmar.com
 moby.to
 mobypicture.com
@@ -16865,6 +16867,7 @@ nowjav.com
 nownews.com
 nowtorrents.com
 noxinfluencer.com
+noxygames.com
 nozomi.la
 npa.go.jp
 npm.community
@@ -19202,6 +19205,8 @@ ravm.tv
 raw.githack.com
 rawgit.com
 rawgithub.com
+rayark.download
+rayark.net
 razer.com
 razerofficial.com
 razersupport.com
@@ -26055,6 +26060,8 @@ full:amp.akamaized.net
 full:android.googlesource.com
 full:angle.com.tw
 full:anime-rule34-world.b-cdn.net
+full:antigravity-pa.googleapis.com
+full:antigravity.googleapis.com
 full:aod-pod-uk-live.akamaized.net
 full:api-p.videomarket.jp
 full:api.viu.now.com
@@ -26105,6 +26112,8 @@ full:cisco.evergage.com
 full:ciscolivehls-i.akamaihd.net
 full:client-teamviewer-com.trafficmanager.net
 full:clients1.google.com
+full:cloudaicompanion.googleapis.com
+full:cloudcode-pa.googleapis.com
 full:cloudsync-prod.s3.amazonaws.com
 full:community.oneplus.com
 full:configuration-lb.ls-apple.com.akadns.net
@@ -26141,6 +26150,7 @@ full:d3r7nsslvs6aaf.cloudfront.net
 full:d3vd9lfkzbru3h.cloudfront.net
 full:d6d4ismr40iw.cloudfront.net
 full:d6tizftlrpuof.cloudfront.net
+full:daily-cloudcode-pa.googleapis.com
 full:databank.worldbank.org
 full:database.asahi.com
 full:datarouter.apps.netherrealm.com
@@ -26268,6 +26278,8 @@ full:nationalaustraliaban.tt.omtrdc.net
 full:netflix.com.edgesuite.net
 full:notary-submissions-prod.s3-accelerate.amazonaws.com
 full:notary-submissions-prod.s3.us-west-2.amazonaws.com
+full:notebooklm-pa.googleapis.com
+full:notebooklm.googleapis.com
 full:notify.ppy.sh
 full:np-edge.itunes.apple.com
 full:ntdfreemobile-tgc.cdn.hinet.net
