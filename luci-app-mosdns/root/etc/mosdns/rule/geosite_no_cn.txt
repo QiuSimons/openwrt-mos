@@ -4469,6 +4469,7 @@ brutalfetish.com
 brutaltgp.com
 bs-adreview.com
 bs-awh.ne.jp
+bsappapi.com
 bsi.ir
 bsky.app
 bsky.network
@@ -17977,6 +17978,7 @@ pixtronix.com
 pjbyj.top
 pjful-app.lol
 pjgirls.com
+pjsekai.sega.jp
 pk.com
 pki-post.ch
 pki-posta.ch
@@ -21381,6 +21383,7 @@ tahr.org.tw
 taiav.com
 tail-f.com
 tailf.com
+tails.net
 tailscale.com
 tailscale.io
 tailwindtraders.com
@@ -26130,6 +26133,7 @@ full:origin-a.akamaihd.net
 full:osu.ppy.sh
 full:p-events-delivery.akamaized.net
 full:p16-tiktokcdn-com.akamaized.net
+full:packages.microsoft.com
 full:paper-attachments.s3.amazonaws.com
 full:pchomeonline.com.tw
 full:pki.google.com
