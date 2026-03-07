@@ -11955,6 +11955,7 @@ inventor-certified.com
 inventorfusion.com
 inventorseries.com
 inventorship.com.au
+investing.com
 investorschronicle.co.uk
 invidio.us
 invity.io
@@ -15030,6 +15031,7 @@ musickit.net
 musixmatch.com
 mut.ch
 muthead.com
+muvluv-girls-garden.com
 muycerdas.xxx
 muyzorras.com
 muzi.com
@@ -16340,6 +16342,7 @@ only3x.com
 onlyams.com
 onlycartoonsex.com
 onlydudes.com
+onlyfans.com
 onlyfanspw.com
 onlyfreelatinaporn.com
 onlygayvideo.com
@@ -18860,6 +18863,7 @@ selfloversworld.com
 sellercommunity.com
 semanticscholar.org
 sena.co.kr
+sendvid.com
 seneporno.com
 seniortgp.com
 senpaiheat.com
@@ -21605,6 +21609,7 @@ ustibetcommittee.org
 ustream.tv
 usvimosquito.com
 usvimosquitoproject.com
+utdstc.com
 utopianpal.com
 uug22.com
 uug23.com
@@ -24007,6 +24012,8 @@ youflix.is
 youjism.com
 youjizz.com
 youjizz.sex
+youla.io
+youla.ru
 youlucky.com
 youmaker.com
 youmind.ai
@@ -24539,6 +24546,7 @@ full:antigravity.googleapis.com
 full:aod-pod-uk-live.akamaized.net
 full:api-p.videomarket.jp
 full:api.viu.now.com
+full:apkmirror.disqus.com
 full:apl-hamivideo.cdn.hinet.net
 full:apple-tv-plus-press.apple.com
 full:apple.com.akadns.net
@@ -24927,6 +24935,8 @@ full:spotify.com.edgesuite.net
 full:spotify.map.fastly.net
 full:spotify.map.fastlylb.net
 full:ssl-lvlt.cdn.ea.com
+full:st-ok-pts.cdn-vk.ru
+full:st-ok.cdn-vk.ru
 full:standchartbank.sc.omtrdc.net
 full:standchartbank.tt.omtrdc.net
 full:static-hamivideo.cdn.hinet.net
@@ -25152,6 +25162,7 @@ full:wwis-dubc1-vip99.adobe.com
 full:www-cdn.icloud.com.akadns.net
 full:yandex-pogoda.static-storage.net
 full:yangzhi.app
+full:youla-web-static.mrgcdn.ru
 full:yt3.googleusercontent.com
 full:zeenews-fonts.s3.amazonaws.com
 regexp:(^|\.)13mei[5-7]\.buzz$
