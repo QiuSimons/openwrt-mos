@@ -1794,6 +1794,7 @@ app-analytics-services.com
 app-dynamics.com
 app-measurement-cn.com
 app-measurement.com
+app-pay.jp
 app-store.wang
 app.box.com
 app.smartmailcloud.com
@@ -18626,6 +18627,7 @@ samsungdm.com
 samsunggalaxyfriends.com
 samsunghealth.com
 samsungiotcloud.com
+samsungiots.com
 samsungknox.com
 samsungosp.com
 samsungqbe.com
@@ -19471,6 +19473,7 @@ smartonerobotics.com
 smartonesolutions.com.hk
 smartonesolutions.hk
 smartstream.ne.jp
+smartthings.com
 smashed.xxx
 smbc.co.jp
 smbctb.co.jp
