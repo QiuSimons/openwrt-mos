@@ -12832,6 +12832,7 @@ anhuiry.com
 anhuisjx.com
 anhuisuya.com
 anhuiwine.com
+anhuiyun.com
 anhuizk.com
 ani-sh.com
 aniccw.net
@@ -118030,6 +118031,7 @@ full:crls.pki.goog
 full:csi.gstatic.com
 full:cstat.apple.com
 full:cstat.cdn-apple.com
+full:ctdsb.clouddiffuse.xyz
 full:ctldl.windowsupdate.com
 full:cueme-api.quark.cn
 full:customization-cdn.dell.com
