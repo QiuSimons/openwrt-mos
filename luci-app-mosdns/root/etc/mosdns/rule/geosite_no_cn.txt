@@ -14170,7 +14170,6 @@ meetandfuck.games
 meetandfuckgames.com
 meetfasttrack.com
 meetsmartbook.com
-meetup.com
 meetyourdevices.com
 mega.co.nz
 mega.io
@@ -18083,7 +18082,6 @@ pyrobot.org
 python.com.tw
 python.org
 pythonhosted.org
-pytorch.org
 pzforever.skin
 pzforever01.homes
 pzhanfor.today
