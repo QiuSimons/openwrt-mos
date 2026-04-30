@@ -25844,6 +25844,7 @@ full:time4.facebook.com
 full:time4.google.com
 full:time5.facebook.com
 full:tmdb-image-prod.b-cdn.net
+full:tmdb-web-image-prod.b-cdn.net
 full:tv.applemusic.com
 full:tvcastlive-hamivideo.cdn.hinet.net
 full:ubisoft-orbit-savegames.s3.amazonaws.com
