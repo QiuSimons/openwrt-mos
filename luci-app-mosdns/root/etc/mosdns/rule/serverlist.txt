@@ -7691,6 +7691,7 @@ ad-a8.www.zeiri4.com
 ad-adapex.io
 ad-android.51wnl.com
 ad-apac.doubleclick.net
+ad-api.adn-plus.com.cn
 ad-api.cnblogs.com
 ad-api.gl-inet.com
 ad-arrow.com
@@ -8744,6 +8745,7 @@ admszahcketzf.site
 admtpmp124.com
 admulti.com
 admusicpic.music.126.net
+adn-plus.com.cn
 adn.agrantsem.com
 adn.atdmt.com
 adn.insight.ucweb.com
