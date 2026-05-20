@@ -1286,6 +1286,7 @@ alchemysynth.com
 alefbank.com
 alexa.com
 alexanderstreet.com
+alfa.me
 alfabank.oavdo.amc
 alfabank.ru
 alfabank.st
@@ -15722,6 +15723,7 @@ mysocialworklab.com
 myspacecdn.com
 mysql.com
 mystrikingly.com
+myteamspeak.com
 myteenwebcam.com
 mythicentertainment.com
 mythicentertainment.net
@@ -21219,6 +21221,8 @@ teachmyass.com
 teachparentstech.org
 teamneedforspeed.com
 teamskeet.com
+teamspeak-services.com
+teamspeak.com
 teamviewer.com
 teamviewer.us
 tearapeak.com
@@ -25771,6 +25775,7 @@ full:espndotcom.tt.omtrdc.net
 full:f3b7q2p3.ssl.hwcdn.net
 full:fandom.zendesk.com
 full:faronics.kayako.com
+full:favoritescc-hamivideo2.cdn.hinet.net
 full:fbcdn-a.akamaihd.net
 full:firebase.google.com
 full:firebase.googleapis.com
@@ -25827,6 +25832,7 @@ full:imperial.insendi.com
 full:ingest.apple-studies.com
 full:lastfm.freetls.fastly.net
 full:lazer.ppy.sh
+full:lgcscc-hamivideo2.cdn.hinet.net
 full:lgelectronics.122.2o7.net
 full:licdn.cn.cdn20.com
 full:linear-abematv.akamaized.net
@@ -26088,6 +26094,7 @@ full:t21.nikkei.co.jp
 full:t21ipau.nikkei.co.jp
 full:teamviewer.com.cdn.cloudflare.net
 full:tesla-cdn.thron.com
+full:thumbnail-hamivideo.cdn.hinet.net
 full:time-a-b.nist.gov
 full:time-a-g.nist.gov
 full:time-a-wwv.nist.gov
@@ -26121,6 +26128,7 @@ full:time3.google.com
 full:time4.facebook.com
 full:time4.google.com
 full:time5.facebook.com
+full:tlmr-hamivideo2.cdn.hinet.net
 full:tmdb-image-prod.b-cdn.net
 full:tmdb-web-image-prod.b-cdn.net
 full:tv.applemusic.com
@@ -26183,6 +26191,7 @@ full:vsmarketplacebadge.apphb.com
 full:wb-agora-hydra-file-storage-k1.s3.amazonaws.com
 full:webchannel-alkalimakersuite-pa.clients6.google.com
 full:weblive-hamivideo.cdn.hinet.net
+full:webvodad-hamivideo.cdn.hinet.net
 full:widgets.stripst.com
 full:wip.adobe.com
 full:wip1.adobe.com
