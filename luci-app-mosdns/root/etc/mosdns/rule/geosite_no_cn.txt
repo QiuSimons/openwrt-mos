@@ -5455,6 +5455,7 @@ clau.de
 claude.ai
 claude.com
 claudemcpclient.com
+claudemcpcontent.com
 claudeusercontent.com
 clawhub.ai
 clck.ru
@@ -21198,6 +21199,7 @@ sustainabledesigncouncil.net
 sustainthesound.com
 suxib.com
 suxiebu.com
+suyingtv.com
 suzuri.jp
 svaboda.org
 svc.ms
@@ -24327,6 +24329,7 @@ woyaolian.org
 wp-themes.com
 wp.com
 wpewebkit.org
+wplace.live
 wpoforum.com
 wpvip.com
 wrenchead.com
@@ -26532,6 +26535,7 @@ full:wwis-dubc1-vip97.adobe.com
 full:wwis-dubc1-vip98.adobe.com
 full:wwis-dubc1-vip99.adobe.com
 full:www-cdn.icloud.com.akadns.net
+full:www.quora.com.cdn.cloudflare.net
 full:yangzhi.app
 full:yt3.googleusercontent.com
 full:zeenews-fonts.s3.amazonaws.com
