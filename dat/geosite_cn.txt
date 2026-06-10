@@ -51554,7 +51554,6 @@ infoldgames.com
 infomorning.com
 infong.net
 infoobs.com
-infoq.com
 infoqstatic.com
 inforbus.com
 inforeenviro.com
@@ -51885,7 +51884,6 @@ iotyes.com
 iouluo.com
 ioxqm.com
 ioxunyun.com
-ip-cdn.com
 ip-guard.net
 ip-hercules.com
 ip-soc.com
