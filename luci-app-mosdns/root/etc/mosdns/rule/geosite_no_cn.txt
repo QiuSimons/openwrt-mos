@@ -5089,6 +5089,7 @@ celebforum.co
 celebgramme.com
 celebmasta.live
 celebritygay.com
+celebritymoviearchive.com
 celebritynakeds.com
 celebrityslips.com
 celebritystorysite.com
@@ -9088,6 +9089,7 @@ foxweatherwatch.com
 fpacebook.com
 fpmt.org
 fpmtmexico.org
+fpo.xxx
 fptolia.com
 fqcebook.com
 fqrouter.com
@@ -9202,6 +9204,8 @@ freevpn.me
 freewallpaper4.me
 freewechat.com
 freeweibo.com
+freexh.blog
+freexh.live
 freexvideos.org
 freexxx.best
 freexxx.win
@@ -17838,6 +17842,7 @@ pikpak.me
 pikpakdrive.com
 pillbeatsblackfridaysale.com
 pimg.tw
+pimpbunny.com
 pin-cong.com
 pin.it
 pin6.com
@@ -18496,6 +18501,7 @@ powershape.com
 powershellgallery.com
 powersrv.de
 powersunitedvr.com
+powfans.com
 pp-soc.com
 pp6.info
 ppaypal.com
@@ -19912,6 +19918,7 @@ seqingwangzhan.pro
 seqingx.com
 sequence.com
 ser7.cc
+serakon.com
 serbiporno.net
 serialssolutions.com
 serlucap.lol
@@ -23840,6 +23847,7 @@ vscode-cdn.net
 vscode-unpkg.net
 vscode.dev
 vsemrabota.ru
+vsex.in
 vsezoo.com
 vsphere.com
 vsphere.net
@@ -24663,6 +24671,7 @@ xhamster19.com
 xhamster2.com
 xhamster3.com
 xhamsterlive.com
+xhapp.live
 xhcdn.com
 xhnews.live
 xhot.pro
@@ -26076,6 +26085,7 @@ full:cbsservice.aws.syncbak.com
 full:cdn-spotify-experiments.conductrics.com
 full:cdn.js7k.com
 full:cdngarenanow-a.akamaihd.net
+full:chatscc-hamivideo2.cdn.hinet.net
 full:chinapower.csis.org
 full:cisco.evergage.com
 full:ciscolivehls-i.akamaihd.net
@@ -26157,6 +26167,7 @@ full:ebay-25-assets.s3-us-west-1.amazonaws.com
 full:ecapi-pchome.cdn.hinet.net
 full:edu.tinkoff.ru
 full:education.tbank.ru
+full:efe8f8a4-abd5-44c9-bf5c-cd217442c52f.t.ssp.hinet.net
 full:elib.maruzen.co.jp
 full:epc-de-agent-proxy.germanywestcentral.cloudapp.azure.com
 full:ereg.adobe.com
@@ -26212,6 +26223,7 @@ full:himalaya-exchange.zendesk.com
 full:hl2rcv.adobe.com
 full:hlrcv.stage.adobe.com
 full:hls-amt.itunes.apple.com
+full:hls-hamivideo.cdn.hinet.net
 full:hls.itunes.apple.com
 full:holoxx.f5.si
 full:homebrew.bintray.com
@@ -26381,6 +26393,7 @@ full:rsshub2.asailor.org
 full:rtm.tnt-ea.com
 full:sa78gs.wpc.edgecastcdn.net
 full:sberpro.vedomosti.ru
+full:scc-hamivideo.cdn.hinet.net
 full:scc.ott.hinet.net
 full:scholar.google.ae
 full:scholar.google.at
@@ -26490,6 +26503,7 @@ full:steamusercontent-a.akamaihd.net
 full:steamuserimages-a.akamaihd.net
 full:steamvideo-a.akamaihd.net
 full:straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
+full:t.ssp.hinet.net
 full:t21.nikkei.co.jp
 full:t21ipau.nikkei.co.jp
 full:teamviewer.com.cdn.cloudflare.net
@@ -26591,6 +26605,7 @@ full:vsmarketplacebadge.apphb.com
 full:wb-agora-hydra-file-storage-k1.s3.amazonaws.com
 full:webchannel-alkalimakersuite-pa.clients6.google.com
 full:weblive-hamivideo.cdn.hinet.net
+full:weblivea-hamivideo.cdn.hinet.net
 full:webvodad-hamivideo.cdn.hinet.net
 full:widgets.stripst.com
 full:wip.adobe.com
