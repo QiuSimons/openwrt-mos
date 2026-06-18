@@ -1843,6 +1843,7 @@ appbridge.io
 appbridge.it
 appcenter.ms
 appcloud.com
+appconsent.io
 appdomain.cloud
 appdynamics.co.uk
 appdynamics.com
@@ -2738,6 +2739,7 @@ awwcn.buzz
 awwcn.xyz
 awxcdn.com
 axbdoll.com.tw
+axept.io
 axios.com
 axureformac.com
 ayabank.com
@@ -5050,6 +5052,7 @@ cdjp.org
 cdkworkshop.com
 cdmatech.com
 cdn-apple.com
+cdn-cookieyes.com
 cdn-telegram.org
 cdn-terapeak.com
 cdn-tinkoff.ru
@@ -5771,6 +5774,7 @@ conoha.jp
 conquerwithcharacter.com
 conscrypt.com
 conscrypt.org
+consentmanager.net
 consentpro.com
 constructware.com
 consul.io
@@ -5780,9 +5784,11 @@ contechacademy.com
 contentful.com
 contest.com
 convrgencegame.com
+cookiebot.com
 cookiechoices.org
 cookielaw.org
 cookiepro.com
+cookieyes.com
 cool-comics.com
 cool18.com
 cool3c.com
@@ -21264,7 +21270,6 @@ supanimegames.com
 supchina.com
 superadultgames.com
 supercell.com
-supercell.helpshift.com
 supercell.net
 supercellcreators.com
 supercellgames.com
@@ -21671,6 +21676,7 @@ terapeak.info
 teraperk.com
 terk.nl
 termius.com
+termly.io
 termux.com
 termux.dev
 termux.org
@@ -22334,6 +22340,7 @@ truefi.io
 truenas.com
 trunest.com
 trust-provider.com
+trustarc.com
 trustcor.ca
 trustcor.com
 trustdoc.ch
@@ -26503,6 +26510,8 @@ full:steamusercontent-a.akamaihd.net
 full:steamuserimages-a.akamaihd.net
 full:steamvideo-a.akamaihd.net
 full:straitsx-826709081262441084-b790f87a2ae6fd417434295.freshchat.com
+full:supercell.helpshift.com
+full:supercell.zendesk.com
 full:t.ssp.hinet.net
 full:t21.nikkei.co.jp
 full:t21ipau.nikkei.co.jp
