@@ -26257,6 +26257,8 @@ full:github-production-repository-image-32fea6.s3.amazonaws.com
 full:github-production-upload-manifest-file-7fdce7.s3.amazonaws.com
 full:github-production-user-asset-6210df.s3.amazonaws.com
 full:gitlab-assets.oss-cn-hongkong.aliyuncs.com
+full:gog-cdn-lumen.secure2.footprint.net
+full:gog-cdn.akamaized.net
 full:google-ohttp-relay-safebrowsing.fastly-edge.com
 full:hamivideo.hinet.net
 full:hammerandchisel.ssl.zendesk.com
