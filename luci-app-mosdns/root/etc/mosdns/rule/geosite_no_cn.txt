@@ -5899,6 +5899,7 @@ crazyxxx3dworld.org
 crazyxxxworld.com
 crbug.com
 crchina.org
+creader.com
 creaders.net
 creamasia.com
 creamlemon.info
@@ -26210,7 +26211,6 @@ full:dlmobilegarena-a.akamaihd.net
 full:dmqdd6hw24ucf.cloudfront.net
 full:docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
 full:docker-pinata-support.s3.amazonaws.com
-full:download.visualstudio.microsoft.com
 full:dqd0jw5gvbchn.cloudfront.net
 full:dqrpb9wgowsf5.cloudfront.net
 full:ds-linear-abematv.akamaized.net
