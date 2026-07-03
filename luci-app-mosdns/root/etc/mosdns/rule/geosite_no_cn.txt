@@ -5819,6 +5819,7 @@ coomer.su
 coova.com
 coova.net
 coova.org
+copilot.com
 copro.pw
 copy-manga.com
 copy20.com
@@ -24152,6 +24153,7 @@ webpass.net
 webpkgcache.com
 webrtc.org
 websdr.org
+webshare.io
 website.new
 webtoons.com
 webtoonscorp.com
@@ -26407,6 +26409,7 @@ full:onekey.zendesk.com
 full:oneocsp.microsoft.com
 full:ood.opsource.net
 full:openaiapi-site.azureedge.net
+full:openaiassets.blob.core.windows.net
 full:openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 full:openaicom.imgix.net
 full:openaicomproductionae4b.blob.core.windows.net
