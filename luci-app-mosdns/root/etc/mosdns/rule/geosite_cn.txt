@@ -112012,7 +112012,6 @@ full:swscan.apple.com
 full:sylvan.apple.com
 full:sync.itunes.apple.com
 full:tac.googleapis.com
-full:tesla-cdn.thron.cn
 full:tf-feedback.itunes.apple.com
 full:time.amazonaws.cn
 full:time.izatcloud.net
