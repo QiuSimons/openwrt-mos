@@ -3349,6 +3349,7 @@ berlincompanions.com
 berlinerbericht.de
 berlintwitterwall.com
 best-sex-games.com
+best2pay.net
 best4bim.com
 bestbeats4u.com
 bestbhy.com
@@ -5490,6 +5491,7 @@ clashmini.com
 clashofclans.com
 clashroyale.com
 clashroyaleapp.com
+clashyun.com
 clasporno.org
 classicalguitarblog.net
 classicnike.com
@@ -8097,6 +8099,8 @@ f-dro1d.org
 f-droid.com
 f-droid.org
 f-secure.com
+f1.com
+f1tv.com
 f2pool.com
 f5pf.com
 f6.dev
@@ -8925,6 +8929,7 @@ form.new
 formit360.com
 formitfactory.com
 forms.new
+formula1.com
 forpojie.pics
 forshtadt.ru
 fortawesome.com
@@ -11640,6 +11645,7 @@ hustlercash.com
 hutao.cloud
 hutianyi.net
 hutpromos.com
+hva.im
 hwayue.org.tw
 hwgo.com
 hwslabs.com
@@ -19126,8 +19132,10 @@ rbmavericks.com
 rbnainternational.com
 rbplc.com
 rbrandlibrary.com
+rbsgate.com
 rbsgr.com
 rbspeakup.com
+rbsuat.com
 rbth.com
 rbx.com
 rbxcdn.com
@@ -21522,6 +21530,7 @@ synologyupdate.com
 syosetu.com
 sysinternals.com
 system76.com
+sysub.com
 syzbj36.xyz
 szabadeuropa.hu
 szcheapmonsterheadphones.com
@@ -26706,6 +26715,7 @@ full:time5.facebook.com
 full:tlmr-hamivideo2.cdn.hinet.net
 full:tmdb-image-prod.b-cdn.net
 full:tmdb-web-image-prod.b-cdn.net
+full:trojan-gfw.github.io
 full:tv.applemusic.com
 full:tvcastlive-hamivideo.cdn.hinet.net
 full:ubisoft-orbit-savegames.s3.amazonaws.com
@@ -26875,6 +26885,7 @@ full:wwis-dubc1-vip99.adobe.com
 full:www-cdn.icloud.com.akadns.net
 full:www.microsoft.com
 full:www.quora.com.cdn.cloudflare.net
+full:xtls.github.io
 full:yangzhi.app
 full:yt3.googleusercontent.com
 full:zeenews-fonts.s3.amazonaws.com
