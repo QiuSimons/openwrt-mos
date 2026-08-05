@@ -111467,6 +111467,8 @@ full:time.amazonaws.cn
 full:time.izatcloud.net
 full:time.xtracloud.net
 full:tj-pod1-smp-device.apple.com
+full:tj-pod2-smp-device.apple.com
+full:tj-pod3-smp-device.apple.com
 full:tools.google.com
 full:tp.louisvuitton.com
 full:universal-activity-service.itunes.apple.com
