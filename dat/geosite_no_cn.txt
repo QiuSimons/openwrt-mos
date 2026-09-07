@@ -26598,6 +26598,7 @@ full:img-prod-cms-rt-microsoft-com.akamaized.net
 full:img-s-msn-com.akamaized.net
 full:impala-media-production.s3.amazonaws.com
 full:imperial.insendi.com
+full:lastfm-img.freetls.fastly.net
 full:lastfm.freetls.fastly.net
 full:lazer.ppy.sh
 full:lgcscc-hamivideo2.cdn.hinet.net
