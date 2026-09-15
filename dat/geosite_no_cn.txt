@@ -21477,6 +21477,9 @@ stripcamfun.com
 stripchat.com
 stripe-terminal-local-reader.net
 stripe.com
+stripe.dev
+stripe.events
+stripe.global
 stripe.network
 stripecdn.com
 stripparadise.com
@@ -26685,6 +26688,7 @@ full:opgg-static.akamaized.net
 full:origin-a.akamaihd.net
 full:osu.ppy.sh
 full:p-events-delivery.akamaized.net
+full:p16-tiktok-dm-sticker-sign-sg.ibyteimg.com
 full:p16-tiktokcdn-com.akamaized.net
 full:packages.microsoft.com
 full:paper-attachments.s3.amazonaws.com
