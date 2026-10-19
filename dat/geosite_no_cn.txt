@@ -2368,7 +2368,6 @@ asminternational.org
 asmr.gay
 asmrbuluo.com
 asn-online.org
-asobostudio.com
 asp-cc.com
 asp.net
 aspbjournals.org
@@ -3354,8 +3353,15 @@ beevpn.com
 beforeigners.com
 befuck.com
 befuck.net
+beget.app
+beget.cloud
 beget.com
+beget.de
+beget.hosting
+beget.pro
 beget.ru
+beget.tech
+begetcdn.cloud
 begin-trade.com
 behance.net
 behindthescreenz.com
@@ -3388,6 +3394,7 @@ berlincompanions.com
 berlinerbericht.de
 berlintwitterwall.com
 beru.ru
+beserver.ru
 best-sex-games.com
 best2pay.net
 best4bim.com
@@ -3498,6 +3505,7 @@ bfads.net
 bffshd.com
 bfnn.org
 bfsh.hk
+bget.ru
 bgicdn.com
 bgm.tv
 bgme.me
@@ -8965,7 +8973,6 @@ flic.kr
 flickr
 flickr.com
 flickr.net
-flightsimulator.com
 flipboard.com
 flipfap.com
 flipkart.com
@@ -19073,6 +19080,7 @@ pussyspace.com
 pussyspace.net
 putinho.net
 putty.org
+pv-cdn.net
 pvp.net
 pvp.tv
 pvt.sexy
@@ -21263,6 +21271,7 @@ springernature.com
 springwood.me
 sprinklesapp.com
 sproutcore.com
+sprut.io
 sptvbroadcast.com
 sputnikglobe.com
 sputnikimages.com
@@ -25245,6 +25254,7 @@ xn--8uq428d76d.tokyo
 xn--90ab.com
 xn--90ab2c.xn--p1ai
 xn--90absjljw3g.xn--p1ai
+xn--90aefb9d.xn--p1ai
 xn--90aifd0az.shop
 xn--90aifd0azb.xn--p1acf
 xn--90wwvt03e.com
@@ -26628,6 +26638,7 @@ full:d2vjef5jvl6bfs.cloudfront.net
 full:d2xmjdvx03ij56.cloudfront.net
 full:d31dormfno8pk4.cloudfront.net
 full:d33wubrfki0l68.cloudfront.net
+full:d348twzf7a8p5.cloudfront.net
 full:d36nr0u3xmc4mm.cloudfront.net
 full:d3aqoihi2n8ty8.cloudfront.net
 full:d3c27h4odz752x.cloudfront.net
@@ -26652,6 +26663,7 @@ full:deribit.cdn.prismic.io
 full:deutschewelle.h-cdn.com
 full:developer.microsoft.com
 full:developers.facebook.com
+full:devforum-uploads.s3.dualstack.us-east-2.amazonaws.com
 full:dfp6rglgjqszk.cloudfront.net
 full:dgeft87wbj63p.cloudfront.net
 full:discord-attachments-uploads-prd.storage.googleapis.com
@@ -26662,6 +26674,7 @@ full:dlmobilegarena-a.akamaihd.net
 full:dmqdd6hw24ucf.cloudfront.net
 full:docker-images-prod.6aa30f8b08e16409b46e0173d6de2f56.r2.cloudflarestorage.com
 full:docker-pinata-support.s3.amazonaws.com
+full:doy2mn9upadnk.cloudfront.net
 full:dqd0jw5gvbchn.cloudfront.net
 full:dqrpb9wgowsf5.cloudfront.net
 full:ds-linear-abematv.akamaized.net
@@ -26709,7 +26722,6 @@ full:firebaselogging.googleapis.com
 full:firebaseperusertopics-pa.googleapis.com
 full:firebaseremoteconfig.googleapis.com
 full:firstsearch.oclc.org
-full:flightsimulator.azureedge.net
 full:fontshop-prod-responsive-images.s3.amazonaws.com
 full:foxnewsplayer-a.akamaihd.net
 full:gamedownloads-rockstargames-com.akamaized.net
