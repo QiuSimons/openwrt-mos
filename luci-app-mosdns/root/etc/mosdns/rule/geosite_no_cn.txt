@@ -36,6 +36,7 @@
 123-hp.com
 123av.com
 123av.me
+123av.org
 123bin.cc
 123dapp.com
 123dappipad.com
@@ -175,6 +176,7 @@
 1password.co
 1password.com
 1password.community
+1password.dev
 1password.eu
 1password.io
 1passwordservices.com
@@ -5175,6 +5177,10 @@ cdnxxx-proxy.xyz
 cdp1998.org
 cdp2006.org
 cdpeu.org
+cdpred.services
+cdprojekt.com
+cdprojekt.red
+cdprojektred.com
 cdpuk.co.uk
 cdpweb.org
 cdpwu.org
@@ -6190,6 +6196,7 @@ cyber-bay.org
 cybercrimecon.com
 cyberghostvpn.com
 cybermondaybeats4sale.com
+cyberpunk.net
 cybersport.ru
 cybertrust.co.jp
 cybertrust.ne.jp
@@ -13687,6 +13694,7 @@ kilmeadeandfriends.com
 kimchi.tv
 kimi.ai
 kimogirl.cc
+kimootoko.net
 kimosex.com
 kindgirls.com
 kindindianporn.com
@@ -15530,6 +15538,7 @@ miniwidget.ca
 miniwindsor.com
 miniworkshop.com
 miniyaletown.ca
+minkch.com
 minnano-av.com
 minne.com
 minneapolisbmw.com
@@ -16921,6 +16930,7 @@ nixos.wiki
 nixpkgs.org
 niziero.info
 njactb.org
+njav.com
 njav.tv
 njavtv.com
 njpw.co.jp
@@ -18367,6 +18377,7 @@ playfab.com
 playfabapi.com
 playfamily.ru
 playforceone.com
+playgwent.com
 playhearthstone.com
 playmation.com
 playmeow.com
@@ -18416,6 +18427,7 @@ pmatehunter.com
 pmem.org
 pmem.us
 pnas.org
+po-kaki-to.com
 po2b.com
 pobeda.page
 pobl-content.com
@@ -22349,6 +22361,7 @@ theweek.com
 theweek.in
 thewgo.org
 thewirechina.com
+thewitcher.com
 thewonderful101.com
 theync.com
 theyxxx.com
@@ -25325,15 +25338,15 @@ xn--d1acpjx3f.xn--p1ai
 xn--d4ty0ojsqzfd.com
 xn--e1adjldbbpv.xn--90ais
 xn--e1aigb.xn--p1ai
-xn--fiqs8s1bxp3anr7a.hk
-xn--fiqs8s1bxp3anr7a.xn--j6w193g
-xn--fiqs8s1byzqyvl.hk
-xn--fiqs8s1byzqyvl.xn--j6w193g
+xn--fiq80y.hk
+xn--fiq80y.xn--j6w193g
+xn--fiq80y3xbiwr.hk
+xn--fiq80y3xbiwr.xn--j6w193g
+xn--fiq80y3xbiwrs0kiu9d.hk
+xn--fiq80y3xbiwrs0kiu9d.xn--j6w193g
 xn--fiqs8sxootzz.xn--hxt814e
 xn--flw351e
 xn--flw351e.com
-xn--gdt08a.hk
-xn--gdt08a.xn--j6w193g
 xn--ggle-55da.com
 xn--gmq348bujlxrb.com
 xn--gmq92kd2rm1kx34a.com
@@ -25353,8 +25366,6 @@ xn--kcrv3utim32hx9f6qe.com
 xn--kput3imi374g.xn--hxt814e
 xn--mts47c3w9b1qr.net
 xn--mtswd61ejxq.com
-xn--mxtq18a.hk
-xn--mxtq18a.xn--j6w193g
 xn--ngstr-lra8j.com
 xn--noss43i.com
 xn--oiq.cc
@@ -25362,14 +25373,10 @@ xn--p8j9a0d9c9a.xn--q9jyb4c
 xn--pearsonenespaol-brb.com
 xn--pssu7ci2j23mp9ny48b.hk
 xn--pssu7ci2j23mp9ny48b.xn--j6w193g
-xn--pssu7cv61af1tcs59bnvd.hk
-xn--pssu7cv61af1tcs59bnvd.xn--j6w193g
+xn--pssu7ci3q5oge0ai91q.xn--j6w193g
 xn--pssu7cv61af44b.hk
 xn--pssu7cv61af44b.xn--j6w193g
-xn--pssu7cv61ahw8aq79bztd.hk
-xn--pssu7cv61ahw8aq79bztd.xn--j6w193g
-xn--pssu7cv61ahwcb1p2yk.hk
-xn--pssu7cv61ahwcb1p2yk.xn--j6w193g
+xn--pssu7cz8nr8ibkx1e8a.xn--j6w193g
 xn--q41am8x.com
 xn--qcka1pmc
 xn--qoq462m.com
@@ -25385,11 +25392,7 @@ xn--uis17aj9kmuf.com
 xn--uis44a.xn--j6w193g
 xn--urs05q.jp
 xn--vuqv2cf7wzyig79c.com
-xn--wcv22d.hk
-xn--wcv22d.xn--j6w193g
 xn--wcvs22d.xn--j6w193g
-xn--wcvs22d1m.hk
-xn--wcvs22d1m.xn--j6w193g
 xn--x-qeu1ji09tzlg.biz
 xn--x-qeu1ji09tzlg.net
 xn--xsq421m.com
@@ -26503,6 +26506,7 @@ zorglist.com
 zorrovpn.com
 zotero.org
 zozotown.com
+zozovideo.com
 zpagov.net
 zpath.com
 zpn.im
